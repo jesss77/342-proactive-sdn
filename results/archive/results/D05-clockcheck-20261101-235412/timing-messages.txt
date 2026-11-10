@@ -1,0 +1,17 @@
+Nov 01 23:22:05 cmps-342-sdn kernel: Hypervisor detected: KVM
+Nov 01 23:22:05 cmps-342-sdn kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+Nov 01 23:22:05 cmps-342-sdn kernel: kvm-clock: using sched offset of 5501047669 cycles
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: tsc: Detected 2918.400 MHz processor
+Nov 01 23:22:05 cmps-342-sdn kernel: Booting paravirtualized kernel on KVM
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: kvm-guest: PV spinlocks enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2a11290c0c8, max_idle_ns: 440795344938 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: NMI watchdog: Perf NMI watchdog permanently disabled
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: Switched to clocksource kvm-clock
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2a11290c0c8, max_idle_ns: 440795344938 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: Switched to clocksource tsc
+Nov 01 23:23:12 cmps-342-sdn kernel: clocksource: Long readout interval, skipping watchdog check: cs_nsec: 4318220335 wd_nsec: 4318219175
+Nov 01 23:31:27 cmps-342-sdn kernel: clocksource: Long readout interval, skipping watchdog check: cs_nsec: 79232895927 wd_nsec: 79232874760

@@ -1,0 +1,26 @@
+{
+  "started": "2026-11-02T00:20:24.333719+02:00",
+  "route": "primary",
+  "requested_bps": 3000000,
+  "payload_bytes": 1200,
+  "requested_seconds": 20,
+  "socket_buffers": "default",
+  "clock_before": "kvm-clock",
+  "client_command": [
+    "iperf3",
+    "-c",
+    "10.0.0.2",
+    "-p",
+    "5201",
+    "-u",
+    "-b",
+    "3M",
+    "-l",
+    "1200",
+    "-t",
+    "20",
+    "-J"
+  ],
+  "client_started": "2026-11-02T00:20:25.364520+02:00",
+  "clock_after": "kvm-clock"
+}

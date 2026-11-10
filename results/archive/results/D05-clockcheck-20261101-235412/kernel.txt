@@ -1,0 +1,794 @@
+Nov 01 23:22:05 cmps-342-sdn kernel: Linux version 7.0.0-42-generic (buildd@lcy02-amd64-051) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2 (Ubuntu 7.0.0-42.42~24.04.1-generic 7.0.14)
+Nov 01 23:22:05 cmps-342-sdn kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-7.0.0-42-generic root=UUID=f41b807b-5ddf-4d19-9f3c-0a88c6133ff7 ro quiet splash
+Nov 01 23:22:05 cmps-342-sdn kernel: KERNEL supported cpus:
+Nov 01 23:22:05 cmps-342-sdn kernel:   Intel GenuineIntel
+Nov 01 23:22:05 cmps-342-sdn kernel:   AMD AuthenticAMD
+Nov 01 23:22:05 cmps-342-sdn kernel:   Hygon HygonGenuine
+Nov 01 23:22:05 cmps-342-sdn kernel:   Centaur CentaurHauls
+Nov 01 23:22:05 cmps-342-sdn kernel:   zhaoxin   Shanghai  
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/CPU: Model not found in latest microcode list
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-provided physical RAM map:
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff]  System RAM
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff]  device reserved
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [gap 0x00000000000a0000-0x00000000000effff]
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff]  device reserved
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff]  System RAM
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff]  ACPI data
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [gap 0x00000000e0000000-0x00000000febfffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff]  device reserved
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [gap 0x00000000fec01000-0x00000000fedfffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff]  device reserved
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [gap 0x00000000fee01000-0x00000000fffbffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff]  device reserved
+Nov 01 23:22:05 cmps-342-sdn kernel: BIOS-e820: [mem 0x0000000100000000-0x000000019fffffff]  System RAM
+Nov 01 23:22:05 cmps-342-sdn kernel: NX (Execute Disable) protection: active
+Nov 01 23:22:05 cmps-342-sdn kernel: APIC: Static calls initialized
+Nov 01 23:22:05 cmps-342-sdn kernel: SMBIOS 2.5 present.
+Nov 01 23:22:05 cmps-342-sdn kernel: DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Nov 01 23:22:05 cmps-342-sdn kernel: DMI: Memory slots populated: 0/0
+Nov 01 23:22:05 cmps-342-sdn kernel: Hypervisor detected: KVM
+Nov 01 23:22:05 cmps-342-sdn kernel: last_pfn = 0xe0000 max_arch_pfn = 0x400000000
+Nov 01 23:22:05 cmps-342-sdn kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+Nov 01 23:22:05 cmps-342-sdn kernel: kvm-clock: using sched offset of 5501047669 cycles
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: tsc: Detected 2918.400 MHz processor
+Nov 01 23:22:05 cmps-342-sdn kernel: e820: update [mem 0x00000000-0x00000fff] System RAM ==> device reserved
+Nov 01 23:22:05 cmps-342-sdn kernel: e820: remove [mem 0x000a0000-0x000fffff] System RAM
+Nov 01 23:22:05 cmps-342-sdn kernel: last_pfn = 0x1a0000 max_arch_pfn = 0x400000000
+Nov 01 23:22:05 cmps-342-sdn kernel: MTRR map: 3 entries (3 fixed + 0 variable; max 19), built from 8 variable MTRRs
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU MTRRs all blank - virtualized system.
+Nov 01 23:22:05 cmps-342-sdn kernel: last_pfn = 0xe0000 max_arch_pfn = 0x400000000
+Nov 01 23:22:05 cmps-342-sdn kernel: found SMP MP-table at [mem 0x0009fbf0-0x0009fbff]
+Nov 01 23:22:05 cmps-342-sdn kernel: RAMDISK: [mem 0x2e42b000-0x3320cfff]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Early table checksum verification disabled
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: DSDT 0x00000000DFFF0310 002353 (v02 VBOX   VBOXBIOS 00000002 VBOX 0002AC8D)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: FACS 0x00000000DFFF0200 000040
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: FACS 0x00000000DFFF0200 000040
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: APIC 0x00000000DFFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: SSDT 0x00000000DFFF02B0 00005F (v01 VBOX   VBOXCPUT 00000002 VBOX 0002AC8D)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0310-0xdfff2662]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02ab]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02b0-0xdfff030e]
+Nov 01 23:22:05 cmps-342-sdn kernel: No NUMA configuration found
+Nov 01 23:22:05 cmps-342-sdn kernel: Faking a node at [mem 0x0000000000000000-0x000000019fffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: NODE_DATA(0) allocated [mem 0x19ffd1280-0x19fffbfff]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: PM-Timer IO Port: 0x4008
+Nov 01 23:22:05 cmps-342-sdn kernel: IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Max. logical packages:   1
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Max. logical nodes:      1
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Num. nodes per package:  1
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Max. logical dies:       1
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Max. dies per package:   1
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Max. threads per core:   1
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Num. cores per package:     4
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Num. threads per package:   4
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU topo: Allowing 4 present CPUs plus 0 hotplug CPUs
+Nov 01 23:22:05 cmps-342-sdn kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Nov 01 23:22:05 cmps-342-sdn kernel: PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x000fffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xffffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: [gap 0xe0000000-0xfebfffff] available for PCI devices
+Nov 01 23:22:05 cmps-342-sdn kernel: Booting paravirtualized kernel on KVM
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: Zone ranges:
+Nov 01 23:22:05 cmps-342-sdn kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel:   Normal   [mem 0x0000000100000000-0x000000019fffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel:   Device   empty
+Nov 01 23:22:05 cmps-342-sdn kernel: Movable zone start for each node
+Nov 01 23:22:05 cmps-342-sdn kernel: Early memory node ranges
+Nov 01 23:22:05 cmps-342-sdn kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Nov 01 23:22:05 cmps-342-sdn kernel:   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+Nov 01 23:22:05 cmps-342-sdn kernel:   node   0: [mem 0x0000000100000000-0x000000019fffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000019fffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+Nov 01 23:22:05 cmps-342-sdn kernel: On node 0, zone DMA: 97 pages in unavailable ranges
+Nov 01 23:22:05 cmps-342-sdn kernel: On node 0, zone Normal: 16 pages in unavailable ranges
+Nov 01 23:22:05 cmps-342-sdn kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+Nov 01 23:22:05 cmps-342-sdn kernel: percpu: Embedded 85 pages/cpu s225280 r8192 d114688 u524288
+Nov 01 23:22:05 cmps-342-sdn kernel: pcpu-alloc: s225280 r8192 d114688 u524288 alloc=1*2097152
+Nov 01 23:22:05 cmps-342-sdn kernel: pcpu-alloc: [0] 0 1 2 3 
+Nov 01 23:22:05 cmps-342-sdn kernel: kvm-guest: PV spinlocks enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: Kernel command line: BOOT_IMAGE=/boot/vmlinuz-7.0.0-42-generic root=UUID=f41b807b-5ddf-4d19-9f3c-0a88c6133ff7 ro quiet splash
+Nov 01 23:22:05 cmps-342-sdn kernel: Unknown kernel command line parameters "splash", will be passed to user space.
+Nov 01 23:22:05 cmps-342-sdn kernel: random: crng init done
+Nov 01 23:22:05 cmps-342-sdn kernel: printk: log buffer data + meta data: 262144 + 1114112 = 1376256 bytes
+Nov 01 23:22:05 cmps-342-sdn kernel: Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: software IO TLB: area num 4.
+Nov 01 23:22:05 cmps-342-sdn kernel: Fallback order for Node 0: 0 
+Nov 01 23:22:05 cmps-342-sdn kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1572750
+Nov 01 23:22:05 cmps-342-sdn kernel: Policy zone: Normal
+Nov 01 23:22:05 cmps-342-sdn kernel: mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+Nov 01 23:22:05 cmps-342-sdn kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Nov 01 23:22:05 cmps-342-sdn kernel: ftrace: allocating 64018 entries in 252 pages
+Nov 01 23:22:05 cmps-342-sdn kernel: ftrace: allocated 252 pages with 6 groups
+Nov 01 23:22:05 cmps-342-sdn kernel: Dynamic Preempt: lazy
+Nov 01 23:22:05 cmps-342-sdn kernel: rcu: Preemptible hierarchical RCU implementation.
+Nov 01 23:22:05 cmps-342-sdn kernel: rcu:         RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=4.
+Nov 01 23:22:05 cmps-342-sdn kernel:         Trampoline variant of Tasks RCU enabled.
+Nov 01 23:22:05 cmps-342-sdn kernel:         Rude variant of Tasks RCU enabled.
+Nov 01 23:22:05 cmps-342-sdn kernel:         Tracing variant of Tasks RCU enabled.
+Nov 01 23:22:05 cmps-342-sdn kernel: rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Nov 01 23:22:05 cmps-342-sdn kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Nov 01 23:22:05 cmps-342-sdn kernel: RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Nov 01 23:22:05 cmps-342-sdn kernel: RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Nov 01 23:22:05 cmps-342-sdn kernel: NR_IRQS: 524544, nr_irqs: 456, preallocated irqs: 16
+Nov 01 23:22:05 cmps-342-sdn kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: Console: colour VGA+ 80x25
+Nov 01 23:22:05 cmps-342-sdn kernel: printk: legacy console [tty0] enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Core revision 20251212
+Nov 01 23:22:05 cmps-342-sdn kernel: APIC: Switch to symmetric I/O mode setup
+Nov 01 23:22:05 cmps-342-sdn kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2a11290c0c8, max_idle_ns: 440795344938 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: Calibrating delay loop (skipped) preset value.. 5836.80 BogoMIPS (lpj=2918400)
+Nov 01 23:22:05 cmps-342-sdn kernel: Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+Nov 01 23:22:05 cmps-342-sdn kernel: Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+Nov 01 23:22:05 cmps-342-sdn kernel: mitigations: Enabled attack vectors: user_kernel, user_user, guest_host, guest_guest, SMT mitigations: auto
+Nov 01 23:22:05 cmps-342-sdn kernel: Speculative Store Bypass: Vulnerable
+Nov 01 23:22:05 cmps-342-sdn kernel: Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+Nov 01 23:22:05 cmps-342-sdn kernel: RETBleed: Mitigation: Enhanced IBRS
+Nov 01 23:22:05 cmps-342-sdn kernel: ITS: Mitigation: Aligned branch/return thunks
+Nov 01 23:22:05 cmps-342-sdn kernel: Register File Data Sampling: Mitigation: Clear Register File
+Nov 01 23:22:05 cmps-342-sdn kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Nov 01 23:22:05 cmps-342-sdn kernel: Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+Nov 01 23:22:05 cmps-342-sdn kernel: active return thunk: its_return_thunk
+Nov 01 23:22:05 cmps-342-sdn kernel: Spectre V2 : Spectre BHI mitigation: SW BHB clearing on syscall and VM exit
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Nov 01 23:22:05 cmps-342-sdn kernel: Freeing SMP alternatives memory: 56K
+Nov 01 23:22:05 cmps-342-sdn kernel: pid_max: default: 32768 minimum: 301
+Nov 01 23:22:05 cmps-342-sdn kernel: landlock: Up and running.
+Nov 01 23:22:05 cmps-342-sdn kernel: Yama: becoming mindful.
+Nov 01 23:22:05 cmps-342-sdn kernel: AppArmor: AppArmor initialized
+Nov 01 23:22:05 cmps-342-sdn kernel: AppArmor: AppArmor secmark mediation reserved: ready to be enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: LSM support for eBPF active
+Nov 01 23:22:05 cmps-342-sdn kernel: Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: VFS: Finished mounting rootfs on nullfs
+Nov 01 23:22:05 cmps-342-sdn kernel: APIC calibration not consistent with PM-Timer: 129ms instead of 100ms
+Nov 01 23:22:05 cmps-342-sdn kernel: APIC delta adjusted to PM-Timer: 6288632 (8123955)
+Nov 01 23:22:05 cmps-342-sdn kernel: smpboot: CPU0: 13th Gen Intel(R) Core(TM) i7-13620H (family: 0x6, model: 0xba, stepping: 0x2)
+Nov 01 23:22:05 cmps-342-sdn kernel: Performance Events: unsupported CPU family 6 model 186 no PMU driver, software events only.
+Nov 01 23:22:05 cmps-342-sdn kernel: signal: max sigframe size: 1776
+Nov 01 23:22:05 cmps-342-sdn kernel: rcu: Hierarchical SRCU implementation.
+Nov 01 23:22:05 cmps-342-sdn kernel: rcu:         Max phase no-delay instances is 400.
+Nov 01 23:22:05 cmps-342-sdn kernel: Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+Nov 01 23:22:05 cmps-342-sdn kernel: NMI watchdog: Perf NMI watchdog permanently disabled
+Nov 01 23:22:05 cmps-342-sdn kernel: smp: Bringing up secondary CPUs ...
+Nov 01 23:22:05 cmps-342-sdn kernel: smpboot: x86: Booting SMP configuration:
+Nov 01 23:22:05 cmps-342-sdn kernel: .... node  #0, CPUs:      #1 #2 #3
+Nov 01 23:22:05 cmps-342-sdn kernel: smp: Brought up 1 node, 4 CPUs
+Nov 01 23:22:05 cmps-342-sdn kernel: smpboot: Total of 4 processors activated (23347.20 BogoMIPS)
+Nov 01 23:22:05 cmps-342-sdn kernel: Memory: 4844660K/6291000K available (23261K kernel code, 4945K rwdata, 16652K rodata, 5436K init, 5724K bss, 1434476K reserved, 0K cma-reserved)
+Nov 01 23:22:05 cmps-342-sdn kernel: devtmpfs: initialized
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/mm: Memory block size: 128MB
+Nov 01 23:22:05 cmps-342-sdn kernel: posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+Nov 01 23:22:05 cmps-342-sdn kernel: PM: RTC time: 21:22:02, date: 2026-11-01
+Nov 01 23:22:05 cmps-342-sdn kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Nov 01 23:22:05 cmps-342-sdn kernel: DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+Nov 01 23:22:05 cmps-342-sdn kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Nov 01 23:22:05 cmps-342-sdn kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: initializing netlink subsys (disabled)
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=2000 audit(1793568129.238:1): state=initialized audit_enabled=0 res=1
+Nov 01 23:22:05 cmps-342-sdn kernel: thermal_sys: Registered thermal governor 'fair_share'
+Nov 01 23:22:05 cmps-342-sdn kernel: thermal_sys: Registered thermal governor 'bang_bang'
+Nov 01 23:22:05 cmps-342-sdn kernel: thermal_sys: Registered thermal governor 'step_wise'
+Nov 01 23:22:05 cmps-342-sdn kernel: thermal_sys: Registered thermal governor 'user_space'
+Nov 01 23:22:05 cmps-342-sdn kernel: thermal_sys: Registered thermal governor 'power_allocator'
+Nov 01 23:22:05 cmps-342-sdn kernel: cpuidle: using governor ladder
+Nov 01 23:22:05 cmps-342-sdn kernel: cpuidle: using governor menu
+Nov 01 23:22:05 cmps-342-sdn kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI: Using configuration type 1 for base access
+Nov 01 23:22:05 cmps-342-sdn kernel: mtrr: your CPUs had inconsistent variable MTRR settings
+Nov 01 23:22:05 cmps-342-sdn kernel: mtrr: probably your BIOS does not setup all CPUs.
+Nov 01 23:22:05 cmps-342-sdn kernel: mtrr: corrected configuration.
+Nov 01 23:22:05 cmps-342-sdn kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Nov 01 23:22:05 cmps-342-sdn kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Nov 01 23:22:05 cmps-342-sdn kernel: HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Added _OSI(Module Device)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Added _OSI(Processor Device)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: \_SB_: platform _OSC: OS support mask [006e7eff]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Interpreter enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: PM: (supports S0 S5)
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Using IOAPIC for interrupt routing
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI: Using E820 reservations for host bridge windows
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Nov 01 23:22:05 cmps-342-sdn kernel: acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI EDR HPX-Type3]
+Nov 01 23:22:05 cmps-342-sdn kernel: acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Nov 01 23:22:05 cmps-342-sdn kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended configuration space under this bridge
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI host bridge to bus 0000:00
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:00.0: [8086:1237] type 00 class 0x060000 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:01.0: [8086:7000] type 00 class 0x060100 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:01.1: BAR 4 [io  0xd000-0xd00f]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:01.1: BAR 0 [io  0x01f0-0x01f7]: legacy IDE quirk
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:01.1: BAR 1 [io  0x03f6]: legacy IDE quirk
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:01.1: BAR 2 [io  0x0170-0x0177]: legacy IDE quirk
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:01.1: BAR 3 [io  0x0376]: legacy IDE quirk
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: BAR 0 [io  0xd010-0xd01f]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: BAR 1 [mem 0xe0000000-0xe0ffffff pref]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: BAR 2 [mem 0xf0000000-0xf01fffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:03.0: [8086:100e] type 00 class 0x020000 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:03.0: BAR 0 [mem 0xf0200000-0xf021ffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:03.0: BAR 2 [io  0xd020-0xd027]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:04.0: BAR 0 [io  0xd040-0xd05f]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:04.0: BAR 1 [mem 0xf0400000-0xf07fffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:04.0: BAR 2 [mem 0xf0800000-0xf0803fff pref]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:05.0: [8086:2415] type 00 class 0x040100 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:05.0: BAR 0 [io  0xd100-0xd1ff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:05.0: BAR 1 [io  0xd200-0xd23f]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:06.0: BAR 0 [mem 0xf0804000-0xf0804fff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:07.0: [8086:7113] type 00 class 0x068000 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0b.0: [8086:265c] type 00 class 0x0c0320 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0b.0: BAR 0 [mem 0xf0805000-0xf0805fff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601 conventional PCI endpoint
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0d.0: BAR 0 [io  0xd240-0xd247]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0d.0: BAR 1 [io  0xd248-0xd24b]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0d.0: BAR 2 [io  0xd250-0xd257]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0d.0: BAR 3 [io  0xd258-0xd25b]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0d.0: BAR 4 [io  0xd260-0xd26f]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:0d.0: BAR 5 [mem 0xf0806000-0xf0807fff]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Nov 01 23:22:05 cmps-342-sdn kernel: iommu: Default domain type: Translated
+Nov 01 23:22:05 cmps-342-sdn kernel: iommu: DMA domain TLB invalidation policy: lazy mode
+Nov 01 23:22:05 cmps-342-sdn kernel: SCSI subsystem initialized
+Nov 01 23:22:05 cmps-342-sdn kernel: libata version 3.00 loaded.
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: bus type USB registered
+Nov 01 23:22:05 cmps-342-sdn kernel: usbcore: registered new interface driver usbfs
+Nov 01 23:22:05 cmps-342-sdn kernel: usbcore: registered new interface driver hub
+Nov 01 23:22:05 cmps-342-sdn kernel: usbcore: registered new device driver usb
+Nov 01 23:22:05 cmps-342-sdn kernel: pps_core: LinuxPPS API ver. 1 registered
+Nov 01 23:22:05 cmps-342-sdn kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Nov 01 23:22:05 cmps-342-sdn kernel: PTP clock support registered
+Nov 01 23:22:05 cmps-342-sdn kernel: EDAC MC: Ver: 3.0.0
+Nov 01 23:22:05 cmps-342-sdn kernel: NetLabel: Initializing
+Nov 01 23:22:05 cmps-342-sdn kernel: NetLabel:  domain hash size = 128
+Nov 01 23:22:05 cmps-342-sdn kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Nov 01 23:22:05 cmps-342-sdn kernel: NetLabel:  unlabeled traffic allowed by default
+Nov 01 23:22:05 cmps-342-sdn kernel: mctp: management component transport protocol core
+Nov 01 23:22:05 cmps-342-sdn kernel: NET: Registered PF_MCTP protocol family
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI: Using ACPI for IRQ routing
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI: pci_cache_line_size set to 64 bytes
+Nov 01 23:22:05 cmps-342-sdn kernel: e820: register RAM buffer resource [mem 0x0009fc00-0x0009ffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: e820: register RAM buffer resource [mem 0xdfff0000-0xdfffffff]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: vgaarb: bridge control possible
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Nov 01 23:22:05 cmps-342-sdn kernel: vgaarb: loaded
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: Switched to clocksource kvm-clock
+Nov 01 23:22:05 cmps-342-sdn kernel: VFS: Disk quotas dquot_6.6.0
+Nov 01 23:22:05 cmps-342-sdn kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Nov 01 23:22:05 cmps-342-sdn kernel: AppArmor: AppArmor Filesystem Enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: pnp: PnP ACPI init
+Nov 01 23:22:05 cmps-342-sdn kernel: pnp: PnP ACPI: found 2 devices
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: NET: Registered PF_INET protocol family
+Nov 01 23:22:05 cmps-342-sdn kernel: IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: TCP: Hash tables configured (established 65536 bind 65536)
+Nov 01 23:22:05 cmps-342-sdn kernel: MPTCP token hash table entries: 8192 (order: 6, 196608 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: UDP hash table entries: 4096 (order: 6, 262144 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: UDP-Lite hash table entries: 4096 (order: 6, 262144 bytes, linear)
+Nov 01 23:22:05 cmps-342-sdn kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Nov 01 23:22:05 cmps-342-sdn kernel: NET: Registered PF_XDP protocol family
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+Nov 01 23:22:05 cmps-342-sdn kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI: CLS 0 bytes, default 64
+Nov 01 23:22:05 cmps-342-sdn kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Nov 01 23:22:05 cmps-342-sdn kernel: software IO TLB: mapped [mem 0x00000000dbff0000-0x00000000dfff0000] (64MB)
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2a11290c0c8, max_idle_ns: 440795344938 ns
+Nov 01 23:22:05 cmps-342-sdn kernel: clocksource: Switched to clocksource tsc
+Nov 01 23:22:05 cmps-342-sdn kernel: platform rtc_cmos: registered platform RTC device (no PNP device found)
+Nov 01 23:22:05 cmps-342-sdn kernel: Trying to unpack rootfs image as initramfs...
+Nov 01 23:22:05 cmps-342-sdn kernel: Initialise system trusted keyrings
+Nov 01 23:22:05 cmps-342-sdn kernel: Key type blacklist registered
+Nov 01 23:22:05 cmps-342-sdn kernel: workingset: timestamp_bits=36 max_order=21 bucket_order=0
+Nov 01 23:22:05 cmps-342-sdn kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Nov 01 23:22:05 cmps-342-sdn kernel: fuse: init (API version 7.45)
+Nov 01 23:22:05 cmps-342-sdn kernel: integrity: Platform Keyring initialized
+Nov 01 23:22:05 cmps-342-sdn kernel: integrity: Machine keyring initialized
+Nov 01 23:22:05 cmps-342-sdn kernel: Key type asymmetric registered
+Nov 01 23:22:05 cmps-342-sdn kernel: Asymmetric key parser 'x509' registered
+Nov 01 23:22:05 cmps-342-sdn kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+Nov 01 23:22:05 cmps-342-sdn kernel: io scheduler mq-deadline registered
+Nov 01 23:22:05 cmps-342-sdn kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: AC: AC Adapter [AC] (on-line)
+Nov 01 23:22:05 cmps-342-sdn kernel: input: Power Button as /devices/platform/LNXPWRBN:00/input/input0
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: button: Power Button [PWRF]
+Nov 01 23:22:05 cmps-342-sdn kernel: input: Sleep Button as /devices/platform/LNXSLPBN:00/input/input1
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: button: Sleep Button [SLPF]
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: battery: Slot [BAT0] (battery present)
+Nov 01 23:22:05 cmps-342-sdn kernel: Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: Linux agpgart interface v0.103
+Nov 01 23:22:05 cmps-342-sdn kernel: loop: module loaded
+Nov 01 23:22:05 cmps-342-sdn kernel: scsi host0: ata_piix
+Nov 01 23:22:05 cmps-342-sdn kernel: scsi host1: ata_piix
+Nov 01 23:22:05 cmps-342-sdn kernel: ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14 lpm-pol 0
+Nov 01 23:22:05 cmps-342-sdn kernel: ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15 lpm-pol 0
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: bus type drm_connector registered
+Nov 01 23:22:05 cmps-342-sdn kernel: tun: Universal TUN/TAP device driver, 1.6
+Nov 01 23:22:05 cmps-342-sdn kernel: PPP generic driver version 2.4.2
+Nov 01 23:22:05 cmps-342-sdn kernel: ohci-pci 0000:00:06.0: OHCI PCI host controller
+Nov 01 23:22:05 cmps-342-sdn kernel: ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+Nov 01 23:22:05 cmps-342-sdn kernel: ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 7.00
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb1: Product: OHCI PCI host controller
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb1: Manufacturer: Linux 7.0.0-42-generic ohci_hcd
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb1: SerialNumber: 0000:00:06.0
+Nov 01 23:22:05 cmps-342-sdn kernel: hub 1-0:1.0: USB hub found
+Nov 01 23:22:05 cmps-342-sdn kernel: hub 1-0:1.0: 12 ports detected
+Nov 01 23:22:05 cmps-342-sdn kernel: i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Nov 01 23:22:05 cmps-342-sdn kernel: ehci-pci 0000:00:0b.0: EHCI Host Controller
+Nov 01 23:22:05 cmps-342-sdn kernel: ehci-pci 0000:00:0b.0: new USB bus registered, assigned bus number 2
+Nov 01 23:22:05 cmps-342-sdn kernel: ehci-pci 0000:00:0b.0: irq 19, io mem 0xf0805000
+Nov 01 23:22:05 cmps-342-sdn kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Nov 01 23:22:05 cmps-342-sdn kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Nov 01 23:22:05 cmps-342-sdn kernel: mousedev: PS/2 mouse device common for all mice
+Nov 01 23:22:05 cmps-342-sdn kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+Nov 01 23:22:05 cmps-342-sdn kernel: rtc_cmos rtc_cmos: registered as rtc0
+Nov 01 23:22:05 cmps-342-sdn kernel: rtc_cmos rtc_cmos: setting system clock to 2026-11-01T21:22:02 UTC (1793568122)
+Nov 01 23:22:05 cmps-342-sdn kernel: rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Nov 01 23:22:05 cmps-342-sdn kernel: i2c_dev: i2c /dev entries driver
+Nov 01 23:22:05 cmps-342-sdn kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+Nov 01 23:22:05 cmps-342-sdn kernel: device-mapper: uevent: version 1.0.3
+Nov 01 23:22:05 cmps-342-sdn kernel: device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+Nov 01 23:22:05 cmps-342-sdn kernel: intel_pstate: CPU model not supported
+Nov 01 23:22:05 cmps-342-sdn kernel: drop_monitor: Initializing network drop monitor service
+Nov 01 23:22:05 cmps-342-sdn kernel: NET: Registered PF_INET6 protocol family
+Nov 01 23:22:05 cmps-342-sdn kernel: ehci-pci 0000:00:0b.0: USB 2.0 started, EHCI 1.00
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.00
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb2: Product: EHCI Host Controller
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb2: Manufacturer: Linux 7.0.0-42-generic ehci_hcd
+Nov 01 23:22:05 cmps-342-sdn kernel: usb usb2: SerialNumber: 0000:00:0b.0
+Nov 01 23:22:05 cmps-342-sdn kernel: hub 2-0:1.0: USB hub found
+Nov 01 23:22:05 cmps-342-sdn kernel: hub 2-0:1.0: 12 ports detected
+Nov 01 23:22:05 cmps-342-sdn kernel: Segment Routing with IPv6
+Nov 01 23:22:05 cmps-342-sdn kernel: In-situ OAM (IOAM) with IPv6
+Nov 01 23:22:05 cmps-342-sdn kernel: NET: Registered PF_PACKET protocol family
+Nov 01 23:22:05 cmps-342-sdn kernel: Key type dns_resolver registered
+Nov 01 23:22:05 cmps-342-sdn kernel: IPI shorthand broadcast: enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: sched_clock: Marking stable (807049182, 35292762)->(859073293, -16731349)
+Nov 01 23:22:05 cmps-342-sdn kernel: registered taskstats version 1
+Nov 01 23:22:05 cmps-342-sdn kernel: Loading compiled-in X.509 certificates
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Build time autogenerated kernel key: 4577687626f07d20ebf7bb300bf1b3dcb9d4195f'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Live Patch Signing 2025 Kmod: d541cef61dc7e793b7eb7e899970a2eef0b5dc8c'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing 2025 Kmod: 4627603d2357a2a3f81006370894c221175893e9'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+Nov 01 23:22:05 cmps-342-sdn kernel: blacklist: Loading compiled-in revocation X.509 certificates
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+Nov 01 23:22:05 cmps-342-sdn kernel: Demotion targets for Node 0: null
+Nov 01 23:22:05 cmps-342-sdn kernel: Key type .fscrypt registered
+Nov 01 23:22:05 cmps-342-sdn kernel: Key type fscrypt-provisioning registered
+Nov 01 23:22:05 cmps-342-sdn kernel: Key type big_key registered
+Nov 01 23:22:05 cmps-342-sdn kernel: ata1.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Nov 01 23:22:05 cmps-342-sdn kernel: scsi 0:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Nov 01 23:22:05 cmps-342-sdn kernel: sr 0:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Nov 01 23:22:05 cmps-342-sdn kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Nov 01 23:22:05 cmps-342-sdn kernel: sr 0:0:0:0: Attached scsi CD-ROM sr0
+Nov 01 23:22:05 cmps-342-sdn kernel: sr 0:0:0:0: Attached scsi generic sg0 type 5
+Nov 01 23:22:05 cmps-342-sdn kernel: Freeing initrd memory: 79752K
+Nov 01 23:22:05 cmps-342-sdn kernel: Key type encrypted registered
+Nov 01 23:22:05 cmps-342-sdn kernel: AppArmor: AppArmor sha256 policy hashing enabled
+Nov 01 23:22:05 cmps-342-sdn kernel: ima: No TPM chip found, activating TPM-bypass!
+Nov 01 23:22:05 cmps-342-sdn kernel: Loading compiled-in module X.509 certificates
+Nov 01 23:22:05 cmps-342-sdn kernel: Loaded X.509 cert 'Build time autogenerated kernel key: 4577687626f07d20ebf7bb300bf1b3dcb9d4195f'
+Nov 01 23:22:05 cmps-342-sdn kernel: ima: Allocated hash algorithm: sha256
+Nov 01 23:22:05 cmps-342-sdn kernel: ima: No architecture policies found
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: Initialising EVM extended attributes:
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.selinux
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.SMACK64
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.SMACK64EXEC
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.SMACK64TRANSMUTE
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.SMACK64MMAP
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.apparmor
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.ima
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: security.capability
+Nov 01 23:22:05 cmps-342-sdn kernel: evm: HMAC attrs: 0x1
+Nov 01 23:22:05 cmps-342-sdn kernel: PM:   Magic number: 2:158:398
+Nov 01 23:22:05 cmps-342-sdn kernel: RAS: Correctable Errors collector initialized.
+Nov 01 23:22:05 cmps-342-sdn kernel: clk: Disabling unused clocks
+Nov 01 23:22:05 cmps-342-sdn kernel: PM: genpd: Disabling unused power domains
+Nov 01 23:22:05 cmps-342-sdn kernel: Freeing unused decrypted memory: 2028K
+Nov 01 23:22:05 cmps-342-sdn kernel: Freeing unused kernel image (initmem) memory: 5436K
+Nov 01 23:22:05 cmps-342-sdn kernel: Write protecting the kernel read-only data: 43008k
+Nov 01 23:22:05 cmps-342-sdn kernel: Freeing unused kernel image (text/rodata gap) memory: 1312K
+Nov 01 23:22:05 cmps-342-sdn kernel: Freeing unused kernel image (rodata/data gap) memory: 1780K
+Nov 01 23:22:05 cmps-342-sdn kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Nov 01 23:22:05 cmps-342-sdn kernel: Run /init as init process
+Nov 01 23:22:05 cmps-342-sdn kernel:   with arguments:
+Nov 01 23:22:05 cmps-342-sdn kernel:     /init
+Nov 01 23:22:05 cmps-342-sdn kernel:     splash
+Nov 01 23:22:05 cmps-342-sdn kernel:   with environment:
+Nov 01 23:22:05 cmps-342-sdn kernel:     HOME=/
+Nov 01 23:22:05 cmps-342-sdn kernel:     TERM=linux
+Nov 01 23:22:05 cmps-342-sdn kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Nov 01 23:22:05 cmps-342-sdn kernel: input: Video Bus as /devices/pci0000:00/acpi.video_bus.0/input/input4
+Nov 01 23:22:05 cmps-342-sdn kernel: ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Nov 01 23:22:05 cmps-342-sdn kernel: ahci 0000:00:0d.0: AHCI vers 0001.0100, 32 command slots, 3 Gbps, SATA mode
+Nov 01 23:22:05 cmps-342-sdn kernel: ahci 0000:00:0d.0: 1/1 ports implemented (port mask 0x1)
+Nov 01 23:22:05 cmps-342-sdn kernel: ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Nov 01 23:22:05 cmps-342-sdn kernel: scsi host2: ahci
+Nov 01 23:22:05 cmps-342-sdn kernel: ata3: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21 lpm-pol 1
+Nov 01 23:22:05 cmps-342-sdn kernel: e1000: Intel(R) PRO/1000 Network Driver
+Nov 01 23:22:05 cmps-342-sdn kernel: e1000: Copyright (c) 1999-2006 Intel Corporation.
+Nov 01 23:22:05 cmps-342-sdn kernel: usb 1-1: new full-speed USB device number 2 using ohci-pci
+Nov 01 23:22:05 cmps-342-sdn kernel: input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Nov 01 23:22:05 cmps-342-sdn kernel: ata3: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Nov 01 23:22:05 cmps-342-sdn kernel: ata3.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Nov 01 23:22:05 cmps-342-sdn kernel: ata3.00: 83886080 sectors, multi 128: LBA48 NCQ (depth 32)
+Nov 01 23:22:05 cmps-342-sdn kernel: ata3.00: configured for UDMA/133
+Nov 01 23:22:05 cmps-342-sdn kernel: scsi 2:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Nov 01 23:22:05 cmps-342-sdn kernel: sd 2:0:0:0: [sda] 83886080 512-byte logical blocks: (42.9 GB/40.0 GiB)
+Nov 01 23:22:05 cmps-342-sdn kernel: sd 2:0:0:0: [sda] Write Protect is off
+Nov 01 23:22:05 cmps-342-sdn kernel: sd 2:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Nov 01 23:22:05 cmps-342-sdn kernel: sd 2:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Nov 01 23:22:05 cmps-342-sdn kernel: sd 2:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+Nov 01 23:22:05 cmps-342-sdn kernel: sd 2:0:0:0: Attached scsi generic sg1 type 0
+Nov 01 23:22:05 cmps-342-sdn kernel:  sda: sda1 sda2
+Nov 01 23:22:05 cmps-342-sdn kernel: sd 2:0:0:0: [sda] Attached SCSI disk
+Nov 01 23:22:05 cmps-342-sdn kernel: usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Nov 01 23:22:05 cmps-342-sdn kernel: usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Nov 01 23:22:05 cmps-342-sdn kernel: usb 1-1: Product: USB Tablet
+Nov 01 23:22:05 cmps-342-sdn kernel: usb 1-1: Manufacturer: VirtualBox
+Nov 01 23:22:05 cmps-342-sdn kernel: hid: raw HID events driver (C) Jiri Kosina
+Nov 01 23:22:05 cmps-342-sdn kernel: usbcore: registered new interface driver usbhid
+Nov 01 23:22:05 cmps-342-sdn kernel: usbhid: USB HID core driver
+Nov 01 23:22:05 cmps-342-sdn kernel: input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
+Nov 01 23:22:05 cmps-342-sdn kernel: hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Nov 01 23:22:05 cmps-342-sdn kernel: e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:62:02:f3
+Nov 01 23:22:05 cmps-342-sdn kernel: e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Nov 01 23:22:05 cmps-342-sdn kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+Nov 01 23:22:05 cmps-342-sdn kernel: EXT4-fs (sda2): mounted filesystem f41b807b-5ddf-4d19-9f3c-0a88c6133ff7 ro with ordered data mode. Quota mode: none.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Inserted module 'autofs4'
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: systemd 255.4-1ubuntu8.18 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Detected virtualization oracle.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Detected architecture x86-64.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Hostname set to <cmps-342-sdn>.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Queued start job for default target graphical.target.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Created slice user.slice - User and Session Slice.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Reached target remote-fs.target - Remote File Systems.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Reached target slices.target - Slice Units.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Reached target time-set.target - System Time Set.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on syslog.socket - Syslog Socket.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: systemd-pcrextend.socket - TPM2 PCR Extension (Varlink) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting systemd-journald.service - Journal Service...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+Nov 01 23:22:05 cmps-342-sdn systemd-journald[274]: Collecting audit messages is disabled.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: modprobe@drm.service: Deactivated successfully.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: modprobe@loop.service: Deactivated successfully.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+Nov 01 23:22:05 cmps-342-sdn systemd[1]: Started systemd-journald.service - Journal Service.
+Nov 01 23:22:05 cmps-342-sdn kernel: EXT4-fs (sda2): re-mounted f41b807b-5ddf-4d19-9f3c-0a88c6133ff7 r/w.
+Nov 01 23:22:05 cmps-342-sdn kernel: lp: driver loaded but no devices found
+Nov 01 23:22:05 cmps-342-sdn kernel: ppdev: user-space parallel port driver
+Nov 01 23:22:05 cmps-342-sdn kernel: Adding 4194300k swap on /swap.img.  Priority:-1 extents:4 across:4464636k 
+Nov 01 23:22:05 cmps-342-sdn systemd-journald[274]: Received client request to flush runtime journal.
+Nov 01 23:22:05 cmps-342-sdn systemd-journald[274]: File /var/log/journal/14ad899da24647679d1f8eca654d56a6/system.journal corrupted or uncleanly shut down, renaming and replacing.
+Nov 01 23:22:05 cmps-342-sdn kernel: loop0: detected capacity change from 0 to 8
+Nov 01 23:22:05 cmps-342-sdn kernel: loop1: detected capacity change from 0 to 534192
+Nov 01 23:22:05 cmps-342-sdn kernel: loop2: detected capacity change from 0 to 136784
+Nov 01 23:22:05 cmps-342-sdn kernel: loop3: detected capacity change from 0 to 187776
+Nov 01 23:22:05 cmps-342-sdn kernel: loop4: detected capacity change from 0 to 1258560
+Nov 01 23:22:05 cmps-342-sdn kernel: loop5: detected capacity change from 0 to 1656
+Nov 01 23:22:05 cmps-342-sdn kernel: loop6: detected capacity change from 0 to 823256
+Nov 01 23:22:05 cmps-342-sdn kernel: loop7: detected capacity change from 0 to 33792
+Nov 01 23:22:05 cmps-342-sdn kernel: loop8: detected capacity change from 0 to 24184
+Nov 01 23:22:05 cmps-342-sdn kernel: loop9: detected capacity change from 0 to 102952
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.414:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=384 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.415:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=386 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.415:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=385 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.416:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=387 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.417:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=392 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.417:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=394 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.418:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=393 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.420:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-run" pid=397 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: audit: type=1400 audit(1793568125.420:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="chrome" pid=398 comm="apparmor_parser"
+Nov 01 23:22:05 cmps-342-sdn kernel: vboxguest: loading out-of-tree module taints kernel.
+Nov 01 23:22:05 cmps-342-sdn kernel: vboxguest: module verification failed: signature and/or required key missing - tainting kernel
+Nov 01 23:22:05 cmps-342-sdn kernel: piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: vgaarb: deactivate vga console
+Nov 01 23:22:05 cmps-342-sdn kernel: Console: switching to colour dummy device 80x25
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] FIFO at 0x00000000f0000000 size is 2048 KiB
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] VRAM at 0x00000000e0000000 size is 16384 KiB
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Running on SVGA version 2.
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Capabilities: rect copy, cursor, cursor bypass, cursor bypass 2, alpha cursor, extended fifo, pitchlock, irq mask, gmr, traces, gmr2, screen object 2, command buffers, command buffers 2, gbobject, cap2 register, 
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Capabilities2: cursor mob, 
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* vmwgfx seems to be running on an unsupported hypervisor.
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* This configuration is likely broken.
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* Please switch to a supported graphics device to avoid problems.
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] DMA map mode: Caching DMA mappings.
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Legacy memory limits: VRAM = 16384 KiB, FIFO = 2048 KiB, surface = 507904 KiB
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] MOB limits: max mob size = 1048576 KiB, max mob pages = 262144
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Max GMR ids is 8192
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Max number of GMR pages is 1048576
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Maximum display memory size is 16384 KiB
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Screen Target display unit initialized
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Using command buffers with DMA pool.
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] Available shader model: Legacy.
+Nov 01 23:22:05 cmps-342-sdn kernel: RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 335544320 ms ovfl timer
+Nov 01 23:22:05 cmps-342-sdn kernel: [drm] Initialized vmwgfx 2.21.0 for 0000:00:02.0 on minor 0
+Nov 01 23:22:05 cmps-342-sdn kernel: Console: switching to colour frame buffer device 160x50
+Nov 01 23:22:05 cmps-342-sdn kernel: vmwgfx 0000:00:02.0: [drm] fb0: vmwgfxdrmfb frame buffer device
+Nov 01 23:22:05 cmps-342-sdn kernel: rtR0InitNative: g_pLnxInitMm=00000000766680ac
+Nov 01 23:22:05 cmps-342-sdn kernel: vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
+Nov 01 23:22:05 cmps-342-sdn kernel: Host supports full mouse state reporting, switching to extended mouse integration protocol
+Nov 01 23:22:05 cmps-342-sdn kernel: input: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input7
+Nov 01 23:22:05 cmps-342-sdn kernel: vboxguest: Successfully loaded version 7.2.22 r175245
+Nov 01 23:22:05 cmps-342-sdn kernel: vboxguest: misc device minor 262, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)
+Nov 01 23:22:05 cmps-342-sdn kernel: vboxguest: Successfully loaded version 7.2.22 r175245 (interface 0x00010004)
+Nov 01 23:22:05 cmps-342-sdn kernel: ------------[ cut here ]------------
+Nov 01 23:22:05 cmps-342-sdn kernel: WARNING: kernel/rcu/tree_plugin.h:823 at rcu_sched_clock_irq+0x394/0x3a0, CPU#2: (udev-worker)/545
+Nov 01 23:22:05 cmps-342-sdn kernel: Modules linked in: intel_pmc_ssram_telemetry(+) snd_seq_midi(+) nsh nf_conncount snd_seq_midi_event nf_nat intel_vsec snd_rawmidi nf_conntrack snd_seq ghash_clmulni_intel snd_seq_device nf_defrag_ipv6 aesni_intel nf_defrag_ipv4 rapl psample snd_timer i2c_piix4 vmwgfx snd vboxguest(OE) drm_ttm_helper ttm i2c_smbus soundcore joydev input_leds serio_raw mac_hid sch_fq_codel msr parport_pc ppdev lp parport efi_pstore nfnetlink dmi_sysfs ip_tables x_tables autofs4 hid_generic usbhid hid vga16fb vgastate psmouse e1000 ahci video pata_acpi wmi libahci
+Nov 01 23:22:05 cmps-342-sdn kernel: CPU: 2 UID: 0 PID: 545 Comm: (udev-worker) Tainted: G           OE       7.0.0-42-generic #42~24.04.1-Ubuntu PREEMPT(lazy) 
+Nov 01 23:22:05 cmps-342-sdn kernel: Tainted: [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+Nov 01 23:22:05 cmps-342-sdn kernel: Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Nov 01 23:22:05 cmps-342-sdn kernel: RIP: 0010:rcu_sched_clock_irq+0x394/0x3a0
+Nov 01 23:22:05 cmps-342-sdn kernel: Code: 02 8b 80 a8 f4 e4 bb a8 04 0f 84 a3 fe ff ff e9 8d fe ff ff 48 8b 03 a8 10 75 ca be 04 00 00 00 48 89 df e8 1e d6 f4 ff eb bb <0f> 0b e9 01 fd ff ff 0f 1f 44 00 00 90 90 90 90 90 90 90 90 90 90
+Nov 01 23:22:05 cmps-342-sdn kernel: RSP: 0018:ffffcc7e00134e80 EFLAGS: 00010086
+Nov 01 23:22:05 cmps-342-sdn kernel: RAX: 00000000ffffffff RBX: ffff89978a592a80 RCX: 0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: RDX: 0000000000000000 RSI: ffffffffba9ba93c RDI: 0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: RBP: ffffcc7e00134ea0 R08: 0000000000000000 R09: 0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: R13: 0000000000000000 R14: 0000000000000002 R15: ffff899819d21ac0
+Nov 01 23:22:05 cmps-342-sdn kernel: FS:  0000710fb347b8c0(0000) GS:ffff89985dede000(0000) knlGS:0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+Nov 01 23:22:05 cmps-342-sdn kernel: CR2: 00005ce9c47a5c58 CR3: 000000010a4f2002 CR4: 00000000000706f0
+Nov 01 23:22:05 cmps-342-sdn kernel: Call Trace:
+Nov 01 23:22:05 cmps-342-sdn kernel:  <IRQ>
+Nov 01 23:22:05 cmps-342-sdn kernel:  update_process_times+0x72/0xd0
+Nov 01 23:22:05 cmps-342-sdn kernel:  tick_nohz_handler+0x97/0x1b0
+Nov 01 23:22:05 cmps-342-sdn kernel:  ? __pfx_tick_nohz_handler+0x10/0x10
+Nov 01 23:22:05 cmps-342-sdn kernel:  __hrtimer_run_queues+0x107/0x270
+Nov 01 23:22:05 cmps-342-sdn kernel:  hrtimer_interrupt+0x104/0x260
+Nov 01 23:22:05 cmps-342-sdn kernel:  __sysvec_apic_timer_interrupt+0x56/0x160
+Nov 01 23:22:05 cmps-342-sdn kernel:  sysvec_apic_timer_interrupt+0x9b/0xc0
+Nov 01 23:22:05 cmps-342-sdn kernel:  </IRQ>
+Nov 01 23:22:05 cmps-342-sdn kernel:  <TASK>
+Nov 01 23:22:05 cmps-342-sdn kernel:  asm_sysvec_apic_timer_interrupt+0x1b/0x20
+Nov 01 23:22:05 cmps-342-sdn kernel: RIP: 0010:__memcg_slab_free_hook+0xbf/0x170
+Nov 01 23:22:05 cmps-342-sdn kernel: Code: 1f 0f 87 78 bb a0 ff d3 e8 44 01 c8 41 80 fc 1f 0f 87 94 bb a0 ff 44 89 e1 d3 e8 41 0f af 45 2c 48 8b 7d d0 48 01 f8 4c 8b 20 <4d> 85 e4 74 52 48 c7 00 00 00 00 00 49 8b 45 00 31 d2 8d 73 08 41
+Nov 01 23:22:05 cmps-342-sdn kernel: RSP: 0018:ffffcc7e011df938 EFLAGS: 00010286
+Nov 01 23:22:05 cmps-342-sdn kernel: RAX: ffff899782eeb500 RBX: 0000000000000100 RCX: 0000000000000007
+Nov 01 23:22:05 cmps-342-sdn kernel: RDX: 0000000000000001 RSI: fffff6f0840c3c80 RDI: ffff899782eeb500
+Nov 01 23:22:05 cmps-342-sdn kernel: RBP: ffffcc7e011df980 R08: ffff899782eeb500 R09: 0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: R10: ffff8997830f2000 R11: ffff8997830f2b00 R12: 0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: R13: fffff6f0840c3c80 R14: ffff899780f9a400 R15: ffffcc7e011df9a0
+Nov 01 23:22:05 cmps-342-sdn kernel:  ? kfree_skbmem+0x7d/0xa0
+Nov 01 23:22:05 cmps-342-sdn kernel:  kmem_cache_free+0x2ec/0x390
+Nov 01 23:22:05 cmps-342-sdn kernel:  kfree_skbmem+0x7d/0xa0
+Nov 01 23:22:05 cmps-342-sdn kernel:  sk_skb_reason_drop+0x5d/0x170
+Nov 01 23:22:05 cmps-342-sdn kernel:  do_one_broadcast+0x225/0x3c0
+Nov 01 23:22:05 cmps-342-sdn kernel:  netlink_broadcast_filtered+0x11d/0x1e0
+Nov 01 23:22:05 cmps-342-sdn kernel:  netlink_sendmsg+0x35c/0x470
+Nov 01 23:22:05 cmps-342-sdn kernel:  ____sys_sendmsg+0x32b/0x350
+Nov 01 23:22:05 cmps-342-sdn kernel:  ___sys_sendmsg+0x99/0xf0
+Nov 01 23:22:05 cmps-342-sdn kernel:  __sys_sendmsg+0x8c/0x100
+Nov 01 23:22:05 cmps-342-sdn kernel:  __x64_sys_sendmsg+0x1d/0x30
+Nov 01 23:22:05 cmps-342-sdn kernel:  x64_sys_call+0x25cc/0x26e0
+Nov 01 23:22:05 cmps-342-sdn kernel:  do_syscall_64+0xd9/0x5a0
+Nov 01 23:22:05 cmps-342-sdn kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0xd/0xe0
+Nov 01 23:22:05 cmps-342-sdn kernel:  ? do_syscall_64+0x116/0x5a0
+Nov 01 23:22:05 cmps-342-sdn kernel:  ? arch_exit_to_user_mode_prepare.isra.0+0xd/0x100
+Nov 01 23:22:05 cmps-342-sdn kernel:  ? irqentry_exit+0x9d/0x640
+Nov 01 23:22:05 cmps-342-sdn kernel:  ? clear_bhb_loop+0x70/0xc0
+Nov 01 23:22:05 cmps-342-sdn kernel:  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+Nov 01 23:22:05 cmps-342-sdn kernel: RIP: 0033:0x710fb332c294
+Nov 01 23:22:05 cmps-342-sdn kernel: Code: 15 89 7b 0d 00 f7 d8 64 89 02 b8 ff ff ff ff eb bf 0f 1f 44 00 00 f3 0f 1e fa 80 3d b5 fd 0d 00 00 74 13 b8 2e 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 4c c3 0f 1f 00 55 48 89 e5 48 83 ec 20 89 55
+Nov 01 23:22:05 cmps-342-sdn kernel: RSP: 002b:00007fff2afb1b08 EFLAGS: 00000202 ORIG_RAX: 000000000000002e
+Nov 01 23:22:05 cmps-342-sdn kernel: RAX: ffffffffffffffda RBX: 00005ce9c47948f0 RCX: 0000710fb332c294
+Nov 01 23:22:05 cmps-342-sdn kernel: RDX: 0000000000000000 RSI: 00007fff2afb1b40 RDI: 0000000000000024
+Nov 01 23:22:05 cmps-342-sdn kernel: RBP: 00007fff2afb1c90 R08: 0000000000000000 R09: 0000000000000007
+Nov 01 23:22:05 cmps-342-sdn kernel: R10: 00005ce9c4794960 R11: 0000000000000202 R12: 0000000000000000
+Nov 01 23:22:05 cmps-342-sdn kernel: R13: 00005ce9c47c2080 R14: 00007fff2afb1d40 R15: 00007fff2afb1bd0
+Nov 01 23:22:05 cmps-342-sdn kernel:  </TASK>
+Nov 01 23:22:05 cmps-342-sdn kernel: ---[ end trace 0000000000000000 ]---
+Nov 01 23:22:06 cmps-342-sdn kernel: openvswitch: Open vSwitch switching datapath
+Nov 01 23:22:06 cmps-342-sdn kernel: intel_rapl_msr: PL4 support detected.
+Nov 01 23:22:06 cmps-342-sdn kernel: snd_intel8x0 0000:00:05.0: allow list rate for 1028:0177 is 48000
+Nov 01 23:22:07 cmps-342-sdn kernel: NET: Registered PF_QIPCRTR protocol family
+Nov 01 23:22:07 cmps-342-sdn kernel: kauditd_printk_skb: 148 callbacks suppressed
+Nov 01 23:22:07 cmps-342-sdn kernel: audit: type=1400 audit(1793568127.261:159): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=1232 comm="apparmor_parser"
+Nov 01 23:22:07 cmps-342-sdn kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Nov 01 23:22:07 cmps-342-sdn kernel: 21:22:07.677636 main     VBoxService 7.2.22 r175245 (verbosity: 0) linux.amd64 (Oct 19 2026 20:22:40) release log
+                                     21:22:07.677637 main     Log opened 2026-11-01T21:22:07.677632000Z
+Nov 01 23:22:07 cmps-342-sdn kernel: 21:22:07.678915 main     OS Product: Linux
+Nov 01 23:22:07 cmps-342-sdn kernel: 21:22:07.678959 main     OS Release: 7.0.0-42-generic
+Nov 01 23:22:07 cmps-342-sdn kernel: 21:22:07.678983 main     OS Version: #42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2
+Nov 01 23:22:07 cmps-342-sdn kernel: 21:22:07.679005 main     Executable: /opt/VBoxGuestAdditions-7.2.22/sbin/VBoxService
+                                     21:22:07.679005 main     Process ID: 1440
+                                     21:22:07.679005 main     Package type: LINUX_64BITS_GENERIC
+Nov 01 23:22:07 cmps-342-sdn kernel: 21:22:07.685683 main     7.2.22 r175245 started. Verbose level = 0
+Nov 01 23:22:07 cmps-342-sdn kernel: 21:22:07.686800 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Nov 01 23:22:07 cmps-342-sdn kernel: audit: type=1400 audit(1793568127.747:160): apparmor="DENIED" operation="capable" class="cap" profile="/usr/sbin/cupsd" pid=1458 comm="cupsd" capability=12  capname="net_admin"
+Nov 01 23:22:10 cmps-342-sdn kernel: rfkill: input handler disabled
+Nov 01 23:22:19 cmps-342-sdn systemd-journald[274]: File /var/log/journal/14ad899da24647679d1f8eca654d56a6/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+Nov 01 23:22:19 cmps-342-sdn kernel: rfkill: input handler enabled
+Nov 01 23:22:20 cmps-342-sdn kernel: rfkill: input handler disabled
+Nov 01 23:22:21 cmps-342-sdn kernel: /dev/sr0: Can't open blockdev
+Nov 01 23:22:21 cmps-342-sdn kernel: ISO 9660 Extensions: Microsoft Joliet Level 3
+Nov 01 23:22:21 cmps-342-sdn kernel: ISO 9660 Extensions: RRIP_1991A
+Nov 01 23:23:12 cmps-342-sdn kernel: clocksource: Long readout interval, skipping watchdog check: cs_nsec: 4318220335 wd_nsec: 4318219175
+Nov 01 23:27:34 cmps-342-sdn kernel: set_capacity_and_notify: 1 callbacks suppressed
+Nov 01 23:27:34 cmps-342-sdn kernel: loop10: detected capacity change from 0 to 91568
+Nov 01 23:27:34 cmps-342-sdn kernel: audit: type=1400 audit(1793568454.984:161): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/snapd/28254/usr/lib/snapd/snap-confine" pid=3538 comm="apparmor_parser"
+Nov 01 23:27:38 cmps-342-sdn kernel: loop11: detected capacity change from 0 to 8
+Nov 01 23:27:38 cmps-342-sdn kernel: audit: type=1400 audit(1793568458.677:162): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=3595 comm="apparmor_parser"
+Nov 01 23:27:39 cmps-342-sdn kernel: audit: type=1400 audit(1793568459.311:163): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/28254/usr/lib/snapd/snap-confine" pid=3618 comm="apparmor_parser"
+Nov 01 23:27:39 cmps-342-sdn kernel: audit: type=1400 audit(1793568459.475:164): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.firmware-updater" pid=3621 comm="apparmor_parser"
+Nov 01 23:27:39 cmps-342-sdn kernel: audit: type=1400 audit(1793568459.795:165): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.firefox" pid=3620 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.057:166): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.snap-store" pid=3622 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.176:167): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.snapd-desktop-integration" pid=3623 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.193:168): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.firefox" pid=3625 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.199:169): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.geckodriver" pid=3626 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.202:170): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.hook.configure" pid=3627 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.204:171): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.hook.disconnect-plug-host-hunspell" pid=3628 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.204:172): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.hook.install" pid=3629 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.208:173): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.hook.post-refresh" pid=3630 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.211:174): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firmware-updater.firmware-notifier" pid=3631 comm="apparmor_parser"
+Nov 01 23:27:40 cmps-342-sdn kernel: audit: type=1400 audit(1793568460.215:175): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firmware-updater.firmware-updater" pid=3632 comm="apparmor_parser"
+Nov 01 23:31:27 cmps-342-sdn kernel: rcu: INFO: rcu_preempt detected stalls on CPUs/tasks:
+Nov 01 23:31:27 cmps-342-sdn kernel: rcu:         2-...!: (0 ticks this GP) idle=3484/0/0x1 softirq=10377/10377 fqs=0
+Nov 01 23:31:27 cmps-342-sdn kernel: rcu:         3-...!: (0 ticks this GP) idle=72a4/1/0x4000000000000000 softirq=10583/10583 fqs=0
+Nov 01 23:31:27 cmps-342-sdn kernel: rcu:         (detected by 0, t=78981 jiffies, g=20025, q=18 ncpus=4)
+Nov 01 23:31:27 cmps-342-sdn kernel: Sending NMI from CPU 0 to CPUs 2:
+Nov 01 23:31:27 cmps-342-sdn kernel: NMI backtrace for cpu 2
+Nov 01 23:31:27 cmps-342-sdn kernel: CPU: 2 UID: 0 PID: 0 Comm: swapper/2 Tainted: G        W  OE       7.0.0-42-generic #42~24.04.1-Ubuntu PREEMPT(lazy) 
+Nov 01 23:31:27 cmps-342-sdn kernel: Tainted: [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+Nov 01 23:31:27 cmps-342-sdn kernel: Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Nov 01 23:31:27 cmps-342-sdn kernel: RIP: 0010:select_task_rq+0x10/0xf0
+Nov 01 23:31:27 cmps-342-sdn kernel: Code: ff 0f 0b 0f 1f 80 00 00 00 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 55 48 89 e5 41 55 41 54 53 83 bf 58 05 00 00 01 <48> 89 fb 7e 0a 66 83 bf 78 09 00 00 00 74 5c 8b 35 8b 40 ad 02 48
+Nov 01 23:31:27 cmps-342-sdn kernel: RSP: 0018:ffffcc7e00134e50 EFLAGS: 00010006
+Nov 01 23:31:27 cmps-342-sdn kernel: RAX: 0000000000000000 RBX: ffff8997a844b8ac RCX: 0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel: RDX: ffffcc7e00134e9c RSI: 0000000000000002 RDI: ffff8997a844aa80
+Nov 01 23:31:27 cmps-342-sdn kernel: RBP: ffffcc7e00134e68 R08: 0000000000000000 R09: 0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel: R10: 0000000000000000 R11: 0000000000000000 R12: ffff8997a844b8ab
+Nov 01 23:31:27 cmps-342-sdn kernel: R13: 0000000000000002 R14: ffff8997a844aa80 R15: ffff899819d21ac0
+Nov 01 23:31:27 cmps-342-sdn kernel: FS:  0000000000000000(0000) GS:ffff89985dede000(0000) knlGS:0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+Nov 01 23:31:27 cmps-342-sdn kernel: CR2: 00007c8f3c98b988 CR3: 000000014f55e006 CR4: 00000000000706f0
+Nov 01 23:31:27 cmps-342-sdn kernel: Call Trace:
+Nov 01 23:31:27 cmps-342-sdn kernel:  <IRQ>
+Nov 01 23:31:27 cmps-342-sdn kernel:  try_to_wake_up+0x156/0x760
+Nov 01 23:31:27 cmps-342-sdn kernel:  ? __pfx_hrtimer_wakeup+0x10/0x10
+Nov 01 23:31:27 cmps-342-sdn kernel:  wake_up_process+0x15/0x30
+Nov 01 23:31:27 cmps-342-sdn kernel:  hrtimer_wakeup+0x22/0x40
+Nov 01 23:31:27 cmps-342-sdn kernel:  __hrtimer_run_queues+0x107/0x270
+Nov 01 23:31:27 cmps-342-sdn kernel:  ? rcu_core+0x17c/0x330
+Nov 01 23:31:27 cmps-342-sdn kernel:  hrtimer_interrupt+0x104/0x260
+Nov 01 23:31:27 cmps-342-sdn kernel:  __sysvec_apic_timer_interrupt+0x56/0x160
+Nov 01 23:31:27 cmps-342-sdn kernel:  sysvec_apic_timer_interrupt+0x9b/0xc0
+Nov 01 23:31:27 cmps-342-sdn kernel:  </IRQ>
+Nov 01 23:31:27 cmps-342-sdn kernel:  <TASK>
+Nov 01 23:31:27 cmps-342-sdn kernel:  asm_sysvec_apic_timer_interrupt+0x1b/0x20
+Nov 01 23:31:27 cmps-342-sdn kernel: RIP: 0010:pv_native_safe_halt+0xb/0x10
+Nov 01 23:31:27 cmps-342-sdn kernel: Code: 22 df 31 ff c3 cc cc cc cc 66 0f 1f 44 00 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 eb 07 0f 00 2d f9 2e 17 00 fb f4 <e9> 00 37 01 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 83
+Nov 01 23:31:27 cmps-342-sdn kernel: RSP: 0018:ffffcc7e000bbe58 EFLAGS: 00010246
+Nov 01 23:31:27 cmps-342-sdn kernel: RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel: RDX: 0000000000000002 RSI: 0000000000000000 RDI: 0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel: RBP: ffffcc7e000bbe60 R08: 0000000000000000 R09: 0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel: R10: 0000000000000000 R11: 0000000000000000 R12: ffff8997809b0000
+Nov 01 23:31:27 cmps-342-sdn kernel: R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel:  ? default_idle+0x9/0x30
+Nov 01 23:31:27 cmps-342-sdn kernel:  arch_cpu_idle+0x9/0x10
+Nov 01 23:31:27 cmps-342-sdn kernel:  default_idle_call+0x33/0x120
+Nov 01 23:31:27 cmps-342-sdn kernel:  cpuidle_idle_call+0x117/0x200
+Nov 01 23:31:27 cmps-342-sdn kernel:  do_idle+0x90/0xf0
+Nov 01 23:31:27 cmps-342-sdn kernel:  cpu_startup_entry+0x29/0x30
+Nov 01 23:31:27 cmps-342-sdn kernel:  start_secondary+0x128/0x170
+Nov 01 23:31:27 cmps-342-sdn kernel:  common_startup_64+0x13e/0x141
+Nov 01 23:31:27 cmps-342-sdn kernel:  </TASK>
+Nov 01 23:31:27 cmps-342-sdn kernel: clocksource: Long readout interval, skipping watchdog check: cs_nsec: 79232895927 wd_nsec: 79232874760
+Nov 01 23:31:27 cmps-342-sdn kernel: Sending NMI from CPU 0 to CPUs 3:
+Nov 01 23:31:27 cmps-342-sdn kernel: NMI backtrace for cpu 3
+Nov 01 23:31:27 cmps-342-sdn kernel: CPU: 3 UID: 0 PID: 3547 Comm: snapd Tainted: G        W  OE       7.0.0-42-generic #42~24.04.1-Ubuntu PREEMPT(lazy) 
+Nov 01 23:31:27 cmps-342-sdn kernel: Tainted: [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+Nov 01 23:31:27 cmps-342-sdn kernel: Hardware name: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Nov 01 23:31:27 cmps-342-sdn kernel: RIP: 0033:0x5f1fd1b455b7
+Nov 01 23:31:27 cmps-342-sdn kernel: Code: e5 48 83 ec 58 49 8b 4e 30 8b 91 08 01 00 00 0f 1f 40 00 85 d2 0f 8c a3 01 00 00 ff c2 89 91 08 01 00 00 b9 01 00 00 00 87 08 <85> c9 74 4d 48 89 44 24 68 89 4c 24 1c 44 0f 11 7c 24 48 44 0f 11
+Nov 01 23:31:27 cmps-342-sdn kernel: RSP: 002b:000000c00006d6e8 EFLAGS: 00010202
+Nov 01 23:31:27 cmps-342-sdn kernel: RAX: 00005f1fd3940fb0 RBX: 00005f1fd393f300 RCX: 0000000000000000
+Nov 01 23:31:27 cmps-342-sdn kernel: RDX: 0000000000000001 RSI: 0000000000800000 RDI: ffffffffffffffff
+Nov 01 23:31:27 cmps-342-sdn kernel: RBP: 000000c00006d740 R08: 0000000000000000 R09: 0000000000000040
+Nov 01 23:31:27 cmps-342-sdn kernel: R10: 0000000000000007 R11: ffffffffffffffff R12: ffffffffffffffff
+Nov 01 23:31:27 cmps-342-sdn kernel: R13: 00005f1fd38ffae0 R14: 000000c000007180 R15: 0000000000000003
+Nov 01 23:31:27 cmps-342-sdn kernel: FS:  00007decfe5fe6c0 GS:  0000000000000000
