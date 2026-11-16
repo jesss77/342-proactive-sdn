@@ -1,0 +1,1065 @@
+{
+  "model_sha256": "63b8b320ca7c6ca7c7e49d9bca6fb8408e491ea5bec168dd206dd9beeadaf595",
+  "parameters": {
+    "max_depth": 3,
+    "min_samples_leaf": 25,
+    "class_weight": null
+  },
+  "threshold": 0.65,
+  "metrics": {
+    "rows": {
+      "pooled": {
+        "n": 642,
+        "tp": 168,
+        "fp": 32,
+        "fn": 38,
+        "tn": 404,
+        "precision": 0.84,
+        "recall": 0.8155339805825242,
+        "f1": 0.8275862068965517,
+        "accuracy": 0.8909657320872274
+      },
+      "by_scenario": {
+        "ramp": {
+          "n": 289,
+          "tp": 22,
+          "fp": 1,
+          "fn": 1,
+          "tn": 265,
+          "precision": 0.9565217391304348,
+          "recall": 0.9565217391304348,
+          "f1": 0.9565217391304348,
+          "accuracy": 0.9930795847750865
+        },
+        "bursty": {
+          "n": 353,
+          "tp": 146,
+          "fp": 31,
+          "fn": 37,
+          "tn": 139,
+          "precision": 0.8248587570621468,
+          "recall": 0.7978142076502732,
+          "f1": 0.8111111111111111,
+          "accuracy": 0.8073654390934845
+        }
+      },
+      "by_run": {
+        "20261115-220149-140313-policy-fixed-ramp-seed31": {
+          "n": 106,
+          "tp": 7,
+          "fp": 0,
+          "fn": 1,
+          "tn": 98,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333,
+          "accuracy": 0.9905660377358491
+        },
+        "20261115-220257-992148-policy-fixed-bursty-seed31": {
+          "n": 120,
+          "tp": 47,
+          "fp": 12,
+          "fn": 13,
+          "tn": 48,
+          "precision": 0.7966101694915254,
+          "recall": 0.7833333333333333,
+          "f1": 0.7899159663865546,
+          "accuracy": 0.7916666666666666
+        },
+        "20261115-220406-813728-policy-fixed-bursty-seed32": {
+          "n": 117,
+          "tp": 43,
+          "fp": 12,
+          "fn": 20,
+          "tn": 42,
+          "precision": 0.7818181818181819,
+          "recall": 0.6825396825396826,
+          "f1": 0.7288135593220338,
+          "accuracy": 0.7264957264957265
+        },
+        "20261115-220516-053845-policy-fixed-ramp-seed32": {
+          "n": 99,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "tn": 92,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0
+        },
+        "20261115-220624-888992-policy-fixed-ramp-seed33": {
+          "n": 84,
+          "tp": 8,
+          "fp": 1,
+          "fn": 0,
+          "tn": 75,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "accuracy": 0.9880952380952381
+        },
+        "20261115-220733-371316-policy-fixed-bursty-seed33": {
+          "n": 116,
+          "tp": 56,
+          "fp": 7,
+          "fn": 4,
+          "tn": 49,
+          "precision": 0.8888888888888888,
+          "recall": 0.9333333333333333,
+          "f1": 0.9105691056910569,
+          "accuracy": 0.9051724137931034
+        }
+      },
+      "scenario_macro_f1": 0.883816425120773
+    },
+    "warnings": {
+      "by_run": [
+        {
+          "run": "20261115-220149-140313-policy-fixed-ramp-seed31",
+          "scenario": "ramp",
+          "events": 1,
+          "scorable_events": 1,
+          "true_warnings": 1,
+          "false_warnings": 0,
+          "late_warnings": 0,
+          "censored_warnings": 1,
+          "event_recall_all": 1.0,
+          "event_recall_scorable": 1.0,
+          "warning_precision": 1.0,
+          "false_warnings_per_minute": 0.0,
+          "lead_s": [
+            1.9985508155004936
+          ],
+          "median_lead_s": 1.9985508155004936,
+          "alarms": [
+            {
+              "available": 46007.09384259,
+              "event": 0,
+              "late": false
+            }
+          ]
+        },
+        {
+          "run": "20261115-220257-992148-policy-fixed-bursty-seed31",
+          "scenario": "bursty",
+          "events": 9,
+          "scorable_events": 8,
+          "true_warnings": 0,
+          "false_warnings": 8,
+          "late_warnings": 8,
+          "censored_warnings": 1,
+          "event_recall_all": 0.0,
+          "event_recall_scorable": 0.0,
+          "warning_precision": 0.0,
+          "false_warnings_per_minute": 8.03421388367291,
+          "lead_s": [],
+          "median_lead_s": null,
+          "alarms": [
+            {
+              "available": 46065.271540585,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46071.530802575,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46076.771472324,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46085.276497333,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46092.771233868,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46101.272457778,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46108.271346293,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46114.525293873,
+              "event": null,
+              "late": true
+            }
+          ]
+        },
+        {
+          "run": "20261115-220406-813728-policy-fixed-bursty-seed32",
+          "scenario": "bursty",
+          "events": 9,
+          "scorable_events": 9,
+          "true_warnings": 4,
+          "false_warnings": 5,
+          "late_warnings": 5,
+          "censored_warnings": 1,
+          "event_recall_all": 0.4444444444444444,
+          "event_recall_scorable": 0.4444444444444444,
+          "warning_precision": 0.4444444444444444,
+          "false_warnings_per_minute": 5.02092929086097,
+          "lead_s": [
+            0.2464621809995151,
+            1.2403491570003098,
+            0.7489504055047291,
+            1.9766335579988663
+          ],
+          "median_lead_s": 0.9946497812525195,
+          "alarms": [
+            {
+              "available": 46132.853499882,
+              "event": 0,
+              "late": false
+            },
+            {
+              "available": 46141.855265345,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46147.606969074,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46154.609981483,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46160.109256341,
+              "event": 4,
+              "late": false
+            },
+            {
+              "available": 46166.85363325,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46173.603402467,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46178.610175719,
+              "event": 7,
+              "late": false
+            },
+            {
+              "available": 46184.626211269,
+              "event": 8,
+              "late": false
+            }
+          ]
+        },
+        {
+          "run": "20261115-220516-053845-policy-fixed-ramp-seed32",
+          "scenario": "ramp",
+          "events": 1,
+          "scorable_events": 1,
+          "true_warnings": 1,
+          "false_warnings": 4,
+          "late_warnings": 4,
+          "censored_warnings": 1,
+          "event_recall_all": 1.0,
+          "event_recall_scorable": 1.0,
+          "warning_precision": 0.2,
+          "false_warnings_per_minute": 4.015966265166396,
+          "lead_s": [
+            1.7556038680049824
+          ],
+          "median_lead_s": 1.7556038680049824,
+          "alarms": [
+            {
+              "available": 46212.344659108,
+              "event": 0,
+              "late": false
+            },
+            {
+              "available": 46218.864400906,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46227.87962999,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46233.845324504,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46239.620480372,
+              "event": null,
+              "late": true
+            }
+          ]
+        },
+        {
+          "run": "20261115-220624-888992-policy-fixed-ramp-seed33",
+          "scenario": "ramp",
+          "events": 1,
+          "scorable_events": 1,
+          "true_warnings": 0,
+          "false_warnings": 4,
+          "late_warnings": 3,
+          "censored_warnings": 0,
+          "event_recall_all": 0.0,
+          "event_recall_scorable": 0.0,
+          "warning_precision": 0.0,
+          "false_warnings_per_minute": 4.0168529424772395,
+          "lead_s": [],
+          "median_lead_s": null,
+          "alarms": [
+            {
+              "available": 46281.354853569,
+              "event": null,
+              "late": false
+            },
+            {
+              "available": 46286.85922254,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46292.854692326,
+              "event": null,
+              "late": true
+            },
+            {
+              "available": 46307.854697914,
+              "event": null,
+              "late": true
+            }
+          ]
+        },
+        {
+          "run": "20261115-220733-371316-policy-fixed-bursty-seed33",
+          "scenario": "bursty",
+          "events": 8,
+          "scorable_events": 8,
+          "true_warnings": 5,
+          "false_warnings": 3,
+          "late_warnings": 0,
+          "censored_warnings": 1,
+          "event_recall_all": 0.625,
+          "event_recall_scorable": 0.625,
+          "warning_precision": 0.625,
+          "false_warnings_per_minute": 3.0127582709076246,
+          "lead_s": [
+            1.4892874459983432,
+            1.0081146385055035,
+            1.9971717385051306,
+            1.748171300496324,
+            1.7506482855023933
+          ],
+          "median_lead_s": 1.748171300496324,
+          "alarms": [
+            {
+              "available": 46339.344471885,
+              "event": 0,
+              "late": false
+            },
+            {
+              "available": 46346.588684455,
+              "event": 1,
+              "late": false
+            },
+            {
+              "available": 46353.337036816,
+              "event": null,
+              "late": false
+            },
+            {
+              "available": 46360.586691548,
+              "event": 3,
+              "late": false
+            },
+            {
+              "available": 46368.085892335,
+              "event": 4,
+              "late": false
+            },
+            {
+              "available": 46374.838877679,
+              "event": null,
+              "late": false
+            },
+            {
+              "available": 46381.587717937,
+              "event": 6,
+              "late": false
+            },
+            {
+              "available": 46387.337317671,
+              "event": null,
+              "late": false
+            }
+          ]
+        }
+      ],
+      "note": "Operational high-utilization onsets, not packet-loss onset. Prediction episodes without interventions; not the live one-action routing policy. Tail warnings without full future support are censored explicitly."
+    }
+  },
+  "baselines": {
+    "always_negative": {
+      "rows": {
+        "pooled": {
+          "n": 642,
+          "tp": 0,
+          "fp": 0,
+          "fn": 206,
+          "tn": 436,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.6791277258566978
+        },
+        "by_scenario": {
+          "ramp": {
+            "n": 289,
+            "tp": 0,
+            "fp": 0,
+            "fn": 23,
+            "tn": 266,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.9204152249134948
+          },
+          "bursty": {
+            "n": 353,
+            "tp": 0,
+            "fp": 0,
+            "fn": 183,
+            "tn": 170,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.48158640226628896
+          }
+        },
+        "by_run": {
+          "20261115-220149-140313-policy-fixed-ramp-seed31": {
+            "n": 106,
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "tn": 98,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.9245283018867925
+          },
+          "20261115-220257-992148-policy-fixed-bursty-seed31": {
+            "n": 120,
+            "tp": 0,
+            "fp": 0,
+            "fn": 60,
+            "tn": 60,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.5
+          },
+          "20261115-220406-813728-policy-fixed-bursty-seed32": {
+            "n": 117,
+            "tp": 0,
+            "fp": 0,
+            "fn": 63,
+            "tn": 54,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.46153846153846156
+          },
+          "20261115-220516-053845-policy-fixed-ramp-seed32": {
+            "n": 99,
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "tn": 92,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.9292929292929293
+          },
+          "20261115-220624-888992-policy-fixed-ramp-seed33": {
+            "n": 84,
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "tn": 76,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.9047619047619048
+          },
+          "20261115-220733-371316-policy-fixed-bursty-seed33": {
+            "n": 116,
+            "tp": 0,
+            "fp": 0,
+            "fn": 60,
+            "tn": 56,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.4827586206896552
+          }
+        },
+        "scenario_macro_f1": 0.0
+      },
+      "warnings": {
+        "by_run": [
+          {
+            "run": "20261115-220149-140313-policy-fixed-ramp-seed31",
+            "scenario": "ramp",
+            "events": 1,
+            "scorable_events": 1,
+            "true_warnings": 0,
+            "false_warnings": 0,
+            "late_warnings": 0,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 0.0,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": []
+          },
+          {
+            "run": "20261115-220257-992148-policy-fixed-bursty-seed31",
+            "scenario": "bursty",
+            "events": 9,
+            "scorable_events": 8,
+            "true_warnings": 0,
+            "false_warnings": 0,
+            "late_warnings": 0,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 0.0,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": []
+          },
+          {
+            "run": "20261115-220406-813728-policy-fixed-bursty-seed32",
+            "scenario": "bursty",
+            "events": 9,
+            "scorable_events": 9,
+            "true_warnings": 0,
+            "false_warnings": 0,
+            "late_warnings": 0,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 0.0,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": []
+          },
+          {
+            "run": "20261115-220516-053845-policy-fixed-ramp-seed32",
+            "scenario": "ramp",
+            "events": 1,
+            "scorable_events": 1,
+            "true_warnings": 0,
+            "false_warnings": 0,
+            "late_warnings": 0,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 0.0,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": []
+          },
+          {
+            "run": "20261115-220624-888992-policy-fixed-ramp-seed33",
+            "scenario": "ramp",
+            "events": 1,
+            "scorable_events": 1,
+            "true_warnings": 0,
+            "false_warnings": 0,
+            "late_warnings": 0,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 0.0,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": []
+          },
+          {
+            "run": "20261115-220733-371316-policy-fixed-bursty-seed33",
+            "scenario": "bursty",
+            "events": 8,
+            "scorable_events": 8,
+            "true_warnings": 0,
+            "false_warnings": 0,
+            "late_warnings": 0,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 0.0,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": []
+          }
+        ],
+        "note": "Operational high-utilization onsets, not packet-loss onset. Prediction episodes without interventions; not the live one-action routing policy. Tail warnings without full future support are censored explicitly."
+      }
+    },
+    "past_trend": {
+      "rows": {
+        "pooled": {
+          "n": 642,
+          "tp": 19,
+          "fp": 13,
+          "fn": 187,
+          "tn": 423,
+          "precision": 0.59375,
+          "recall": 0.09223300970873786,
+          "f1": 0.15966386554621848,
+          "accuracy": 0.6884735202492211
+        },
+        "by_scenario": {
+          "ramp": {
+            "n": 289,
+            "tp": 19,
+            "fp": 5,
+            "fn": 4,
+            "tn": 261,
+            "precision": 0.7916666666666666,
+            "recall": 0.8260869565217391,
+            "f1": 0.8085106382978723,
+            "accuracy": 0.9688581314878892
+          },
+          "bursty": {
+            "n": 353,
+            "tp": 0,
+            "fp": 8,
+            "fn": 183,
+            "tn": 162,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.45892351274787535
+          }
+        },
+        "by_run": {
+          "20261115-220149-140313-policy-fixed-ramp-seed31": {
+            "n": 106,
+            "tp": 7,
+            "fp": 5,
+            "fn": 1,
+            "tn": 93,
+            "precision": 0.5833333333333334,
+            "recall": 0.875,
+            "f1": 0.7,
+            "accuracy": 0.9433962264150944
+          },
+          "20261115-220257-992148-policy-fixed-bursty-seed31": {
+            "n": 120,
+            "tp": 0,
+            "fp": 3,
+            "fn": 60,
+            "tn": 57,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.475
+          },
+          "20261115-220406-813728-policy-fixed-bursty-seed32": {
+            "n": 117,
+            "tp": 0,
+            "fp": 1,
+            "fn": 63,
+            "tn": 53,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.452991452991453
+          },
+          "20261115-220516-053845-policy-fixed-ramp-seed32": {
+            "n": 99,
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "tn": 92,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.9230769230769231,
+            "accuracy": 0.98989898989899
+          },
+          "20261115-220624-888992-policy-fixed-ramp-seed33": {
+            "n": 84,
+            "tp": 6,
+            "fp": 0,
+            "fn": 2,
+            "tn": 76,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "accuracy": 0.9761904761904762
+          },
+          "20261115-220733-371316-policy-fixed-bursty-seed33": {
+            "n": 116,
+            "tp": 0,
+            "fp": 4,
+            "fn": 60,
+            "tn": 52,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 0.4482758620689655
+          }
+        },
+        "scenario_macro_f1": 0.40425531914893614
+      },
+      "warnings": {
+        "by_run": [
+          {
+            "run": "20261115-220149-140313-policy-fixed-ramp-seed31",
+            "scenario": "ramp",
+            "events": 1,
+            "scorable_events": 1,
+            "true_warnings": 0,
+            "false_warnings": 5,
+            "late_warnings": 4,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 5.021143793028446,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": [
+              {
+                "available": 46005.892045542,
+                "event": null,
+                "late": false
+              },
+              {
+                "available": 46014.841822371,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46019.845627157,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46025.093215206,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46032.364033335,
+                "event": null,
+                "late": true
+              }
+            ]
+          },
+          {
+            "run": "20261115-220257-992148-policy-fixed-bursty-seed31",
+            "scenario": "bursty",
+            "events": 9,
+            "scorable_events": 8,
+            "true_warnings": 0,
+            "false_warnings": 8,
+            "late_warnings": 8,
+            "censored_warnings": 1,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 8.03421388367291,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": [
+              {
+                "available": 46064.271554595,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46070.521385051,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46075.772489305,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46084.047717984,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46091.771538492,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46100.021435386,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46107.272323271,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46113.273625512,
+                "event": null,
+                "late": true
+              }
+            ]
+          },
+          {
+            "run": "20261115-220406-813728-policy-fixed-bursty-seed32",
+            "scenario": "bursty",
+            "events": 9,
+            "scorable_events": 9,
+            "true_warnings": 0,
+            "false_warnings": 8,
+            "late_warnings": 8,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 8.033486865377553,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": [
+              {
+                "available": 46133.353005484,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46140.611560405,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46146.35328187,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46153.605322462,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46161.352332001,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46172.352277307,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46179.606101732,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46186.607656062,
+                "event": null,
+                "late": true
+              }
+            ]
+          },
+          {
+            "run": "20261115-220516-053845-policy-fixed-ramp-seed32",
+            "scenario": "ramp",
+            "events": 1,
+            "scorable_events": 1,
+            "true_warnings": 1,
+            "false_warnings": 4,
+            "late_warnings": 4,
+            "censored_warnings": 0,
+            "event_recall_all": 1.0,
+            "event_recall_scorable": 1.0,
+            "warning_precision": 0.2,
+            "false_warnings_per_minute": 4.015966265166396,
+            "lead_s": [
+              1.7556038680049824
+            ],
+            "median_lead_s": 1.7556038680049824,
+            "alarms": [
+              {
+                "available": 46212.344659108,
+                "event": 0,
+                "late": false
+              },
+              {
+                "available": 46220.358760406,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46225.602963745,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46230.618706112,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46236.848322377,
+                "event": null,
+                "late": true
+              }
+            ]
+          },
+          {
+            "run": "20261115-220624-888992-policy-fixed-ramp-seed33",
+            "scenario": "ramp",
+            "events": 1,
+            "scorable_events": 1,
+            "true_warnings": 1,
+            "false_warnings": 4,
+            "late_warnings": 4,
+            "censored_warnings": 0,
+            "event_recall_all": 1.0,
+            "event_recall_scorable": 1.0,
+            "warning_precision": 0.2,
+            "false_warnings_per_minute": 4.0168529424772395,
+            "lead_s": [
+              1.9908946819996345
+            ],
+            "median_lead_s": 1.9908946819996345,
+            "alarms": [
+              {
+                "available": 46281.611315496,
+                "event": 0,
+                "late": false
+              },
+              {
+                "available": 46290.619696252,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46297.854462247,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46304.878130645,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46310.854685135,
+                "event": null,
+                "late": true
+              }
+            ]
+          },
+          {
+            "run": "20261115-220733-371316-policy-fixed-bursty-seed33",
+            "scenario": "bursty",
+            "events": 8,
+            "scorable_events": 8,
+            "true_warnings": 0,
+            "false_warnings": 8,
+            "late_warnings": 8,
+            "censored_warnings": 0,
+            "event_recall_all": 0.0,
+            "event_recall_scorable": 0.0,
+            "warning_precision": 0.0,
+            "false_warnings_per_minute": 8.034022055753667,
+            "lead_s": [],
+            "median_lead_s": null,
+            "alarms": [
+              {
+                "available": 46341.086833709,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46347.844063346,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46356.337430637,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46362.837718381,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46369.836946427,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46377.087135869,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46383.586955796,
+                "event": null,
+                "late": true
+              },
+              {
+                "available": 46389.837249987,
+                "event": null,
+                "late": true
+              }
+            ]
+          }
+        ],
+        "note": "Operational high-utilization onsets, not packet-loss onset. Prediction episodes without interventions; not the live one-action routing policy. Tail warnings without full future support are censored explicitly."
+      }
+    }
+  },
+  "counts": {
+    "total_eligible": 642,
+    "total_positive": 206,
+    "total_observed_events": 29
+  },
+  "fitting_performed": false,
+  "threshold_changed": false,
+  "interpretation": "Fresh fixed-primary prediction test of the pinned model. No ML rerouting, networking gain or universal congestion-truth claim."
+}

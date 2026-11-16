@@ -1,3 +1,9 @@
+# Current results — November 16, 2026
+
+The completed 36-trial benchmark is in [matched-v1/RESULTS.md](matched-v1/RESULTS.md). Read [interpretation](matched-v1/INTERPRETATION.md), [proposal alignment](matched-v1/PROPOSAL_ALIGNMENT.md) and [reproduction instructions](../docs/REPRODUCIBILITY.md). The complete checkpoint is in [evidence/raw](../evidence/raw/). The diagnostic results below are historical and remain unchanged.
+
+---
+
 # Experiment log
 
 Measurements collected October 29–November 2, 2026. Source files and raw outputs are preserved unchanged in `archive/`.

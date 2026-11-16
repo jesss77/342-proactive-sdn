@@ -1,0 +1,313 @@
+{
+  "policy": "fixed",
+  "scenario": "ramp",
+  "seed": 42,
+  "outcome": "completed",
+  "sender_mbps": 8.158073647193707,
+  "receiver_mbps": 7.522821277077962,
+  "udp_loss_percent": 7.762154105626483,
+  "queue_drop_deltas": {
+    "h1-eth0": 0,
+    "s1-eth3": 0,
+    "s2-eth2": 3970,
+    "s1-eth4": 0,
+    "s3-eth2": 0,
+    "s4-eth1": 0
+  },
+  "trial": {
+    "run": "20261116-210158-776349-primary-continuous-ramp-8158933bps",
+    "route": "primary",
+    "requested_bps": 8158933,
+    "sender": {
+      "start": 0,
+      "packets": 50991,
+      "lost_packets": 0,
+      "lost_percent": 0,
+      "jitter_ms": 0,
+      "end": 60.003576968,
+      "seconds": 60.003576968,
+      "bytes": 61189200,
+      "bits_per_second": 8158073.647193706,
+      "sender": true
+    },
+    "receiver": {
+      "start": 0,
+      "packets": 50991,
+      "lost_packets": 3958,
+      "lost_percent": 7.762154105626483,
+      "jitter_ms": 2.065097096075511,
+      "end": 60.019610113,
+      "seconds": 60.019610113,
+      "bytes": 56439600,
+      "bits_per_second": 7522821.277077962,
+      "sender": false
+    },
+    "queue_drop_deltas": {
+      "h1-eth0": 0,
+      "s1-eth3": 0,
+      "s2-eth2": 3970,
+      "s1-eth4": 0,
+      "s3-eth2": 0,
+      "s4-eth1": 0
+    },
+    "udp_error_deltas": {
+      "h1": {
+        "UdpInErrors": 0,
+        "UdpRcvbufErrors": 0,
+        "UdpSndbufErrors": 0
+      },
+      "h2": {
+        "UdpInErrors": 0,
+        "UdpRcvbufErrors": 0,
+        "UdpSndbufErrors": 0
+      }
+    },
+    "screen_failures": [],
+    "max_resource_gap_s": 1.0,
+    "traffic_engine": "continuous-udp-v1",
+    "scenario": "ramp",
+    "pacer": {
+      "discarded_budget_bits": 0.0,
+      "planned_bits": 489535980.0,
+      "skipped_ticks": 58,
+      "max_pacer_gap_s": 0.02029047199903289,
+      "send_errors": {}
+    },
+    "mixed_schedule_note": "Whole-run average is not a congestion label; inspect per-window data.",
+    "sender_based_missing_datagrams": 3958.0,
+    "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+  },
+  "collector": {
+    "qdiscs": {
+      "s1-eth3": {
+        "samples": 261,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.23245878850866575,
+          "median": 0.2500037650024751,
+          "p95": 0.2576157984949532,
+          "max": 0.2701055235011154
+        },
+        "query_duration_s": {
+          "min": 0.004412484995555133,
+          "median": 0.007056169000861701,
+          "p95": 0.02027139699930558,
+          "max": 0.03513295599987032
+        },
+        "invalid_intervals": 0,
+        "interval_count": 260,
+        "max_queue_packets": 11,
+        "max_backlog_bytes": 13662,
+        "sampled_drop_delta": 0,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 8095514.450347049,
+          "p95": 13198863.041885234,
+          "max": 13925164.60495605
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      },
+      "s2-eth2": {
+        "samples": 261,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.23245878850866575,
+          "median": 0.2500037650024751,
+          "p95": 0.2576157984949532,
+          "max": 0.2701055235011154
+        },
+        "query_duration_s": {
+          "min": 0.004412484995555133,
+          "median": 0.007056169000861701,
+          "p95": 0.02027139699930558,
+          "max": 0.03513295599987032
+        },
+        "invalid_intervals": 0,
+        "interval_count": 260,
+        "max_queue_packets": 50,
+        "max_backlog_bytes": 62100,
+        "sampled_drop_delta": 3970,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 8038579.558905489,
+          "p95": 10094612.113061983,
+          "max": 10482516.189822868
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      },
+      "s1-eth4": {
+        "samples": 261,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.23245878850866575,
+          "median": 0.2500037650024751,
+          "p95": 0.2576157984949532,
+          "max": 0.2701055235011154
+        },
+        "query_duration_s": {
+          "min": 0.004412484995555133,
+          "median": 0.007056169000861701,
+          "p95": 0.02027139699930558,
+          "max": 0.03513295599987032
+        },
+        "invalid_intervals": 0,
+        "interval_count": 260,
+        "max_queue_packets": 0,
+        "max_backlog_bytes": 0,
+        "sampled_drop_delta": 0,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      },
+      "s3-eth2": {
+        "samples": 261,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.23245878850866575,
+          "median": 0.2500037650024751,
+          "p95": 0.2576157984949532,
+          "max": 0.2701055235011154
+        },
+        "query_duration_s": {
+          "min": 0.004412484995555133,
+          "median": 0.007056169000861701,
+          "p95": 0.02027139699930558,
+          "max": 0.03513295599987032
+        },
+        "invalid_intervals": 0,
+        "interval_count": 260,
+        "max_queue_packets": 0,
+        "max_backlog_bytes": 0,
+        "sampled_drop_delta": 0,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      }
+    },
+    "stats": {
+      "route": "primary",
+      "schema_version": 6,
+      "coverage": "all",
+      "backend": "one-tc-json-dump-per-cycle",
+      "tc_processes_per_sample": 1,
+      "interval_s": 0.25,
+      "samples": 261,
+      "elapsed_s": 65.25831669999752,
+      "queried_qdiscs": [
+        "s1-eth3",
+        "s2-eth2",
+        "s1-eth4",
+        "s3-eth2"
+      ],
+      "cpu_seconds": {
+        "self_s": 0.5908439999999999,
+        "children_s": 1.5841509999999999
+      },
+      "cpu_percent_one_core": {
+        "self_s": 0.90539264553237,
+        "children_s": 2.4275082167420665
+      },
+      "stopped_by_signal": true
+    }
+  },
+  "route_counter_deltas": {
+    "s1-eth3": {
+      "tx_bytes": 63361594,
+      "tx_packets": 51305,
+      "rx_bytes": 29596,
+      "rx_packets": 302
+    },
+    "s1-eth4": {
+      "tx_bytes": 0,
+      "tx_packets": 0,
+      "rx_bytes": 0,
+      "rx_packets": 0
+    },
+    "s2-eth2": {
+      "tx_bytes": 58444582,
+      "tx_packets": 47335,
+      "rx_bytes": 29596,
+      "rx_packets": 302
+    },
+    "s3-eth2": {
+      "tx_bytes": 0,
+      "tx_packets": 0,
+      "rx_bytes": 0,
+      "rx_packets": 0
+    },
+    "s4-eth3": {
+      "tx_bytes": 29596,
+      "tx_packets": 302,
+      "rx_bytes": 58444582,
+      "rx_packets": 47335
+    },
+    "s4-eth4": {
+      "tx_bytes": 0,
+      "tx_packets": 0,
+      "rx_bytes": 0,
+      "rx_packets": 0
+    }
+  },
+  "screen_failures": [],
+  "applied_actions": [],
+  "denied_requests": [],
+  "in_traffic_switch_verified": false,
+  "rtt": {
+    "idle": {
+      "replies": 10,
+      "milliseconds": {
+        "min": 9.32,
+        "median": 12.5,
+        "p95": 16.4,
+        "max": 16.4
+      },
+      "loss_percent": 0.0,
+      "censored_below_1ms": 0
+    },
+    "loaded": {
+      "replies": 302,
+      "milliseconds": {
+        "min": 8.65,
+        "median": 14.5,
+        "p95": 58.8,
+        "max": 64.8
+      },
+      "loss_percent": 3.82166,
+      "censored_below_1ms": 0
+    },
+    "traffic_only": {
+      "replies": 286,
+      "milliseconds": {
+        "min": 8.65,
+        "median": 14.8,
+        "p95": 58.8,
+        "max": 64.8
+      },
+      "loss_percent": null,
+      "censored_below_1ms": 0
+    }
+  },
+  "restoration": {
+    "failures": []
+  },
+  "route_restoration": {
+    "verified": true,
+    "failures": []
+  },
+  "model": null,
+  "inference": null,
+  "overhead": {
+    "collector_cpu_percent_one_core": 3.3329008622744363,
+    "policy_thread_cpu_percent_one_core": 0.9353994797454219,
+    "inference_cpu_percent_one_core": 0.0
+  },
+  "interpretation": "Pilot policy outcome; no gain claim before matched repeats and quality review"
+}

@@ -1,0 +1,364 @@
+{
+  "policy": "ml",
+  "scenario": "steady",
+  "seed": 41,
+  "outcome": "completed",
+  "sender_mbps": 2.9985434970161067,
+  "receiver_mbps": 2.998440142902402,
+  "udp_loss_percent": 0.0,
+  "queue_drop_deltas": {
+    "h1-eth0": 0,
+    "s1-eth3": 0,
+    "s2-eth2": 0,
+    "s1-eth4": 0,
+    "s3-eth2": 0,
+    "s4-eth1": 0
+  },
+  "trial": {
+    "run": "20261116-191500-130142-primary-continuous-steady-3000000bps",
+    "route": "primary",
+    "requested_bps": 3000000,
+    "sender": {
+      "start": 0,
+      "packets": 18741,
+      "lost_packets": 0,
+      "lost_percent": 0,
+      "jitter_ms": 0,
+      "end": 60.00033022,
+      "seconds": 60.00033022,
+      "bytes": 22489200,
+      "bits_per_second": 2998543.4970161067,
+      "sender": true
+    },
+    "receiver": {
+      "start": 0,
+      "packets": 18741,
+      "lost_packets": 0,
+      "lost_percent": 0.0,
+      "jitter_ms": 0.69373326238861,
+      "end": 60.002398389,
+      "seconds": 60.002398389,
+      "bytes": 22489200,
+      "bits_per_second": 2998440.1429024017,
+      "sender": false
+    },
+    "queue_drop_deltas": {
+      "h1-eth0": 0,
+      "s1-eth3": 0,
+      "s2-eth2": 0,
+      "s1-eth4": 0,
+      "s3-eth2": 0,
+      "s4-eth1": 0
+    },
+    "udp_error_deltas": {
+      "h1": {
+        "UdpInErrors": 0,
+        "UdpRcvbufErrors": 0,
+        "UdpSndbufErrors": 0
+      },
+      "h2": {
+        "UdpInErrors": 0,
+        "UdpRcvbufErrors": 0,
+        "UdpSndbufErrors": 0
+      }
+    },
+    "screen_failures": [],
+    "max_resource_gap_s": 1.0,
+    "traffic_engine": "continuous-udp-v1",
+    "scenario": "steady",
+    "pacer": {
+      "discarded_budget_bits": 65321.74501284957,
+      "planned_bits": 180000000.0,
+      "skipped_ticks": 484,
+      "max_pacer_gap_s": 0.12337578400183702,
+      "send_errors": {}
+    },
+    "mixed_schedule_note": null,
+    "sender_based_missing_datagrams": 0.0,
+    "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+  },
+  "collector": {
+    "qdiscs": {
+      "s1-eth3": {
+        "samples": 263,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.0930929659953108,
+          "median": 0.2500063410043367,
+          "p95": 0.2633875790052116,
+          "max": 0.3893524885061197
+        },
+        "query_duration_s": {
+          "min": 0.007526235000113957,
+          "median": 0.013071903995296452,
+          "p95": 0.04646676799893612,
+          "max": 0.1195945879953797
+        },
+        "invalid_intervals": 0,
+        "interval_count": 262,
+        "max_queue_packets": 2,
+        "max_backlog_bytes": 2484,
+        "sampled_drop_delta": 0,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 3165701.6617108746,
+          "max": 3758704.5100515364
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      },
+      "s2-eth2": {
+        "samples": 263,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.0930929659953108,
+          "median": 0.2500063410043367,
+          "p95": 0.2633875790052116,
+          "max": 0.3893524885061197
+        },
+        "query_duration_s": {
+          "min": 0.007526235000113957,
+          "median": 0.013071903995296452,
+          "p95": 0.04646676799893612,
+          "max": 0.1195945879953797
+        },
+        "invalid_intervals": 0,
+        "interval_count": 262,
+        "max_queue_packets": 3,
+        "max_backlog_bytes": 3726,
+        "sampled_drop_delta": 0,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 3167367.952704725,
+          "max": 3758704.5100515364
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      },
+      "s1-eth4": {
+        "samples": 263,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.0930929659953108,
+          "median": 0.2500063410043367,
+          "p95": 0.2633875790052116,
+          "max": 0.3893524885061197
+        },
+        "query_duration_s": {
+          "min": 0.007526235000113957,
+          "median": 0.013071903995296452,
+          "p95": 0.04646676799893612,
+          "max": 0.1195945879953797
+        },
+        "invalid_intervals": 0,
+        "interval_count": 262,
+        "max_queue_packets": 2,
+        "max_backlog_bytes": 2484,
+        "sampled_drop_delta": 0,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 3165480.2491272483,
+          "max": 4267142.469608327
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      },
+      "s3-eth2": {
+        "samples": 263,
+        "failed_queries": 0,
+        "actual_interval_s": {
+          "min": 0.0930929659953108,
+          "median": 0.2500063410043367,
+          "p95": 0.2633875790052116,
+          "max": 0.3893524885061197
+        },
+        "query_duration_s": {
+          "min": 0.007526235000113957,
+          "median": 0.013071903995296452,
+          "p95": 0.04646676799893612,
+          "max": 0.1195945879953797
+        },
+        "invalid_intervals": 0,
+        "interval_count": 262,
+        "max_queue_packets": 2,
+        "max_backlog_bytes": 2484,
+        "sampled_drop_delta": 0,
+        "departure_bps": {
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 3157300.8659924967,
+          "max": 4267142.469608327
+        },
+        "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+      }
+    },
+    "stats": {
+      "route": "primary",
+      "schema_version": 6,
+      "coverage": "all",
+      "backend": "one-tc-json-dump-per-cycle",
+      "tc_processes_per_sample": 1,
+      "interval_s": 0.25,
+      "samples": 263,
+      "elapsed_s": 65.75224072399578,
+      "queried_qdiscs": [
+        "s1-eth3",
+        "s2-eth2",
+        "s1-eth4",
+        "s3-eth2"
+      ],
+      "cpu_seconds": {
+        "self_s": 1.4629759999999998,
+        "children_s": 3.212781
+      },
+      "cpu_percent_one_core": {
+        "self_s": 2.2249827289400614,
+        "children_s": 4.886192416599302
+      },
+      "stopped_by_signal": true
+    }
+  },
+  "route_counter_deltas": {
+    "s1-eth3": {
+      "tx_bytes": 11704698,
+      "tx_packets": 9565,
+      "rx_bytes": 14994,
+      "rx_packets": 153
+    },
+    "s1-eth4": {
+      "tx_bytes": 11602592,
+      "tx_packets": 9492,
+      "rx_bytes": 15974,
+      "rx_packets": 163
+    },
+    "s2-eth2": {
+      "tx_bytes": 11704698,
+      "tx_packets": 9565,
+      "rx_bytes": 14994,
+      "rx_packets": 153
+    },
+    "s3-eth2": {
+      "tx_bytes": 11602592,
+      "tx_packets": 9492,
+      "rx_bytes": 15974,
+      "rx_packets": 163
+    },
+    "s4-eth3": {
+      "tx_bytes": 14994,
+      "tx_packets": 153,
+      "rx_bytes": 11704698,
+      "rx_packets": 9565
+    },
+    "s4-eth4": {
+      "tx_bytes": 15974,
+      "tx_packets": 163,
+      "rx_bytes": 11602592,
+      "rx_packets": 9492
+    }
+  },
+  "screen_failures": [],
+  "applied_actions": [
+    {
+      "applied": true,
+      "route": "alternate",
+      "reason": "frozen_tree_probability",
+      "started": 51216.996511543,
+      "verified_finished": 51217.207184768,
+      "command_and_readback_elapsed_s": 0.21067322499584407,
+      "admission": {
+        "route": "alternate",
+        "observed_at": 51216.760953408,
+        "selected_demand_bps": 3167367.952704725,
+        "background_bps": 0.0,
+        "admission_budget_bps": 15900000,
+        "links_up": true,
+        "evidence": "dual-profile-operating-bounds-v1"
+      }
+    }
+  ],
+  "denied_requests": [],
+  "in_traffic_switch_verified": true,
+  "rtt": {
+    "idle": {
+      "replies": 10,
+      "milliseconds": {
+        "min": 9.67,
+        "median": 12.2,
+        "p95": 18.2,
+        "max": 18.2
+      },
+      "loss_percent": 0.0,
+      "censored_below_1ms": 0
+    },
+    "loaded": {
+      "replies": 316,
+      "milliseconds": {
+        "min": 9.28,
+        "median": 10.2,
+        "p95": 26.5,
+        "max": 90.5
+      },
+      "loss_percent": 0.0,
+      "censored_below_1ms": 0
+    },
+    "traffic_only": {
+      "replies": 297,
+      "milliseconds": {
+        "min": 9.28,
+        "median": 10.2,
+        "p95": 19.1,
+        "max": 90.5
+      },
+      "loss_percent": null,
+      "censored_below_1ms": 0
+    }
+  },
+  "restoration": {
+    "failures": []
+  },
+  "route_restoration": {
+    "verified": true,
+    "failures": []
+  },
+  "model": {
+    "sha256": "63b8b320ca7c6ca7c7e49d9bca6fb8408e491ea5bec168dd206dd9beeadaf595",
+    "threshold": 0.65,
+    "nodes": 15,
+    "feature_source_sha256": "2654567afd5e77285fdbf8ca0077e733389c07b4b63d7003ed6afff66649c291",
+    "profile_id": "dual-forward-cburst16k-source250-v1",
+    "label_config": {
+      "version": "highutil85-duration1-horizon2-v1",
+      "utilization_threshold": 0.85,
+      "confirmation_s": 1.0,
+      "horizon_s": 2.0,
+      "history_s": 2.0,
+      "ewma_tau_s": 1.0,
+      "future_guard_s": 0.75,
+      "route": "primary",
+      "scope": "Frozen operational target for dual-fixed development; not packet-loss ground truth"
+    },
+    "training_dataset_fingerprint": "a5c3d17eb0397af62768bda2e49b5e94a8dd159fcf342b220fd9b32cbec6c7f5"
+  },
+  "inference": {
+    "calls": 110,
+    "cpu": {
+      "total_ns": 5099393,
+      "median_ns": 39863,
+      "p95_ns": 79638,
+      "max_ns": 272479
+    },
+    "wall": {
+      "total_ns": 11471325,
+      "median_ns": 46260,
+      "p95_ns": 258432,
+      "max_ns": 1191283
+    },
+    "note": "Model calls only. CPU is a subset of policy-thread CPU, not an additional additive cost. No inference after the successful one-way action."
+  },
+  "overhead": {
+    "collector_cpu_percent_one_core": 7.111175145539363,
+    "policy_thread_cpu_percent_one_core": 1.9366671172632952,
+    "inference_cpu_percent_one_core": 0.008239139005666602
+  },
+  "interpretation": "Pilot policy outcome; no gain claim before matched repeats and quality review"
+}

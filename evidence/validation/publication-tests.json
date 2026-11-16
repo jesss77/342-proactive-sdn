@@ -1,0 +1,8 @@
+{
+  "tests_run": 137,
+  "passed": 133,
+  "skipped": 4,
+  "platform": "Windows",
+  "code_source": "Unchanged final guest checkpoint",
+  "note": "Initial restricted run blocked local UDP loopback. The unchanged suite passed with loopback access. Ubuntu installation previously passed 135 with two optional training skips."
+}

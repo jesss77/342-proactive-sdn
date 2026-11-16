@@ -1,0 +1,17 @@
+{
+  "figures": [
+    "figures\\01-networking-outcomes.png",
+    "figures\\01-networking-outcomes.svg",
+    "figures\\02-computation-costs.png",
+    "figures\\02-computation-costs.svg",
+    "figures\\03-routing-and-inference.png",
+    "figures\\03-routing-and-inference.svg",
+    "figures\\04-queues-and-drops.png",
+    "figures\\04-queues-and-drops.svg"
+  ],
+  "trials": 36,
+  "rows_preserved": 36,
+  "style": "individual-seed points, mean and observed range; no confidence intervals",
+  "matplotlib": "3.11.2",
+  "numpy": "2.3.5"
+}
