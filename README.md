@@ -1,6 +1,6 @@
 # Proactive Congestion Management in SDN
 
-CMPS342 research project — Youssef Shawwa and Jessy Karamaoun. Updated November 16, 2026.
+CMPS342 research project — Youssef Shawwa and Jessy Karamaoun. Updated November 19, 2026.
 
 We test whether a lightweight learned congestion warning adds value when routing, observations and admission constraints are shared. **The registered experiment is complete: 36 matched trials, four policies, three traffic scenarios and three seeds. Earlier triggering helped against fixed/reactive routing; an added benefit from the learned tree over the simple trend rule was not established.**
 
@@ -50,7 +50,8 @@ Ten fixed-primary traces trained the tree; six validation traces selected it; si
 ## Reproduce or inspect
 
 - [Setup and offline checks](SETUP.md)
-- [Reproduce the complete saved results without traffic or fitting](docs/REPRODUCIBILITY.md)
+- [Reproduce calibration, development, matched/prediction reports, optional training replay and plots](docs/REPRODUCIBILITY.md)
+- [Repeat the live lab in a separate clean workspace](docs/LIVE_REPLAY.md)
 - [Exact preserved raw checkpoint and checksum](evidence/raw/)
 - [Source publication manifest](evidence/publication-manifest.json)
 - [Versioned acquisition protocols](docs/PROTOCOL_INDEX.md)
@@ -61,4 +62,4 @@ All 36 final networking trials passed independent source/model/raw-hash, endpoin
 
 Only the Decision Tree was trained; an earlier broader classifier objective was narrowed. The polling sweep used steady traffic and an older collector. More high-variance repetitions and current-collector burst/interval validation remain open. Repeated recovery and oscillation are untested. Received-probe RTT is not one-way delay; command/readback elapsed time is not packet-level activation or disruption. No production-controller or general abrupt-burst prediction claim is made.
 
-PR4 is awaiting author revision and submission. The final IEEE paper and final submission audit remain open. The report currently being edited is kept separate from this reproducibility publication.
+PR4 was submitted, as confirmed by the authors on November 17. The final IEEE paper and final submission audit remain open. The submitted report PDF is kept separate from this reproducibility publication.

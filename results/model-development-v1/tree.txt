@@ -1,0 +1,23 @@
+|--- upstream_mean_1s_bps <= 3024308.00
+|   |--- util_ewma_1s <= 0.35
+|   |   |--- util_ewma_1s <= 0.31
+|   |   |   |--- class: 1
+|   |   |--- util_ewma_1s >  0.31
+|   |   |   |--- class: 1
+|   |--- util_ewma_1s >  0.35
+|   |   |--- util_ewma_1s <= 0.42
+|   |   |   |--- class: 1
+|   |   |--- util_ewma_1s >  0.42
+|   |   |   |--- class: 1
+|--- upstream_mean_1s_bps >  3024308.00
+|   |--- util_mean_2s <= 0.73
+|   |   |--- upstream_bps <= 3384554.00
+|   |   |   |--- class: 0
+|   |   |--- upstream_bps >  3384554.00
+|   |   |   |--- class: 0
+|   |--- util_mean_2s >  0.73
+|   |   |--- util_slope_2s <= 0.02
+|   |   |   |--- class: 0
+|   |   |--- util_slope_2s >  0.02
+|   |   |   |--- class: 1
+

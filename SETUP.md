@@ -46,6 +46,6 @@ sudo mn --custom topology.py --topo diamond --link tc --arp --controller remote,
 
 At `mininet>`, verify `pingall` gives 12/12 replies, baseline s1/s4 uplinks use port 3 and the expected shaped classes exist. Live trial wrappers apply and restore the recorded calibration. Their admission and restoration checks are part of the experiment; do not bypass them.
 
-The historical matched batch is complete. Do not blindly rerun its acquisition command or reuse its registry to collect replacements. An additional study needs a separately recorded plan; retain the model/protocol and adverse outcomes from this benchmark.
+The historical matched batch is complete. Do not reuse its registry or replace its runs. For new live replay, use the separate clean-clone procedure in [LIVE_REPLAY.md](docs/LIVE_REPLAY.md); retain the frozen model/protocol and report fresh outcomes separately.
 
 To stop, enter `exit` in Mininet and Ctrl+C in the controller terminal. Refer to [protocol notes](docs/PROTOCOL_INDEX.md) for individual wrappers. Older setup and diagnostic descriptions remain in [docs/history](docs/history/) and the raw checkpoint.

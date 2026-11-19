@@ -12,3 +12,7 @@ results/runs/
 
 scratch/
 *.log
+
+.venv-analysis/
+.venv-training/
+results/environment/

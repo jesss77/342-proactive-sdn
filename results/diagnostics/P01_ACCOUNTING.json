@@ -1,0 +1,19 @@
+{
+  "requested_bps": 3000000,
+  "sender_datagrams": 5163,
+  "sender_duration_s_rounded": 25.22,
+  "sender_bps_approx_from_rounded_duration": 1965297.383029342,
+  "receiver_sequence_total": 5160,
+  "receiver_sequence_missing": 3927,
+  "receiver_sequence_loss_percent": 76.1046511627907,
+  "received_datagrams": 1233,
+  "receiver_bytes": 1479600,
+  "receiver_duration_s": 26.043471,
+  "receiver_bps_recomputed": 454501.62921831734,
+  "sender_based_missing_datagrams": 3930,
+  "input_sha256": {
+    "client.txt": "212e16b72dd57b388a82ed2a7928073fb4d44dc78e250d43e838665756be3b01",
+    "server.json": "9d777b40068cda00768d612cf30c4b41993723a0e1321cd3981a65fd7c0a046e"
+  },
+  "interpretation": "Requested sending rate was not achieved; intervals and loss denominators differ. Arithmetic reconciles, original anomaly remains diagnostic and excluded. No layer/drop counters are summed."
+}

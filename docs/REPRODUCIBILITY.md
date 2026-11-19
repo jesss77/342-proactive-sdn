@@ -1,42 +1,72 @@
-# Reproduce the saved study
+# Recreate the experiment and saved results
 
-This repository includes the exact 21.4 MB compressed checkpoint, all 9,818 raw/source/derived files it contained, current frozen runtime code and separately reviewed results. Earlier failed/superseded diagnostics are retained. It includes no VM disk image or private report draft.
+The repository contains the complete exact 21.4 MB compressed checkpoint (9,818 files), frozen runtime/model/protocols, original development-search code and selected-model report, analysis/table/plot generators, tests and live-lab commands.
 
-Checkpoint: `evidence/raw/342-sdn-checkpoint-20261116-214839.tar.gz`
+## Reproduce all saved numerical results
 
-SHA-256: `e8f2e4e4294d35918c8b0d2e37fa79e92366732a19b0a12daad6f7c2a521b8e3`
-
-## One command, no traffic or fitting
-
-From the repository root with Python 3.12 and roughly 400 MB free disk space:
+With Python 3.12, from a clean clone:
 
 ```bash
 python3 tools/reproduce_results.py --output scratch/reproduced
 ```
 
-Use a new output directory each time. The command refuses overwrites, verifies the archive checksum, checks archive paths/entry types, and extracts the original repository into `scratch/reproduced/checkpoint/342-proactive-sdn/`. It never overwrites the published source or rewrites the archived evidence.
+No third-party Python packages, Mininet, running controller or fitting are needed for this default command. Allow about 400 MB for the checkpoint and derivatives. Use a new output directory each time. It verifies the exact checkpoint digest, safely extracts only regular files/directories, checks source/model pins, and reproduces:
 
-It then:
+- P01 diagnostic arithmetic, retaining its exclusion.
+- Six primary calibration and six dual-profile alternate controls, including accounting and restoration checks.
+- The development-only event-target audit.
+- All 16 development traces: 1,594 eligible rows, 559 positives and 79 observed events.
+- Frozen-tree training/validation review with the original model-input fingerprint.
+- The full 36-trial matched report, paired ML comparisons, quality/CPU/source/adverse-outcome summaries and additional tables.
+- The untouched six-run held-out prediction report, exactly matching the published reference.
+- The 36-run received-reply mean RTT supplement, exactly matching published values.
 
-1. Checks the frozen source/model/protocol pins against both the published files and checkpoint.
-2. Re-inspects the registered 36-trial batch and compares the entire networking report exactly with the published report.
-3. Re-evaluates the untouched six-run prediction test and compares its entire report exactly with the published reference.
-4. Saves `reproduction.json` plus independently generated review/CSV/label files.
+Logs identify the failed stage if a check fails. Original raw metadata is never rewritten, including runtime `pending_review` statuses. Regenerated development audit wording belongs to its original pre-test design stage; it does not mean the final held-out evaluation is still pending.
 
-No Mininet installation, running controller or scikit-learn is required for these offline calculations. No models are trained, thresholds changed or new traffic collected. This validates saved evidence, not a fresh live experiment on different hardware.
+## Regenerate figures
 
-## Data and provenance
+The original plot environment used NumPy 2.3.5; the original fitting environment used NumPy 2.5.4. Keep them separate. They are recorded environments, not instructions to update the model or claim compatibility with arbitrary library versions.
 
-- Matched batch: `20261116-191234-565387-matched-policy-batch`, seeds 41–43, four policies × three scenarios.
-- Development batch: `20261115-194521-170669-fixed-development-batch`, 10 training and 6 validation traces.
-- Fresh prediction batch: `20261115-220149-096785-frozen-heldout-batch`, six traces, seeds 31–33.
-- The continuous source and dual calibration differ from earlier diagnostic configurations; do not pool versions as matched trials.
-- The original runtime `pending_review` metadata remains unchanged. [Derived independent assessments](../results/matched-v1/reviews/) are separate.
-- Failed smoke tests, source failures and older collector outcomes remain in the checkpoint. Their presence does not make them accepted comparative trials.
-- Historical source copies inside runs are part of the evidence and can differ from later files. Current model/protocol pins must not be updated to hide a mismatch.
+```bash
+python3.12 -m venv .venv-analysis
+.venv-analysis/bin/python -m pip install -r requirements-analysis.txt
+python3 tools/reproduce_results.py --output scratch/reproduced-with-plots --figures --plot-python .venv-analysis/bin/python
+```
 
-The 36-trial CSV, paired summaries, figure sources and adverse outcomes are in [results/matched-v1](../results/matched-v1/). Received-reply means were completed from timestamped ping logs; see [latency supplement](../results/matched-v1/LATENCY_SUPPLEMENT.md). Plot formats are PNG and editable SVG. Sampled queue maxima and received-probe quantiles are not packet-level continuous observations.
+On Windows, replace `bin/python` with `Scripts/python.exe`. This regenerates four figure sets in PNG and editable SVG under the output's `plots/figures/`. The numbers and trial selection are checked exactly. File hashes/pixels can differ with renderer, fonts, metadata and library build; that is separate from reproducing the experiment's numerical results.
 
-The old `results/archive` directory remains unchanged and has its original checksum listing. The final raw checkpoint is tracked as a compressed artifact rather than thousands of duplicated historical files. Git history preserves the original public baseline.
+To plot an already reproduced report without extracting again:
 
-PR4 is under author review; its final edited/submitted version is intentionally not represented as published. [Alignment limits](../results/matched-v1/PROPOSAL_ALIGNMENT.md) must remain alongside the obtained results.
+```bash
+.venv-analysis/bin/python tools/plot_matched.py --report scratch/reproduced/networking/matched-report.json --output scratch/plots
+```
+
+## Replay the original training search, without changing the frozen model
+
+```bash
+python3.12 -m venv .venv-training
+.venv-training/bin/python -m pip install -r requirements-ml.txt
+python3 tools/reproduce_results.py --output scratch/reproduced-with-fit --refit --training-python .venv-training/bin/python
+```
+
+Combine `--figures` and `--refit`, with both interpreter arguments, to run every stage. Fitting uses only the ten original training traces; selection uses the six original validation traces. No fresh test rows enter selection or fitting. The resulting JSON tree is compared structurally, including node values and thresholds, with `selected_tree.json`. The replay is saved separately and never replaces the frozen model.
+
+Original selection evidence is in [results/model-development-v1](../results/model-development-v1/): all 36 parameter/threshold candidates, tie rules, weights, float32 feature fingerprint, export parity, software versions and the selected tree. Recomputed wall/CPU inference timings are hardware-dependent; the historical measured timings remain in the published reports.
+
+## New live measurements
+
+Follow [LIVE_REPLAY.md](LIVE_REPLAY.md) for Ubuntu/VirtualBox resources, controller/topology startup, path controls, in-traffic pilot, full matched matrix and analysis. No VM disk image is provided. Saved-data reproduction is verified independently of fresh live acquisition; fresh VM loss/RTT numbers can vary.
+
+## Exact checkpoint and provenance
+
+`evidence/raw/342-sdn-checkpoint-20261116-214839.tar.gz`
+
+SHA-256: `e8f2e4e4294d35918c8b0d2e37fa79e92366732a19b0a12daad6f7c2a521b8e3`
+
+- Development: `20261115-194521-170669-fixed-development-batch`, seeds 11-15 train and 21-23 validation.
+- Untouched prediction test: `20261115-220149-096785-frozen-heldout-batch`, seeds 31-33.
+- Matched policies: `20261116-191234-565387-matched-policy-batch`, seeds 41-43.
+
+Earlier failed/superseded diagnostics and historical source snapshots remain in the checkpoint and original `results/archive`. Versions, engines and profiles must not be pooled as matched data. Queue root drops, sender pacing shortfall and UDP sequence loss have distinct meanings. The paper's claims remain bounded by [the reported limitations](../results/matched-v1/PROPOSAL_ALIGNMENT.md).
+
+Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/recreation-manifest.json`. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
