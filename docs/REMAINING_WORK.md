@@ -52,8 +52,8 @@ stay unchanged while the smallest reproducing case is investigated.
 
 | ID | Work | Completion criterion | Current state |
 | --- | --- | --- | --- |
-| R1 | Isolate loaded measurement failure | Four-step bounded component ladder, one case per explicit call; stop at first quality failure and inspect preserved evidence. Do not require a desired loss result. | Runner, registration, guards and installation package implemented; guest execution pending. |
-| R2 | Decide fix versus bounded stopping | Explain observed failure mechanism and remaining uncertainty. Any actual change gets a separate version and renewed low-load/overload/path/monitoring calibration. If unresolved promptly, retain the failure limitation and finish the accepted study. | Pending R1 evidence. No automatic parameter change. |
+| R1 | Isolate loaded measurement failure | Four-step bounded component ladder, one case per explicit call; stop at first quality failure and inspect preserved evidence. Do not require a desired loss result. | All four cases independently verified from the new checkpoint. Earlier fault not reproduced; root cause unresolved. |
+| R2 | Decide fix versus bounded stopping | Explain observed failure mechanism and remaining uncertainty. Any actual change gets a separate version and renewed low-load/overload/path/monitoring calibration. If unresolved promptly, retain the failure limitation and finish the accepted study. | Bounded diagnostic complete. No fix is justified from these four windows; preserve intermittent-failure limitation and keep failed batches closed. |
 | R3 | Close supplemental repetition decision | Only after stable loaded measurements, prospectively decide whether extra independent complete bursty blocks could change interpretation. Keep old partial attempts unpooled and register any new acquisition separately. If not feasible, report the original three paired seeds and uncertainty explicitly. | Held. The old failed batches stay closed. |
 | R4 | Measure forwarding activation if feasible | Separate narrowly instrumented pilot after stability; correlate measurement availability, decision, command/readback and first selected UDP packet observed on alternate path. Document capture overhead/clock basis and onset bounds. | Pending; rule readback and whole-run counters remain bounds, not exact activation. |
 | R5 | Consolidate existing offline evidence | One compact calibration/parameter table; split/run exclusions and reasons; scorable observation-time denominators, missed/false/late warning episodes and rates; individual paired differences; time-trace/activation uncertainty. Reproduce without relabeling intervened traffic. | Much evidence exists; final consolidated paper tables and claim audit remain. |
@@ -76,3 +76,10 @@ proceed; do not hold the whole paper for an optional ML win.
 The existing 95/100 is a planning rubric for the narrowed implementation and
 delivery, not a grade, time estimate, or percentage of all research uncertainty
 resolved. Creating this plan or installing the diagnostic adds no points.
+
+Latest evidence: [independently verified component ladder](../results/component-ladder-v1/RESULTS.md).
+All four reviews reproduce, 76 installed source/artifact pins match, and both failed
+batches plus all 36 original matched trials remain intact. Collector quality is clean
+in these windows; source-only pacing still has a 145 ms gap. Do not infer a root-cause
+fix or reopen the extra matrix. Next optional timing work needs a separately
+registered capture/activation pilot with its own quality and overhead checks.

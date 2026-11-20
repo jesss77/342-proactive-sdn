@@ -60,6 +60,12 @@ All 36 final networking trials passed independent source/model/raw-hash, endpoin
 
 ## Limits and remaining work
 
+The [four-case component ladder](results/component-ladder-v1/RESULTS.md) is now
+independently verified: source/receiver, collector, fixed loop and reactive loop
+all pass their registered quality checks. The earlier intermittent fault was
+not reproduced; its cause remains unresolved. These diagnostic runs are separate
+from policy-benefit estimates and do not reopen either failed batch.
+
 [Remaining work and acceptance gates](docs/REMAINING_WORK.md) map the completed
 study and follow-up to the research question. The [bounded component diagnostic](LOADED_DIAGNOSTICS.md)
 is implemented and tested; guest execution starts with source/receiver only, one

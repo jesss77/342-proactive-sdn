@@ -69,7 +69,7 @@ SHA-256: `e8f2e4e4294d35918c8b0d2e37fa79e92366732a19b0a12daad6f7c2a521b8e3`
 
 Earlier failed/superseded diagnostics and historical source snapshots remain in the checkpoint and original `results/archive`. Versions, engines and profiles must not be pooled as matched data. Queue root drops, sender pacing shortfall and UDP sequence loss have distinct meanings. The paper's claims remain bounded by [the reported limitations](../results/matched-v1/PROPOSAL_ALIGNMENT.md).
 
-Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/loaded-diagnostics-publication-manifest.json`. The earlier recreation and recovery manifests remain historical snapshots. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
+Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/component-ladder-publication-manifest.json`. The earlier recreation and recovery manifests remain historical snapshots. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
 
 ## November-20 failed recovery audit
 
@@ -82,3 +82,14 @@ cancellation review and failed loaded recovery. No extra complete policy block
 was obtained. [Diagnosis and exact audit command](../results/loaded-recovery-diagnostics-v1/DIAGNOSIS.md)
 explain the endpoint/collector failures and timing limits. The diagnostic audit
 starts no traffic and changes no model or raw metadata.
+
+## Completed component ladder
+
+The subsequent full checkpoint is
+`evidence/raw/342-sdn-checkpoint-20261120-234612.tar.gz`, SHA-256
+`b851a04ab1762953dea2b36ae64268373bc961b4cef6ce490d56ee70b25f4005`.
+All four diagnostic cases and their raw reviews independently reproduce.
+[Results, provenance and the exact reproduction command](../results/component-ladder-v1/RESULTS.md)
+retain source pacing, absent-versus-present monitoring, endpoint/queue accounting,
+resource and action timing. Earlier failed evidence remains unchanged. This is
+not an extra matched policy block or proof of a root-cause fix.
