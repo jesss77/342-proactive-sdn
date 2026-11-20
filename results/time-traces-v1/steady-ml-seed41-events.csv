@@ -1,0 +1,2 @@
+decision_s,available_s,sample_age_s,reason,applied,rejection,model_probability,started_s,readback_finished_s
+29.88565157400444,29.852526107999438,0.033125466005003545,frozen_tree_probability,True,,0.8903848753138112,30.08808424300514,30.298757468000986

@@ -1,0 +1,2 @@
+decision_s,available_s,sample_age_s,reason,applied,rejection,model_probability,started_s,readback_finished_s
+12.02727887799847,12.026727365002444,0.0005515129960258491,past_trend_forecast,True,,,12.114788628001406,12.262818859002437

@@ -1,0 +1,2 @@
+decision_s,available_s,sample_age_s,reason,applied,rejection,model_probability,started_s,readback_finished_s
+15.317938719999802,15.312393892992986,0.005544827006815467,observed_utilization_sustained,True,,,15.386618124997767,15.47445610799332

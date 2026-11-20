@@ -1,0 +1,199 @@
+{
+  "registered_at": "2026-11-20T15:20:41.452064+00:00",
+  "settings": {
+    "id": "advisor-supplement-v1",
+    "controls_seeds": [
+      41,
+      42,
+      43
+    ],
+    "bursty_seeds": [
+      44,
+      45,
+      46
+    ],
+    "duration_s": 60,
+    "requested_scale_bps": 11500000,
+    "interval_s": 0.25,
+    "model_sha256": "63b8b320ca7c6ca7c7e49d9bca6fb8408e491ea5bec168dd206dd9beeadaf595",
+    "policy_order": "three successive Williams orders continuing original block numbering at nine",
+    "scope": "Supplement to original 36; controls answer fixed-alternate asymmetry. New bursty blocks assess run variability. All outcomes retained; no parameter fitting or benefit gate."
+  },
+  "plan": [
+    {
+      "stage": "controls",
+      "policy": "fixed_alternate",
+      "scenario": "ramp",
+      "seed": 41,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "controls",
+      "policy": "fixed_alternate",
+      "scenario": "bursty",
+      "seed": 41,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "controls",
+      "policy": "fixed_alternate",
+      "scenario": "ramp",
+      "seed": 42,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "controls",
+      "policy": "fixed_alternate",
+      "scenario": "bursty",
+      "seed": 42,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "controls",
+      "policy": "fixed_alternate",
+      "scenario": "ramp",
+      "seed": 43,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "controls",
+      "policy": "fixed_alternate",
+      "scenario": "bursty",
+      "seed": 43,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 9,
+      "position": 0,
+      "policy": "reactive",
+      "scenario": "bursty",
+      "seed": 44,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 9,
+      "position": 1,
+      "policy": "early_warning",
+      "scenario": "bursty",
+      "seed": 44,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 9,
+      "position": 2,
+      "policy": "fixed",
+      "scenario": "bursty",
+      "seed": 44,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 9,
+      "position": 3,
+      "policy": "ml",
+      "scenario": "bursty",
+      "seed": 44,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 10,
+      "position": 0,
+      "policy": "early_warning",
+      "scenario": "bursty",
+      "seed": 45,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 10,
+      "position": 1,
+      "policy": "ml",
+      "scenario": "bursty",
+      "seed": 45,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 10,
+      "position": 2,
+      "policy": "reactive",
+      "scenario": "bursty",
+      "seed": 45,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 10,
+      "position": 3,
+      "policy": "fixed",
+      "scenario": "bursty",
+      "seed": 45,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 11,
+      "position": 0,
+      "policy": "ml",
+      "scenario": "bursty",
+      "seed": 46,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 11,
+      "position": 1,
+      "policy": "fixed",
+      "scenario": "bursty",
+      "seed": 46,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 11,
+      "position": 2,
+      "policy": "early_warning",
+      "scenario": "bursty",
+      "seed": 46,
+      "requested_bps": 11500000,
+      "duration": 60
+    },
+    {
+      "stage": "bursty",
+      "block": 11,
+      "position": 3,
+      "policy": "reactive",
+      "scenario": "bursty",
+      "seed": 46,
+      "requested_bps": 11500000,
+      "duration": 60
+    }
+  ],
+  "matched_protocol_sha256": "ed8eebbfe08b8cce536b9c49048ad7ebb83aae7bd79f29ef4d8ca8857e1b17c0",
+  "additional_source_sha256": {
+    "run_schedule_path_control.py": "58a85fd8cb3cd1713e2981fd2244aaea9b8f36e31b62167f5f673d9ac9cb157f",
+    "run_supplement_batch.py": "9e28d36bcfbea71b44d1f87bb726d77326aeac94dceb13df1bd1de6882c08ad1",
+    "test_supplement.py": "3fb6485e5a7aec62c6ff3c0c524869cc4c1d2ac3014e147c0b9c63124b9a2576",
+    "run_path_control.py": "ea3e936d5e11bf85a39c23efa6ee5919b009da116219b66e022b67382b132f28"
+  }
+}
