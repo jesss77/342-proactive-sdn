@@ -1,0 +1,175 @@
+{
+  "id": "bursty-followup-reservation-v1",
+  "status": "reserved_design_not_armed",
+  "reserved_on": "2026-11-21",
+  "seeds": [
+    51,
+    52,
+    53,
+    54
+  ],
+  "plan": [
+    {
+      "seed": 51,
+      "block": 0,
+      "position": 0,
+      "policy": "fixed",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 51,
+      "block": 0,
+      "position": 1,
+      "policy": "reactive",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 51,
+      "block": 0,
+      "position": 2,
+      "policy": "ml",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 51,
+      "block": 0,
+      "position": 3,
+      "policy": "early_warning",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 52,
+      "block": 1,
+      "position": 0,
+      "policy": "reactive",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 52,
+      "block": 1,
+      "position": 1,
+      "policy": "early_warning",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 52,
+      "block": 1,
+      "position": 2,
+      "policy": "fixed",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 52,
+      "block": 1,
+      "position": 3,
+      "policy": "ml",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 53,
+      "block": 2,
+      "position": 0,
+      "policy": "early_warning",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 53,
+      "block": 2,
+      "position": 1,
+      "policy": "ml",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 53,
+      "block": 2,
+      "position": 2,
+      "policy": "reactive",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 53,
+      "block": 2,
+      "position": 3,
+      "policy": "fixed",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 54,
+      "block": 3,
+      "position": 0,
+      "policy": "ml",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 54,
+      "block": 3,
+      "position": 1,
+      "policy": "fixed",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 54,
+      "block": 3,
+      "position": 2,
+      "policy": "early_warning",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    },
+    {
+      "seed": 54,
+      "block": 3,
+      "position": 3,
+      "policy": "reactive",
+      "scenario": "bursty",
+      "requested_bps": 11500000,
+      "duration_s": 60
+    }
+  ],
+  "model_sha256": "63b8b320ca7c6ca7c7e49d9bca6fb8408e491ea5bec168dd206dd9beeadaf595",
+  "matched_protocol_sha256": "ed8eebbfe08b8cce536b9c49048ad7ebb83aae7bd79f29ef4d8ca8857e1b17c0",
+  "reference_checkpoint_sha256": "b851a04ab1762953dea2b36ae64268373bc961b4cef6ce490d56ee70b25f4005",
+  "seed_check_scope": "None of 51-54 appear among the real run metadata in the latest independently verified checkpoint; recheck current guest before registration.",
+  "policy_positions_balanced": true,
+  "directed_adjacent_pairs_balanced": true,
+  "capture_enabled": false,
+  "activation_clock_observer_enabled": false,
+  "runner_implemented": false,
+  "acquisition_allowed": false,
+  "prerequisites": [
+    "Review/dispose current activation pilot and its quality outcomes",
+    "Verify uncaptured loaded-readiness eligibility and preserved failed evidence",
+    "Implement/test separate source-pinned runner and verify reserved seeds unused",
+    "Review first complete four-policy block before continuing"
+  ],
+  "failure_rule": "Keep every attempted cell and stop on quality/execution/identity/restoration failure. No repeats, seed replacements or old failed-batch reset.",
+  "analysis_scope": "Separate post-failure cohort. Original three plus supplemental four, if complete; seven-seed pooling only as labeled sensitivity. No ML-benefit acceptance requirement or model tuning."
+}
