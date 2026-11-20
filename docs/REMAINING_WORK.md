@@ -55,7 +55,7 @@ stay unchanged while the smallest reproducing case is investigated.
 | R1 | Isolate loaded measurement failure | Four-step bounded component ladder, one case per explicit call; stop at first quality failure and inspect preserved evidence. Do not require a desired loss result. | All four cases independently verified from the new checkpoint. Earlier fault not reproduced; root cause unresolved. |
 | R2 | Decide fix versus bounded stopping | Explain observed failure mechanism and remaining uncertainty. Any actual change gets a separate version and renewed low-load/overload/path/monitoring calibration. If unresolved promptly, retain the failure limitation and finish the accepted study. | Bounded diagnostic complete. No fix is justified from these four windows; preserve intermittent-failure limitation and keep failed batches closed. |
 | R3 | Close supplemental repetition decision | Only after stable loaded measurements, prospectively decide whether extra independent complete bursty blocks could change interpretation. Keep old partial attempts unpooled and register any new acquisition separately. If not feasible, report the original three paired seeds and uncertainty explicitly. | Held. The old failed batches stay closed. |
-| R4 | Measure forwarding activation if feasible | Separate narrowly instrumented pilot after stability; correlate measurement availability, decision, command/readback and first selected UDP packet observed on alternate path. Document capture overhead/clock basis and onset bounds. | Registered off/on/off frozen-ML ramp pilot implemented and tested; guest installation and before control pending. No capture quality or activation result claimed yet. |
+| R4 | Measure forwarding activation if feasible | Separate narrowly instrumented pilot after stability; correlate measurement availability, decision, command/readback and first selected UDP packet observed on alternate path. Document capture overhead/clock basis and onset bounds. | Installed. Initial idle check manually interrupted before any traffic; explicit one-use cancellation review prepared. Guest review and before control pending; no activation result yet. |
 | R5 | Consolidate existing offline evidence | One compact calibration/parameter table; split/run exclusions and reasons; scorable observation-time denominators, missed/false/late warning episodes and rates; individual paired differences; time-trace/activation uncertainty. Reproduce without relabeling intervened traffic. | Much evidence exists; final consolidated paper tables and claim audit remain. |
 | R6 | Finish final IEEE paper and reproducibility audit | Topology, common-loop pseudocode, parameters, dataset/workload/exclusion rules, closest-work comparison, measured networking results, timing/costs and limitations. Every numerical claim traces to frozen evidence. Validate final figures, bibliography and recreation commands. | Open. PR4 already submitted. Final deadline November 24. |
 
@@ -93,3 +93,11 @@ application-delivery timestamps. Per-capture child CPU omits kernel work
 charged elsewhere; retain whole-guest resources and descriptive bracket
 variation. Installation/first capture-off control are pending; no new guest
 traffic or capture has started. Both failed supplemental matrices stay closed.
+
+The reported initial activation readiness was cancelled with KeyboardInterrupt,
+zero traffic attempts and no new raw folders. The [explicit cancellation
+review](ACTIVATION_INTERRUPTION_REVIEW.md) is a separately recorded
+pre-acquisition administrative amendment, not permission to retry a screened
+experiment. It preserves failed raw/state, checks all partial samples and
+processes, archives only the registry once and leaves the 81 source/protocol
+files unchanged. Its 15 guard/regression checks pass; guest execution is pending.
