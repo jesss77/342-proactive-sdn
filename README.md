@@ -60,6 +60,11 @@ All 36 final networking trials passed independent source/model/raw-hash, endpoin
 
 ## Limits and remaining work
 
+[Remaining work and acceptance gates](docs/REMAINING_WORK.md) map the completed
+study and follow-up to the research question. The [bounded component diagnostic](LOADED_DIAGNOSTICS.md)
+is implemented and tested; guest execution starts with source/receiver only, one
+case per call. It does not reset either failed supplemental batch.
+
 November-20 follow-up: six variable fixed-alternate controls passed independent
 review. Additional bursty repetitions stopped on collector/endpoint quality
 failures; no extra complete four-policy block was obtained. The original

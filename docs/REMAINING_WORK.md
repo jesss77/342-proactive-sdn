@@ -1,0 +1,78 @@
+# Evidence status and remaining work — November 20, 2026
+
+## Research question and agreed scope
+
+Does a lightweight Decision Tree provide useful advance warning that improves
+SDN networking outcomes beyond a simpler early-warning rule? Keep observations,
+flow selection, alternate-path admission and rule installation common. This is
+a controlled trigger comparison, not a new path-selection algorithm. Preserve
+the DT-only, four-switch, single UDP pair, asymmetric-path study. No new models,
+larger topology, polling sweep, switch-back controller or test-set retuning.
+
+## What is implemented and evidenced
+
+| Checkpoint | Evidence and present status |
+| --- | --- |
+| Measurement and shaping | Primary low-load/overload calibration, alternate-path controls, achieved sender/receiver accounting, interface-specific root drops and endpoint errors. Early anomalous runs remain excluded diagnostics; loopback/clock observations alone were never proof of a shaped-path fix. |
+| Traffic and observation | Persistent 1,200-byte UDP; reproducible steady/ramp/bursty schedules; actual elapsed counter rates; four forward qdiscs at requested 250 ms; source pacing and resource diagnostics. |
+| Prediction dataset | 16 fixed-primary development runs: ten training, six validation; 1,594 eligible rows, 559 positives, 79 observed events. Whole-run splits, causal history, explicit gaps/censoring and a disclosed pre-fit source-audit amendment. |
+| Target and model | New 85% configured-utilization onset, sustained one second, within a two-second horizon; two-second history and sufficient future confirmation information. This is a high-utilization target, not universal packet-loss ground truth. Frozen tree: depth 3, minimum leaf 25, 15 nodes, probability threshold 0.65. |
+| Untouched prediction test | Six no-intervention runs, seeds 31–33, 642 eligible rows, 206 positives, 29 events. Ramp F1 0.957; bursty F1 0.811. Useful warnings: 2/3 ramp and 9/25 scorable burst events. Do not equate row F1 with usable networking warning. |
+| Common control | h1/h2 IPv4 pair including probes; recent valid upstream demand; both standby queues; operating budget 15.9 Mbit/s with 80% admission bound; carrier/freshness gates; five-second cooldown and one successful switch. No return during traffic; cleanup restores primary. |
+| Four trigger modes | Fixed primary; reactive after one second of observed high utilization; causal trend early warning; frozen-tree ML. Same sampler/admission/action. No-action, denials and unnecessary actions retained. The trend rule's recorded parameters are not claimed to have undergone an unrecorded validation search. |
+| Main networking experiment | 36 independently accepted trials: four policies × three scenarios × seeds 41–43, with matched schedules, balanced ordering and per-run/paired results. Loss, goodput, received-probe RTT, queue observations, rerouting and costs are reported separately. |
+| Interpretation | Mean burst loss: fixed 18.682%, reactive 5.591%, early warning 0.013%, ML 0.195%. No added ML advantage is established. One unnecessary low-load ML switch remains visible. This small study cannot establish general Internet/TCP performance. |
+| Follow-up capacity controls | Six accepted variable fixed-alternate controls, ramp/bursty seeds 41–43. All datagrams arrived. Choosing the stronger route permanently already avoids loss in these tested workloads; disclose this limitation. |
+| Time traces and provenance | Representative ramp/bursty/adverse/low-load traces and saved-data reproduction published. Code/model/protocol pins, raw checkpoints, rejected attempts and original metadata preserved. Submitted PR4 remains the private author-edited reference. |
+
+Main [networking results](../results/matched-v1/RESULTS.md),
+[prediction reference](../results/matched-v1/PREDICTION_REFERENCE.md),
+[proposal alignment](../results/matched-v1/PROPOSAL_ALIGNMENT.md),
+[initial supplement audit](../results/supplement-diagnostics-v1/DIAGNOSIS.md) and
+[loaded recovery audit](../results/loaded-recovery-diagnostics-v1/DIAGNOSIS.md)
+remain separately identifiable.
+
+## Why new acquisition is gated
+
+The initial supplemental batch accepted six controls and reactive seed 44, then
+stopped on early-warning collector quality. Its partial policy block cannot
+support a new paired mean. A separately registered once-only whole-block
+recovery passed idle readiness but failed its first reactive loaded trial:
+43 receiver-buffer errors, three query overruns, six invalid intervals per
+queue, a 359 ms maximum pacing gap and 2.370 s decision-to-final-readback.
+Restoration passed. There are zero complete extra four-policy blocks.
+
+The full failure archive and both stopped states are preserved. Their failures
+do not invalidate the already independently checked historical benchmark, but
+current loaded repeatability is unresolved. No further automatic recovery is
+permitted. Source, model, buffers, profile, vCPU, clock, polling and thresholds
+stay unchanged while the smallest reproducing case is investigated.
+
+## Ordered plan and acceptance gates
+
+| ID | Work | Completion criterion | Current state |
+| --- | --- | --- | --- |
+| R1 | Isolate loaded measurement failure | Four-step bounded component ladder, one case per explicit call; stop at first quality failure and inspect preserved evidence. Do not require a desired loss result. | Runner, registration, guards and installation package implemented; guest execution pending. |
+| R2 | Decide fix versus bounded stopping | Explain observed failure mechanism and remaining uncertainty. Any actual change gets a separate version and renewed low-load/overload/path/monitoring calibration. If unresolved promptly, retain the failure limitation and finish the accepted study. | Pending R1 evidence. No automatic parameter change. |
+| R3 | Close supplemental repetition decision | Only after stable loaded measurements, prospectively decide whether extra independent complete bursty blocks could change interpretation. Keep old partial attempts unpooled and register any new acquisition separately. If not feasible, report the original three paired seeds and uncertainty explicitly. | Held. The old failed batches stay closed. |
+| R4 | Measure forwarding activation if feasible | Separate narrowly instrumented pilot after stability; correlate measurement availability, decision, command/readback and first selected UDP packet observed on alternate path. Document capture overhead/clock basis and onset bounds. | Pending; rule readback and whole-run counters remain bounds, not exact activation. |
+| R5 | Consolidate existing offline evidence | One compact calibration/parameter table; split/run exclusions and reasons; scorable observation-time denominators, missed/false/late warning episodes and rates; individual paired differences; time-trace/activation uncertainty. Reproduce without relabeling intervened traffic. | Much evidence exists; final consolidated paper tables and claim audit remain. |
+| R6 | Finish final IEEE paper and reproducibility audit | Topology, common-loop pseudocode, parameters, dataset/workload/exclusion rules, closest-work comparison, measured networking results, timing/costs and limitations. Every numerical claim traces to frozen evidence. Validate final figures, bibliography and recreation commands. | Open. PR4 already submitted. Final deadline November 24. |
+
+R1 is a diagnostic ladder: (1) source/receiver with existing snapshots, probes
+and vmstat; (2) add continuous collector; (3) frozen fixed-policy loop; (4)
+frozen reactive loop. It is not another four-policy efficacy study. Jess's
+reported host condition is plugged in with other work still running. Keep that
+limitation visible; neither an idle readiness pass nor one passing loaded case
+proves a resource-contention fix. See [the executable diagnostic protocol](../LOADED_DIAGNOSTICS.md).
+
+By November 21, make an evidence-based R2/R3 decision rather than adding another
+open-ended retry. Use November 22 for evidence consolidation and the complete
+paper draft, November 23 for verification/review, and November 24 for final
+submission. These are work targets around the known deadline, not new course
+requirements. Write established methods/results while targeted diagnostics
+proceed; do not hold the whole paper for an optional ML win.
+
+The existing 95/100 is a planning rubric for the narrowed implementation and
+delivery, not a grade, time estimate, or percentage of all research uncertainty
+resolved. Creating this plan or installing the diagnostic adds no points.

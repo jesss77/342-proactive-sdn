@@ -17,3 +17,7 @@ The current outcomes are in [the repository README](../README.md) and [matched r
 | [MATCHED_EVALUATION.md](../MATCHED_EVALUATION.md) | Completed 36-cell matched acquisition protocol |
 
 `selected_tree.json`, `dataset_protocol.json`, `matched_protocol.json` and the pinned implementation files are published byte-for-byte from the verified final guest checkpoint. Acquisition wrappers retain strict source hashes; documentation updates are separate from frozen experimental evidence.
+
+Current follow-up: [bounded loaded diagnostic](../LOADED_DIAGNOSTICS.md) and
+[remaining-work gates](REMAINING_WORK.md). These preserve the completed benchmark
+and both stopped batches; installation starts no new traffic.
