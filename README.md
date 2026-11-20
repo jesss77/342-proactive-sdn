@@ -1,6 +1,6 @@
 # Proactive Congestion Management in SDN
 
-CMPS342 research project — Youssef Shawwa and Jessy Karamaoun. Updated November 19, 2026.
+CMPS342 research project — Youssef Shawwa and Jessy Karamaoun. Updated November 20, 2026.
 
 We test whether a lightweight learned congestion warning adds value when routing, observations and admission constraints are shared. **The registered experiment is complete: 36 matched trials, four policies, three traffic scenarios and three seeds. Earlier triggering helped against fixed/reactive routing; an added benefit from the learned tree over the simple trend rule was not established.**
 
@@ -59,6 +59,13 @@ Ten fixed-primary traces trained the tree; six validation traces selected it; si
 All 36 final networking trials passed independent source/model/raw-hash, endpoint, collector and restoration checks. Original raw runtime `pending_review` statuses are preserved; derived assessments are separate. The complete checkpoint also retains failed and superseded diagnostics. Source pacing discard reached 0.342% against the inherited 5% screen; achieved rates are reported separately from network loss.
 
 ## Limits and remaining work
+
+November-20 follow-up: six variable fixed-alternate controls passed independent
+review. Additional bursty repetitions stopped on collector/endpoint quality
+failures; no extra complete four-policy block was obtained. The original
+36-run benchmark is preserved. [The loaded-recovery diagnosis](results/loaded-recovery-diagnostics-v1/DIAGNOSIS.md)
+and exact new raw checkpoint document the validation hold, source gaps and
+measurement aging. No model, frozen source or acceptance threshold changed.
 
 Only the Decision Tree was trained; an earlier broader classifier objective was narrowed. The polling sweep used steady traffic and an older collector. More high-variance repetitions and current-collector burst/interval validation remain open. Repeated recovery and oscillation are untested. Received-probe RTT is not one-way delay; command/readback elapsed time is not packet-level activation or disruption. No production-controller or general abrupt-burst prediction claim is made.
 

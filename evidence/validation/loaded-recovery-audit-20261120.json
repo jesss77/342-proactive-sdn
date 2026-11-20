@@ -1,0 +1,20 @@
+{
+  "as_of": "2026-11-20",
+  "scope": "Offline diagnostic reproduction only; no new live acquisition or fitting",
+  "replay_command": "python3 tools/audit_loaded_recovery.py --extract scratch/recovery-checkpoint --output scratch/recovery-audit",
+  "fresh_safe_extraction_regular_files": 10720,
+  "replay_exit_code": 0,
+  "independent_audit_and_published_tool_replay_exactly_equal_except_output_path": true,
+  "installed_source_hashes_verified": 72,
+  "parent_evidence_hashes_verified": 828,
+  "original_matched_trials_raw_hashes_verified": 36,
+  "recovery_trial_accepted": false,
+  "quality_failures": [
+    "udp_error",
+    "collector_quality"
+  ],
+  "raw_checkpoint_sha256": "7ea47c86690aca1b8767577a0accaa9e16797d1c0e8115e0c5494350bfec64cc",
+  "frozen_model_sha256": "63b8b320ca7c6ca7c7e49d9bca6fb8408e491ea5bec168dd206dd9beeadaf595",
+  "acquisition_code_or_thresholds_changed": false,
+  "root_cause_identified": false
+}

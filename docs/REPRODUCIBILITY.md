@@ -69,4 +69,16 @@ SHA-256: `e8f2e4e4294d35918c8b0d2e37fa79e92366732a19b0a12daad6f7c2a521b8e3`
 
 Earlier failed/superseded diagnostics and historical source snapshots remain in the checkpoint and original `results/archive`. Versions, engines and profiles must not be pooled as matched data. Queue root drops, sender pacing shortfall and UDP sequence loss have distinct meanings. The paper's claims remain bounded by [the reported limitations](../results/matched-v1/PROPOSAL_ALIGNMENT.md).
 
-Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/recreation-manifest.json`. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
+Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/loaded-recovery-publication-manifest.json`. The earlier recreation and recovery manifests remain historical snapshots. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
+
+## November-20 failed recovery audit
+
+The original accepted benchmark above remains separate from the later stopped
+supplement. The newer full checkpoint is
+`evidence/raw/342-sdn-checkpoint-20261120-223910.tar.gz`, SHA-256
+`7ea47c86690aca1b8767577a0accaa9e16797d1c0e8115e0c5494350bfec64cc`.
+It preserves the six alternate controls, partial failed supplement, readiness
+cancellation review and failed loaded recovery. No extra complete policy block
+was obtained. [Diagnosis and exact audit command](../results/loaded-recovery-diagnostics-v1/DIAGNOSIS.md)
+explain the endpoint/collector failures and timing limits. The diagnostic audit
+starts no traffic and changes no model or raw metadata.
