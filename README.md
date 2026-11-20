@@ -1,6 +1,6 @@
 # Proactive Congestion Management in SDN
 
-CMPS342 research project — Youssef Shawwa and Jessy Karamaoun. Updated November 20, 2026.
+CMPS342 research project — Youssef Shawwa and Jessy Karamaoun. Updated November 21, 2026.
 
 We test whether a lightweight learned congestion warning adds value when routing, observations and admission constraints are shared. **The registered experiment is complete: 36 matched trials, four policies, three traffic scenarios and three seeds. Earlier triggering helped against fixed/reactive routing; an added benefit from the learned tree over the simple trend rule was not established.**
 
@@ -59,6 +59,11 @@ Ten fixed-primary traces trained the tree; six validation traces selected it; si
 All 36 final networking trials passed independent source/model/raw-hash, endpoint, collector and restoration checks. Original raw runtime `pending_review` statuses are preserved; derived assessments are separate. The complete checkpoint also retains failed and superseded diagnostics. Source pacing discard reached 0.342% against the inherited 5% screen; achieved rates are reported separately from network loss.
 
 ## Limits and remaining work
+
+The [bounded packet-activation pilot](ACTIVATION_PILOT.md) is implemented and
+tested: frozen ML ramp with capture off/on/off, one run per explicit call.
+It will measure a selected UDP observation at alternate egress with clock and
+capture-quality checks; no new guest activation result is available yet.
 
 The [four-case component ladder](results/component-ladder-v1/RESULTS.md) is now
 independently verified: source/receiver, collector, fixed loop and reactive loop

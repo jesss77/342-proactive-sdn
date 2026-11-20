@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-11-21",
+  "scope": "Preparation only; no guest activation step acquired",
+  "full_test_total": 176,
+  "passed": 172,
+  "skipped": 4,
+  "new_activation_tests": 14,
+  "installer_guards": [
+    {
+      "case": "success",
+      "passed": true,
+      "old_raw_preserved": true
+    },
+    {
+      "case": "frozen_mutation",
+      "passed": true,
+      "old_raw_preserved": true
+    },
+    {
+      "case": "test_failure",
+      "passed": true,
+      "old_raw_preserved": true
+    }
+  ],
+  "existing_source_artifact_pins_verified": 76,
+  "completed_parent_evidence_pins_verified": 571,
+  "protocol_sha256": "48d4c2ddade50ee3266c1bfa811b3c2f8cff622fffa63dcb11678b4ec312f237",
+  "package_sha256": "0bcaefa3cff21720bad613f6767a3c33b333a764b0ce68c456bbb3978157ceb1",
+  "tcpdump_reported": "4.99.4",
+  "libpcap_reported": "1.10.4 with TPACKET_V3",
+  "capture_interfaces": [
+    "s1-eth3",
+    "s1-eth4"
+  ],
+  "direction": "out",
+  "capture_timestamp_basis": "Linux outgoing tap refreshes clone software timestamp; observed clock envelope is not a physical accuracy guarantee",
+  "guest_capture_quality_verified": false,
+  "new_live_traffic_started": false,
+  "frozen_source_or_model_rewritten": false
+}

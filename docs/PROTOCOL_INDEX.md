@@ -21,3 +21,6 @@ The current outcomes are in [the repository README](../README.md) and [matched r
 Current follow-up: [bounded loaded diagnostic](../LOADED_DIAGNOSTICS.md) and
 [remaining-work gates](REMAINING_WORK.md). These preserve the completed benchmark
 and both stopped batches; installation starts no new traffic.
+
+Capture follow-up: [selected UDP activation pilot](../ACTIVATION_PILOT.md),
+registered off/on/off bracket; prepared, not yet acquired.
