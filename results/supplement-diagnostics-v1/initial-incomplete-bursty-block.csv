@@ -1,0 +1,3 @@
+scenario,seed,policy,status,folder,trial,sender_mbps,receiver_mbps,udp_loss_percent,source_discard_percent,traffic_reply_rtt_median_ms,traffic_reply_rtt_p95_ms,screen_failures,paired_block_complete
+bursty,44,reactive,accepted,20261120-200931-499542-policy-reactive-bursty-seed44,20261120-200936-624960-primary-continuous-bursty-7881320bps,7.835498287834245,7.516529976939784,4.065588499550763,0.5774550508531908,11.6,56.1,,False
+bursty,44,early_warning,failed,20261120-201043-190009-policy-early_warning-bursty-seed44,20261120-201049-154227-primary-continuous-bursty-7881320bps,7.866492369929581,7.578107352649448,3.6447951836635073,0.1842944778488565,11.7,59.8,collector_quality,False

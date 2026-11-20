@@ -1,0 +1,26 @@
+{
+  "as_of": "2026-11-20T19:00:33.047152+00:00",
+  "archive_sha256": "fb5d184b1888add78828938b72bf37bda99233996ea3b4c25b5def46d28ba07c",
+  "exported_files_verified": 828,
+  "frozen_sources_verified": 68,
+  "accepted_records_reproduced": 7,
+  "controls_independently_accepted": 6,
+  "initial_bursty_accepted": 1,
+  "initial_bursty_failed": 1,
+  "complete_extra_blocks": 0,
+  "failure": "one shared skipped polling deadline, sample135; query exits0, no counter resets",
+  "root_cause_limit": "Precise host/kernel scheduling cause not established",
+  "full_suite": {
+    "run": 159,
+    "passed": 155,
+    "skipped": 4
+  },
+  "new_recovery_tests": 8,
+  "recovery_protocol_sha256": "538b9a814e9a9308900d9d4acd1af1e26f55a16d02cdcc63b1c42f3d645e2442",
+  "unchanged_existing_source_files": 68,
+  "new_recovery_files": 4,
+  "recovery_traffic_started": false,
+  "original_36_raw_hashes_rechecked": true,
+  "model_changed": false,
+  "quality_threshold_changed": false
+}
