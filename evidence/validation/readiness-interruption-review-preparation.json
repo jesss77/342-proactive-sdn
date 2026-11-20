@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-11-20T19:17:19.476170+00:00",
+  "reported_event": "KeyboardInterrupt during readiness/00; SCREEN None",
+  "guest_installation_reported_passed": true,
+  "guest_optional_skips": 2,
+  "review_helper_sha256": "af2d44d478fc7024bde289a741fe009fc8032218db6936dc2f0885a2ee24e98c",
+  "guard_tests_run": 5,
+  "guard_tests_passed": 5,
+  "frozen_recovery_protocol_sha256": "538b9a814e9a9308900d9d4acd1af1e26f55a16d02cdcc63b1c42f3d645e2442",
+  "source_or_settings_changed": false,
+  "guest_review_performed": false,
+  "scope": "Prospective one-time administrative review; runtime guard must prove zero acquisition and no completed partial quality failures. No new traffic acceptance claimed."
+}
