@@ -1,0 +1,179 @@
+{
+  "format": "cmps342-cart-json-v1",
+  "features": [
+    "utilization",
+    "util_mean_1s",
+    "util_mean_2s",
+    "util_ewma_1s",
+    "util_slope_2s",
+    "upstream_bps",
+    "upstream_mean_1s_bps",
+    "queue_packets",
+    "backlog_bytes",
+    "drops_per_s",
+    "query_duration_s"
+  ],
+  "alarm_threshold": 0.65,
+  "nodes": [
+    {
+      "feature": 6,
+      "threshold": 3024308.0,
+      "left": 1,
+      "right": 8,
+      "p1": 0.3333399040181018
+    },
+    {
+      "feature": 3,
+      "threshold": 0.3482941687107086,
+      "left": 2,
+      "right": 5,
+      "p1": 0.748208294179511
+    },
+    {
+      "feature": 3,
+      "threshold": 0.3052005171775818,
+      "left": 3,
+      "right": 4,
+      "p1": 0.9730874919786164
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.8903848753138112
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.9917533450989108
+    },
+    {
+      "feature": 3,
+      "threshold": 0.42137858271598816,
+      "left": 6,
+      "right": 7,
+      "p1": 0.6181392013841253
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.7094727640308489
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.5339523466141262
+    },
+    {
+      "feature": 2,
+      "threshold": 0.7272038161754608,
+      "left": 9,
+      "right": 12,
+      "p1": 0.12415299559447283
+    },
+    {
+      "feature": 5,
+      "threshold": 3384554.0,
+      "left": 10,
+      "right": 11,
+      "p1": 0.020347255443182076
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.32703108316937896
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.0
+    },
+    {
+      "feature": 4,
+      "threshold": 0.02352575585246086,
+      "left": 13,
+      "right": 14,
+      "p1": 0.2543370720990946
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.14227556861828147
+    },
+    {
+      "feature": -1,
+      "threshold": -2.0,
+      "left": -1,
+      "right": -1,
+      "p1": 0.7949314399255509
+    }
+  ],
+  "parameters": {
+    "max_depth": 3,
+    "min_samples_leaf": 25,
+    "class_weight": null
+  },
+  "plan": {
+    "id": "cart-development-selection-v1",
+    "random_state": 342,
+    "max_depth": [
+      2,
+      3,
+      4
+    ],
+    "min_samples_leaf": [
+      10,
+      25
+    ],
+    "class_weight": [
+      null,
+      "balanced"
+    ],
+    "alarm_thresholds": [
+      0.35,
+      0.5,
+      0.65
+    ],
+    "sample_weight": "Equal total weight per training run",
+    "selection": "Maximize validation positive-class F1 averaged equally over ramp/bursty; tie: fewer nodes, larger min_samples_leaf, threshold closer to .5, unweighted classes",
+    "fit_partitions": [
+      "train"
+    ],
+    "selection_partitions": [
+      "validation"
+    ],
+    "test_partitions": [],
+    "warning_episode_cooldown_s": 5.0,
+    "warning_horizon_s": 2.0,
+    "note": "Limited development search, not an untouched test estimate; never refit on validation after selection"
+  },
+  "dataset_fingerprint": "a5c3d17eb0397af62768bda2e49b5e94a8dd159fcf342b220fd9b32cbec6c7f5",
+  "acquisition_protocol_id": "dual-fixed-highutil-v1",
+  "label_config": {
+    "version": "highutil85-duration1-horizon2-v1",
+    "utilization_threshold": 0.85,
+    "confirmation_s": 1.0,
+    "horizon_s": 2.0,
+    "history_s": 2.0,
+    "ewma_tau_s": 1.0,
+    "future_guard_s": 0.75,
+    "route": "primary",
+    "scope": "Frozen operational target for dual-fixed development; not packet-loss ground truth"
+  },
+  "profile_id": "dual-forward-cburst16k-source250-v1",
+  "feature_source_sha256": "2654567afd5e77285fdbf8ca0077e733389c07b4b63d7003ed6afff66649c291",
+  "note": "Leaf frequency estimates, not calibrated probabilities. Selected using validation; no fresh test result or live ML action yet."
+}

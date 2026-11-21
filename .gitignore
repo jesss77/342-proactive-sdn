@@ -1,18 +1,7 @@
+@"
 .venv/
 __pycache__/
-*.py[cod]
-.env
-.env.*
-*.iso
-*.vdi
-*.vmdk
-.DS_Store
-Thumbs.db
+*.pyc
 results/runs/
-
-scratch/
-*.log
-
-.venv-analysis/
-.venv-training/
-results/environment/
+results/derived/
+"@ | Set-Content -Encoding UTF8 .gitignore

@@ -1,0 +1,33 @@
+{
+  "id": "dual-profile-operating-bounds-v1",
+  "frozen_on": "2026-11-15",
+  "profile": "dual-forward-cburst16k-source250-v1",
+  "collector_coverage": "all",
+  "collector_interval_s": 0.25,
+  "max_tested_payload_bps": 16000000,
+  "admission_budget_bps": 15900000,
+  "headroom_fraction": 0.8,
+  "admission_aggregate_limit_bps": 12720000,
+  "max_read_age_s": 0.5,
+  "scope": "One h1/h2 IPv4 pair, no generated background; current measured-load admission, not a guarantee for arbitrary future bursts.",
+  "rate_note": "Admission compares observed counter rates with a budget rounded below the lowest demonstrated 16M payload goodput; deliberately conservative. Nominal 20M is not used as a certified payload budget.",
+  "controls_16m": [
+    {
+      "control": "20261115-174718-568518-path-control-alternate-16000000bps",
+      "receiver_bps": 15993285.224597536
+    },
+    {
+      "control": "20261115-175651-482492-path-control-alternate-16000000bps",
+      "receiver_bps": 15995903.242380876
+    },
+    {
+      "control": "20261115-175719-445352-path-control-alternate-16000000bps",
+      "receiver_bps": 15995927.88475852
+    }
+  ],
+  "limitations": [
+    "Three 20-second steady controls do not certify all burst peaks or maximum path service.",
+    "Admission uses recent observed load and must reject stale, down-link or over-budget conditions.",
+    "Counter freshness/event-target calibration and larger independent data remain separate open checkpoints."
+  ]
+}

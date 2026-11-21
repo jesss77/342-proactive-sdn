@@ -1,3 +1,0 @@
-# Original model-development evidence
-
-These are the original frozen development-search outputs, not a new fit. The selected model.json is byte-identical to ../../selected_tree.json. training_report.json records every candidate, validation selection, weighting, feature fingerprint, export parity, source hashes and original software environment. Its original future-work wording predates fresh evaluation; current results are in ../matched-v1/. Replay the search with tools/reproduce_results.py --refit using the separate training environment. The output is compared with the frozen model and is never installed over it.
