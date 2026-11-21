@@ -54,8 +54,8 @@ stay unchanged while the smallest reproducing case is investigated.
 | --- | --- | --- | --- |
 | R1 | Isolate loaded measurement failure | Four-step bounded component ladder, one case per explicit call; stop at first quality failure and inspect preserved evidence. Do not require a desired loss result. | All four cases independently verified from the new checkpoint. Earlier fault not reproduced; root cause unresolved. |
 | R2 | Decide fix versus bounded stopping | Explain observed failure mechanism and remaining uncertainty. Any actual change gets a separate version and renewed low-load/overload/path/monitoring calibration. If unresolved promptly, retain the failure limitation and finish the accepted study. | Bounded diagnostic complete. No fix is justified from these four windows; preserve intermittent-failure limitation and keep failed batches closed. |
-| R3 | Close supplemental repetition decision | Keep old partial attempts unpooled; use a separately registered bounded cohort after the activation review and uncaptured eligibility checks. | [Design reserved](BURSTY_FOLLOWUP_PLAN.md): seeds 51–54, four policies, 16 trials with balanced order. Runner not implemented or armed. Review the first block before continuing. Old failed batches stay closed. |
-| R4 | Measure forwarding activation if feasible | Separate narrowly instrumented pilot after stability; correlate measurement availability, decision, command/readback and first selected UDP packet observed on alternate path. Document capture overhead/clock basis and onset bounds. | Guest cancellation review reported successful: zero traffic attempts, 204 complete partial idle samples, old batch unchanged. Fresh full readiness and before control pending; no activation result yet. |
+| R3 | Close supplemental repetition decision | Keep old partial attempts unpooled; use a separately registered bounded cohort after activation review and uncaptured eligibility checks. | [Four-seed follow-up implemented](../BURSTY_FOLLOWUP.md): 16 cells, one four-policy block per call, explicit independent review gate between blocks. Guest installation/acquisition pending. Old failed batches stay closed. |
+| R4 | Measure forwarding activation if feasible | Separate narrowly instrumented pilot; correlate observation availability, decision, programming/readback and first selected UDP on alternate egress, with capture/clock limitations. | [All three off/on/off reviews independently reproduce](../results/activation-pilot-v1/RESULTS.md). Captured first alternate UDP at 110.117–110.142 ms after decision; full final readback 201.043 ms. Single ML ramp, not a general latency bound or before-onset proof. |
 | R5 | Consolidate existing offline evidence | One compact calibration/parameter table; split/run exclusions and reasons; scorable observation-time denominators, missed/false/late warning episodes and rates; individual paired differences; time-trace/activation uncertainty. Reproduce without relabeling intervened traffic. | Much evidence exists; final consolidated paper tables and claim audit remain. |
 | R6 | Finish final IEEE paper and reproducibility audit | Topology, common-loop pseudocode, parameters, dataset/workload/exclusion rules, closest-work comparison, measured networking results, timing/costs and limitations. Every numerical claim traces to frozen evidence. Validate final figures, bibliography and recreation commands. | Open. PR4 already submitted. Final deadline November 24. |
 
@@ -91,8 +91,9 @@ and compares capture off/on/off without changing the common controller. Kernel
 software capture timestamps are observations, not atomic rule-activation or
 application-delivery timestamps. Per-capture child CPU omits kernel work
 charged elsewhere; retain whole-guest resources and descriptive bracket
-variation. Installation is complete; the first capture-off control is pending.
-No pilot traffic or capture has started. Both failed supplemental matrices stay closed.
+variation. All three guest steps completed and independently reproduce from
+checkpoint `20261121-020916`; no pilot repetitions remain. Both failed
+supplemental matrices stay closed. See the [timing and overhead evidence](../results/activation-pilot-v1/RESULTS.md).
 
 The reported initial activation readiness was cancelled with KeyboardInterrupt,
 zero traffic attempts and no new raw folders. The [explicit cancellation
@@ -103,6 +104,7 @@ processes, archives only the registry once and leaves the 81 source/protocol
 files unchanged. Its 15 guard/regression checks pass. Jess reports successful
 guest review at `20261120-230735-648374-reviewed-activation-idle-interruption`:
 zero traffic attempts, 204 completed partial samples, old batch unchanged and
-no source/quality change. Exported independent review remains pending. Partial
-idle samples are not a full readiness pass. Run the unchanged `before` command
-once; do not rerun the one-use review helper.
+no source/quality change. The exported review now independently reproduces:
+204 clean partial rows, exact old-batch hashes and archived registry. Partial
+idle samples are not a full readiness pass; the new completed pilot has its own
+full passing idle check. The one-use helper must not run again.

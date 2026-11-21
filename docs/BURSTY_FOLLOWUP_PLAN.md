@@ -1,5 +1,9 @@
 # Reserved bursty follow-up cohort — November 21, 2026
 
+This records the prospective reservation. Its subsequent implementation is
+[BURSTY_FOLLOWUP.md](../BURSTY_FOLLOWUP.md); the original reservation JSON is
+retained unchanged. Acquisition has not started.
+
 The additional bursty comparison can be strengthened with new independent,
 matched traffic realizations. Failed measurements cannot be converted into
 valid repetitions. Preserve the original 36-trial benchmark, both stopped

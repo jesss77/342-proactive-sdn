@@ -16,5 +16,5 @@ def verify(root,manifest):
     print(json.dumps(dict(files_verified=count,raw_and_frozen_hashes_checked=True)))
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=ROOT)
-    p.add_argument('--manifest',type=Path,default=ROOT/'evidence/bursty-reservation-publication-manifest.json')
+    p.add_argument('--manifest',type=Path,default=ROOT/'evidence/activation-audit-followup-publication-manifest.json')
     a=p.parse_args();verify(a.root,a.manifest)
