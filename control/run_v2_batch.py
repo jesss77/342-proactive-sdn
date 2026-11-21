@@ -11,7 +11,7 @@ sys.path.insert(0, str(BASE))
 POLICIES = ['fixed', 'reactive', 'early_warning', 'ml']
 SCENARIOS = ['ramp', 'bursty']
 BG_LEVELS = [0, 4_000_000, 14_000_000]
-SEEDS = [41, 42]
+SEEDS = [41, 42, 43]
 
 
 def make_plan():

@@ -1,0 +1,38 @@
+[
+  {
+    "policy": "fixed_alternate",
+    "scenario": "ramp",
+    "seed": 41,
+    "bg_bps": 14000000,
+    "folder": "20261121-205413-754704-fixed-alternate-ramp-bg14m-seed41",
+    "trial": "20261121-205415-821219-alternate-continuous-ramp-8246914bps",
+    "h1_sender_mbps": 8.133,
+    "h1_receiver_mbps": 6.972,
+    "h1_loss_percent": 14.264,
+    "rtt_p95_ms": 42.4,
+    "s1_eth4_drops": 14889,
+    "s3_eth2_drops": 0,
+    "bg_sender_mbps": 13.562,
+    "bg_receiver_mbps": 12.157,
+    "bg_loss_percent": 10.354,
+    "screen_failures": []
+  },
+  {
+    "policy": "fixed_alternate",
+    "scenario": "bursty",
+    "seed": 41,
+    "bg_bps": 14000000,
+    "folder": "20261121-205519-734074-fixed-alternate-bursty-bg14m-seed41",
+    "trial": "20261121-205521-728630-alternate-continuous-bursty-7358693bps",
+    "h1_sender_mbps": 7.063,
+    "h1_receiver_mbps": 5.795,
+    "h1_loss_percent": 17.952,
+    "rtt_p95_ms": 36.8,
+    "s1_eth4_drops": 15555,
+    "s3_eth2_drops": 0,
+    "bg_sender_mbps": 13.769,
+    "bg_receiver_mbps": 12.362,
+    "bg_loss_percent": 10.22,
+    "screen_failures": []
+  }
+]
