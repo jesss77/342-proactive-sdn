@@ -12,6 +12,12 @@ one failed and nine unattempted. Only seed51 is a complete additional matched
 block. Earlier failures and partial outcomes remain separate; no retries or
 quality waivers follow. See the [post-PR4 attrition table](results/bursty-followup-v1/POST_PR4_ATTRITION.md).
 
+The [consolidated evidence](results/paper-evidence-v1/README.md) now includes
+whole-run dataset exclusions, held-out warning rates with explicit denominators,
+individual paired differences, fixed settings and standalone scientific figures.
+It is rebuilt from saved evidence without traffic, fitting or trigger changes.
+The final paper remains a private author-review draft.
+
 ## Obtained results
 
 Each entry is a whole-run mean over three matched seeds. These are descriptive results from one VM, one selected host pair and at most one successful alternate-path switch per trial.
@@ -68,10 +74,11 @@ All 36 final networking trials passed independent source/model/raw-hash, endpoin
 
 ## Limits and remaining work
 
-The [bounded packet-activation pilot](ACTIVATION_PILOT.md) is implemented and
-tested: frozen ML ramp with capture off/on/off, one run per explicit call.
-It will measure a selected UDP observation at alternate egress with clock and
-capture-quality checks; no new guest activation result is available yet.
+The [bounded packet-activation pilot](results/activation-pilot-v1/RESULTS.md)
+completed and independently reproduces: first selected alternate UDP observation
+110.117–110.142 ms after the decision in one captured frozen-ML ramp. Its software
+timestamp is not atomic rule installation, application delivery or a general
+latency bound. All three capture-off/on/off runs passed the registered checks.
 
 The [four-case component ladder](results/component-ladder-v1/RESULTS.md) is now
 independently verified: source/receiver, collector, fixed loop and reactive loop
@@ -80,9 +87,8 @@ not reproduced; its cause remains unresolved. These diagnostic runs are separate
 from policy-benefit estimates and do not reopen either failed batch.
 
 [Remaining work and acceptance gates](docs/REMAINING_WORK.md) map the completed
-study and follow-up to the research question. The [bounded component diagnostic](LOADED_DIAGNOSTICS.md)
-is implemented and tested; guest execution starts with source/receiver only, one
-case per call. It does not reset either failed supplemental batch.
+study and follow-up to the research question. Live acquisition is closed; the
+remaining deliverable is final author review and submission of the paper.
 
 November-20 follow-up: six variable fixed-alternate controls passed independent
 review. Additional bursty repetitions stopped on collector/endpoint quality

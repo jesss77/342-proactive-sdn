@@ -1,0 +1,4 @@
+split,independent_runs,rows,eligible,positive,negative,incomplete_past_history,event_already_started,incomplete_or_invalid_future,invalid_sample,feature_available_rows,covered_source_seconds
+train,10,2390,995,352,643,75,1213,107,0,2315,597.5003151235142
+validation,6,1434,599,207,392,46,719,70,0,1388,358.47987717997603
+test,6,1434,642,206,436,45,670,77,0,1389,358.4973667449958

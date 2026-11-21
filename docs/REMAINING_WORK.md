@@ -40,7 +40,8 @@ support a new paired mean. A separately registered once-only whole-block
 recovery passed idle readiness but failed its first reactive loaded trial:
 43 receiver-buffer errors, three query overruns, six invalid intervals per
 queue, a 359 ms maximum pacing gap and 2.370 s decision-to-final-readback.
-Restoration passed. There are zero complete extra four-policy blocks.
+Restoration passed. Those two phases produced zero complete extra four-policy
+blocks; the later, separate follow-up produced one complete seed51 block.
 
 The full failure archive and both stopped states are preserved. Their failures
 do not invalidate the already independently checked historical benchmark, but
@@ -56,8 +57,8 @@ stay unchanged while the smallest reproducing case is investigated.
 | R2 | Decide fix versus bounded stopping | Explain observed failure mechanism and remaining uncertainty. Any actual change gets a separate version and renewed low-load/overload/path/monitoring calibration. If unresolved promptly, retain the failure limitation and finish the accepted study. | Bounded diagnostic complete. No fix is justified from these four windows; preserve intermittent-failure limitation and keep failed batches closed. |
 | R3 | Close supplemental repetition decision | Keep old partial attempts unpooled and honor the separately registered bounded stopping rule. | [Acquisition closed](../results/bursty-followup-v1/CLOSED.md): seven attempted, six individually valid, one collector-quality failure, nine unattempted. Only seed51 is a complete extra block. All seven reviews independently reproduce; no more traffic or recovery. |
 | R4 | Measure forwarding activation if feasible | Separate narrowly instrumented pilot; correlate observation availability, decision, programming/readback and first selected UDP on alternate egress, with capture/clock limitations. | [All three off/on/off reviews independently reproduce](../results/activation-pilot-v1/RESULTS.md). Captured first alternate UDP at 110.117–110.142 ms after decision; full final readback 201.043 ms. Single ML ramp, not a general latency bound or before-onset proof. |
-| R5 | Consolidate existing offline evidence | One compact calibration/parameter table; split/run exclusions and reasons; scorable observation-time denominators, missed/false/late warning episodes and rates; individual paired differences; time-trace/activation uncertainty. Reproduce without relabeling intervened traffic. | [Post-PR4 acquisition attrition](../results/bursty-followup-v1/POST_PR4_ATTRITION.md) and final failure audit complete. Final consolidated paper tables, warning rates and claim audit remain. |
-| R6 | Finish final IEEE paper and reproducibility audit | Topology, common-loop pseudocode, parameters, dataset/workload/exclusion rules, closest-work comparison, measured networking results, timing/costs and limitations. Every numerical claim traces to frozen evidence. Validate final figures, bibliography and recreation commands. | Open. PR4 already submitted. Final deadline November 24. |
+| R5 | Consolidate existing offline evidence | Compact calibration/settings; split/run exclusions; explicit warning-time denominators and missed/late/unmatched rates; individual paired differences and timing uncertainty. No controlled-trace relabeling. | Complete: [consolidated tables, figures and exact rebuild commands](../results/paper-evidence-v1/README.md). Original held-out row/episode reports reproduce exactly. |
+| R6 | Finish final IEEE paper and reproducibility audit | Topology, common-loop pseudocode, parameters, workload/exclusion rules, closest-work comparison, measured outcomes, timing/costs and limitations. Trace claims to frozen evidence and verify layout/references. | Complete private author-review draft prepared in IEEE PDF and editable Word formats. Final author review, exact Moodle-template check and submission remain; deadline November 24. No paper draft is published here. |
 
 R1 is a diagnostic ladder: (1) source/receiver with existing snapshots, probes
 and vmstat; (2) add continuous collector; (3) frozen fixed-policy loop; (4)

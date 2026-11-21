@@ -69,7 +69,7 @@ SHA-256: `e8f2e4e4294d35918c8b0d2e37fa79e92366732a19b0a12daad6f7c2a521b8e3`
 
 Earlier failed/superseded diagnostics and historical source snapshots remain in the checkpoint and original `results/archive`. Versions, engines and profiles must not be pooled as matched data. Queue root drops, sender pacing shortfall and UDP sequence loss have distinct meanings. The paper's claims remain bounded by [the reported limitations](../results/matched-v1/PROPOSAL_ALIGNMENT.md).
 
-Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/followup-closure-publication-manifest.json`. The earlier recreation and recovery manifests remain historical snapshots. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
+Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/paper-evidence-publication-manifest.json`. Earlier manifests remain historical snapshots. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 and final paper drafts stay private and are not needed to run this pipeline.
 
 ## November-20 failed recovery audit
 
@@ -103,3 +103,22 @@ The separate [bursty follow-up](../BURSTY_FOLLOWUP.md) adds four files while ret
 ## Final follow-up closure
 
 The [closure record](../results/bursty-followup-v1/CLOSED.md) preserves all seven attempts, the exact shared polling miss, two passing readiness checks and the incomplete-block decision. The [post-PR4 attrition table](../results/bursty-followup-v1/POST_PR4_ATTRITION.md) separates calibration, diagnostic, timing and efficacy phases. Reproduce the final read-only review with `python3 tools/audit_closed_bursty_followup.py --extract scratch/closed-followup --output scratch/closed-followup-audit` in fresh directories. It generates no traffic or fitting, changes no raw files, and issues no resumption receipt.
+
+## Consolidated final evidence
+
+After the final checkpoint audit above has extracted the saved repository:
+
+```bash
+python3 tools/consolidate_paper_evidence.py --repo scratch/closed-followup/342-proactive-sdn --output scratch/paper-evidence
+.venv-analysis/bin/python tools/plot_paper_evidence.py --repo scratch/closed-followup/342-proactive-sdn --analysis scratch/paper-evidence --output scratch/paper-figures
+```
+
+Use fresh output directories. The first command needs only the Python standard
+library; the second uses the recorded `requirements-analysis.txt` environment.
+The final checkpoint includes both original development and held-out datasets.
+The analysis verifies raw hashes, frozen model and exact agreement with the
+previous row/episode reports before deriving explicit warning-rate denominators,
+exclusion tables, per-run paired differences and timing summaries. It never fits,
+relabels controlled traffic, changes triggers or creates live traffic. Plot files
+are PDF/SVG/PNG; metadata/font differences may change file hashes while numerical
+values remain identical. See [definitions, values and figure captions](../results/paper-evidence-v1/README.md).

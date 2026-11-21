@@ -1,0 +1,4470 @@
+{
+  "model_sha256": "63b8b320ca7c6ca7c7e49d9bca6fb8408e491ea5bec168dd206dd9beeadaf595",
+  "fitting_performed": false,
+  "threshold_changed": false,
+  "inputs_sha256": {
+    "results\\derived\\development-v1-audited-20261115-210839\\summary.json": "6ae3c3d02b0579976c3a1a498e7851010229b01c9c8ea1ed9da740c9fcc7b43c",
+    "results\\derived\\development-v1-audited-20261115-210839\\rows.jsonl": "772622486fea26d9997a585ec653e37d11f7f36c241eea66567e922d9f1c65cf",
+    "results\\derived\\heldout-v1-20261115-220914\\summary.json": "7a83343ed49c0c046e786218041727497c20d926955bef1a3722f2d590418ca7",
+    "results\\derived\\heldout-v1-20261115-220914\\rows.jsonl": "a09c13e7cef485ac3023604ba6551cca8302de0ad6bb61f742e712444f629186"
+  },
+  "exclusion_by_run": [
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 11,
+      "run": "20261115-194521-205072-policy-fixed-ramp-seed11",
+      "rows": 239,
+      "eligible": 87,
+      "positive": 7,
+      "negative": 80,
+      "incomplete_past_history": 7,
+      "event_already_started": 129,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.75025350850774,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 11,
+      "run": "20261115-194630-052595-policy-fixed-bursty-seed11",
+      "rows": 239,
+      "eligible": 97,
+      "positive": 65,
+      "negative": 32,
+      "incomplete_past_history": 8,
+      "event_already_started": 129,
+      "incomplete_or_invalid_future": 5,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.7470402484978,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 12,
+      "run": "20261115-201812-415577-policy-fixed-bursty-seed12",
+      "rows": 239,
+      "eligible": 102,
+      "positive": 67,
+      "negative": 35,
+      "incomplete_past_history": 8,
+      "event_already_started": 128,
+      "incomplete_or_invalid_future": 1,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.72842556800606,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 12,
+      "run": "20261115-201921-136071-policy-fixed-ramp-seed12",
+      "rows": 239,
+      "eligible": 84,
+      "positive": 8,
+      "negative": 76,
+      "incomplete_past_history": 8,
+      "event_already_started": 131,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.746215610502986,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 13,
+      "run": "20261115-202030-010606-policy-fixed-ramp-seed13",
+      "rows": 239,
+      "eligible": 86,
+      "positive": 8,
+      "negative": 78,
+      "incomplete_past_history": 7,
+      "event_already_started": 130,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.750354826996045,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 13,
+      "run": "20261115-202138-547099-policy-fixed-bursty-seed13",
+      "rows": 239,
+      "eligible": 110,
+      "positive": 56,
+      "negative": 54,
+      "incomplete_past_history": 7,
+      "event_already_started": 114,
+      "incomplete_or_invalid_future": 8,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.750339595004334,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 14,
+      "run": "20261115-202247-279573-policy-fixed-bursty-seed14",
+      "rows": 239,
+      "eligible": 114,
+      "positive": 63,
+      "negative": 51,
+      "incomplete_past_history": 8,
+      "event_already_started": 111,
+      "incomplete_or_invalid_future": 6,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.76395896649046,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 14,
+      "run": "20261115-202355-749293-policy-fixed-ramp-seed14",
+      "rows": 239,
+      "eligible": 93,
+      "positive": 8,
+      "negative": 85,
+      "incomplete_past_history": 8,
+      "event_already_started": 122,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.74773925050249,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 15,
+      "run": "20261115-202504-552114-policy-fixed-ramp-seed15",
+      "rows": 239,
+      "eligible": 101,
+      "positive": 7,
+      "negative": 94,
+      "incomplete_past_history": 7,
+      "event_already_started": 116,
+      "incomplete_or_invalid_future": 15,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.762441669008695,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 15,
+      "run": "20261115-202613-481035-policy-fixed-bursty-seed15",
+      "rows": 239,
+      "eligible": 121,
+      "positive": 63,
+      "negative": 58,
+      "incomplete_past_history": 7,
+      "event_already_started": 103,
+      "incomplete_or_invalid_future": 8,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.753545879997546,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "ramp",
+      "seed": 21,
+      "run": "20261115-202722-320511-policy-fixed-ramp-seed21",
+      "rows": 239,
+      "eligible": 86,
+      "positive": 8,
+      "negative": 78,
+      "incomplete_past_history": 8,
+      "event_already_started": 129,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.73532377050287,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "bursty",
+      "seed": 21,
+      "run": "20261115-202831-295691-policy-fixed-bursty-seed21",
+      "rows": 239,
+      "eligible": 120,
+      "positive": 62,
+      "negative": 58,
+      "incomplete_past_history": 8,
+      "event_already_started": 101,
+      "incomplete_or_invalid_future": 10,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.74676802699105,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "bursty",
+      "seed": 22,
+      "run": "20261115-202940-023843-policy-fixed-bursty-seed22",
+      "rows": 239,
+      "eligible": 115,
+      "positive": 55,
+      "negative": 60,
+      "incomplete_past_history": 7,
+      "event_already_started": 109,
+      "incomplete_or_invalid_future": 8,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.75046085199574,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "ramp",
+      "seed": 22,
+      "run": "20261115-203048-927739-policy-fixed-ramp-seed22",
+      "rows": 239,
+      "eligible": 92,
+      "positive": 8,
+      "negative": 84,
+      "incomplete_past_history": 7,
+      "event_already_started": 124,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.7513696659953,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "ramp",
+      "seed": 23,
+      "run": "20261115-203157-350275-policy-fixed-ramp-seed23",
+      "rows": 239,
+      "eligible": 72,
+      "positive": 8,
+      "negative": 64,
+      "incomplete_past_history": 8,
+      "event_already_started": 143,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.747576481495344,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "bursty",
+      "seed": 23,
+      "run": "20261115-203305-814592-policy-fixed-bursty-seed23",
+      "rows": 239,
+      "eligible": 114,
+      "positive": 66,
+      "negative": 48,
+      "incomplete_past_history": 8,
+      "event_already_started": 113,
+      "incomplete_or_invalid_future": 4,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.748378382995725,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "ramp",
+      "seed": 31,
+      "run": "20261115-220149-140313-policy-fixed-ramp-seed31",
+      "rows": 239,
+      "eligible": 106,
+      "positive": 8,
+      "negative": 98,
+      "incomplete_past_history": 7,
+      "event_already_started": 110,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.74734290950437,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "bursty",
+      "seed": 31,
+      "run": "20261115-220257-992148-policy-fixed-bursty-seed31",
+      "rows": 239,
+      "eligible": 120,
+      "positive": 60,
+      "negative": 60,
+      "incomplete_past_history": 8,
+      "event_already_started": 105,
+      "incomplete_or_invalid_future": 6,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.74448862700228,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "bursty",
+      "seed": 32,
+      "run": "20261115-220406-813728-policy-fixed-bursty-seed32",
+      "rows": 239,
+      "eligible": 117,
+      "positive": 63,
+      "negative": 54,
+      "incomplete_past_history": 7,
+      "event_already_started": 107,
+      "incomplete_or_invalid_future": 8,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.74989541200193,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "ramp",
+      "seed": 32,
+      "run": "20261115-220516-053845-policy-fixed-ramp-seed32",
+      "rows": 239,
+      "eligible": 99,
+      "positive": 7,
+      "negative": 92,
+      "incomplete_past_history": 8,
+      "event_already_started": 117,
+      "incomplete_or_invalid_future": 15,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.761458177999884,
+      "feature_available_rows": 231
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "ramp",
+      "seed": 33,
+      "run": "20261115-220624-888992-policy-fixed-ramp-seed33",
+      "rows": 239,
+      "eligible": 84,
+      "positive": 8,
+      "negative": 76,
+      "incomplete_past_history": 7,
+      "event_already_started": 132,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.74826647549344,
+      "feature_available_rows": 232
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "bursty",
+      "seed": 33,
+      "run": "20261115-220733-371316-policy-fixed-bursty-seed33",
+      "rows": 239,
+      "eligible": 116,
+      "positive": 60,
+      "negative": 56,
+      "incomplete_past_history": 8,
+      "event_already_started": 99,
+      "incomplete_or_invalid_future": 16,
+      "invalid_sample": 0,
+      "covered_source_seconds": 59.74591514299391,
+      "feature_available_rows": 231
+    }
+  ],
+  "exclusion_by_split": [
+    {
+      "split": "train",
+      "independent_runs": 10,
+      "rows": 2390,
+      "eligible": 995,
+      "positive": 352,
+      "negative": 643,
+      "incomplete_past_history": 75,
+      "event_already_started": 1213,
+      "incomplete_or_invalid_future": 107,
+      "invalid_sample": 0,
+      "feature_available_rows": 2315,
+      "covered_source_seconds": 597.5003151235142
+    },
+    {
+      "split": "validation",
+      "independent_runs": 6,
+      "rows": 1434,
+      "eligible": 599,
+      "positive": 207,
+      "negative": 392,
+      "incomplete_past_history": 46,
+      "event_already_started": 719,
+      "incomplete_or_invalid_future": 70,
+      "invalid_sample": 0,
+      "feature_available_rows": 1388,
+      "covered_source_seconds": 358.47987717997603
+    },
+    {
+      "split": "test",
+      "independent_runs": 6,
+      "rows": 1434,
+      "eligible": 642,
+      "positive": 206,
+      "negative": 436,
+      "incomplete_past_history": 45,
+      "event_already_started": 670,
+      "incomplete_or_invalid_future": 77,
+      "invalid_sample": 0,
+      "feature_available_rows": 1389,
+      "covered_source_seconds": 358.4973667449958
+    }
+  ],
+  "prediction_rows": [
+    {
+      "method": "ML",
+      "scenario": "ramp",
+      "n": 289,
+      "tp": 22,
+      "fp": 1,
+      "fn": 1,
+      "tn": 265,
+      "precision": 0.9565217391304348,
+      "recall": 0.9565217391304348,
+      "f1": 0.9565217391304348,
+      "accuracy": 0.9930795847750865
+    },
+    {
+      "method": "ML",
+      "scenario": "bursty",
+      "n": 353,
+      "tp": 146,
+      "fp": 31,
+      "fn": 37,
+      "tn": 139,
+      "precision": 0.8248587570621468,
+      "recall": 0.7978142076502732,
+      "f1": 0.8111111111111111,
+      "accuracy": 0.8073654390934845
+    },
+    {
+      "method": "trend",
+      "scenario": "ramp",
+      "n": 289,
+      "tp": 19,
+      "fp": 5,
+      "fn": 4,
+      "tn": 261,
+      "precision": 0.7916666666666666,
+      "recall": 0.8260869565217391,
+      "f1": 0.8085106382978723,
+      "accuracy": 0.9688581314878892
+    },
+    {
+      "method": "trend",
+      "scenario": "bursty",
+      "n": 353,
+      "tp": 0,
+      "fp": 8,
+      "fn": 183,
+      "tn": 162,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.45892351274787535
+    },
+    {
+      "method": "always_negative",
+      "scenario": "ramp",
+      "n": 289,
+      "tp": 0,
+      "fp": 0,
+      "fn": 23,
+      "tn": 266,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.9204152249134948
+    },
+    {
+      "method": "always_negative",
+      "scenario": "bursty",
+      "n": 353,
+      "tp": 0,
+      "fp": 0,
+      "fn": 183,
+      "tn": 170,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.48158640226628896
+    }
+  ],
+  "warning_by_run": [
+    {
+      "method": "ML",
+      "scenario": "ramp",
+      "seed": 31,
+      "run": "20261115-220149-140313-policy-fixed-ramp-seed31",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 1,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 1,
+      "missed_scorable_events": 0,
+      "covered_source_seconds": 59.74734290950437,
+      "scorable_opportunity_seconds": 53.99134432899882,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "lead_at_least_0_5s": 1,
+      "lead_at_least_1s": 1,
+      "lead_s": [
+        1.9985508155004936
+      ]
+    },
+    {
+      "method": "ML",
+      "scenario": "bursty",
+      "seed": 31,
+      "run": "20261115-220257-992148-policy-fixed-bursty-seed31",
+      "events": 9,
+      "scorable_events": 8,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 8,
+      "late_unmatched_episodes": 8,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 1,
+      "missed_scorable_events": 8,
+      "covered_source_seconds": 59.74448862700228,
+      "scorable_opportunity_seconds": 53.750938304001465,
+      "unmatched_per_covered_minute": 8.03421388367291,
+      "unmatched_per_scorable_minute": 8.930076667410782,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "ML",
+      "scenario": "bursty",
+      "seed": 32,
+      "run": "20261115-220406-813728-policy-fixed-bursty-seed32",
+      "events": 9,
+      "scorable_events": 9,
+      "true_advance_episodes": 4,
+      "unmatched_episodes": 5,
+      "late_unmatched_episodes": 5,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 1,
+      "missed_scorable_events": 5,
+      "covered_source_seconds": 59.74989541200193,
+      "scorable_opportunity_seconds": 53.99772762400244,
+      "unmatched_per_covered_minute": 5.02092929086097,
+      "unmatched_per_scorable_minute": 5.5557893489326675,
+      "lead_at_least_0_5s": 3,
+      "lead_at_least_1s": 2,
+      "lead_s": [
+        0.2464621809995151,
+        1.2403491570003098,
+        0.7489504055047291,
+        1.9766335579988663
+      ]
+    },
+    {
+      "method": "ML",
+      "scenario": "ramp",
+      "seed": 32,
+      "run": "20261115-220516-053845-policy-fixed-ramp-seed32",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 1,
+      "unmatched_episodes": 4,
+      "late_unmatched_episodes": 4,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 1,
+      "missed_scorable_events": 0,
+      "covered_source_seconds": 59.761458177999884,
+      "scorable_opportunity_seconds": 54.00591490250372,
+      "unmatched_per_covered_minute": 4.015966265166396,
+      "unmatched_per_scorable_minute": 4.443957674511567,
+      "lead_at_least_0_5s": 1,
+      "lead_at_least_1s": 1,
+      "lead_s": [
+        1.7556038680049824
+      ]
+    },
+    {
+      "method": "ML",
+      "scenario": "ramp",
+      "seed": 33,
+      "run": "20261115-220624-888992-policy-fixed-ramp-seed33",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 4,
+      "late_unmatched_episodes": 3,
+      "other_unmatched_episodes": 1,
+      "censored_episodes": 0,
+      "missed_scorable_events": 1,
+      "covered_source_seconds": 59.74826647549344,
+      "scorable_opportunity_seconds": 53.99861694300489,
+      "unmatched_per_covered_minute": 4.0168529424772395,
+      "unmatched_per_scorable_minute": 4.444558279211448,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "ML",
+      "scenario": "bursty",
+      "seed": 33,
+      "run": "20261115-220733-371316-policy-fixed-bursty-seed33",
+      "events": 8,
+      "scorable_events": 8,
+      "true_advance_episodes": 5,
+      "unmatched_episodes": 3,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 3,
+      "censored_episodes": 1,
+      "missed_scorable_events": 3,
+      "covered_source_seconds": 59.74591514299391,
+      "scorable_opportunity_seconds": 53.747645320996526,
+      "unmatched_per_covered_minute": 3.0127582709076246,
+      "unmatched_per_scorable_minute": 3.3489839215278696,
+      "lead_at_least_0_5s": 5,
+      "lead_at_least_1s": 5,
+      "lead_s": [
+        1.4892874459983432,
+        1.0081146385055035,
+        1.9971717385051306,
+        1.748171300496324,
+        1.7506482855023933
+      ]
+    },
+    {
+      "method": "trend",
+      "scenario": "ramp",
+      "seed": 31,
+      "run": "20261115-220149-140313-policy-fixed-ramp-seed31",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 5,
+      "late_unmatched_episodes": 4,
+      "other_unmatched_episodes": 1,
+      "censored_episodes": 0,
+      "missed_scorable_events": 1,
+      "covered_source_seconds": 59.74734290950437,
+      "scorable_opportunity_seconds": 53.99134432899882,
+      "unmatched_per_covered_minute": 5.021143793028446,
+      "unmatched_per_scorable_minute": 5.556446199448855,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "trend",
+      "scenario": "bursty",
+      "seed": 31,
+      "run": "20261115-220257-992148-policy-fixed-bursty-seed31",
+      "events": 9,
+      "scorable_events": 8,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 8,
+      "late_unmatched_episodes": 8,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 1,
+      "missed_scorable_events": 8,
+      "covered_source_seconds": 59.74448862700228,
+      "scorable_opportunity_seconds": 53.750938304001465,
+      "unmatched_per_covered_minute": 8.03421388367291,
+      "unmatched_per_scorable_minute": 8.930076667410782,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "trend",
+      "scenario": "bursty",
+      "seed": 32,
+      "run": "20261115-220406-813728-policy-fixed-bursty-seed32",
+      "events": 9,
+      "scorable_events": 9,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 8,
+      "late_unmatched_episodes": 8,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 9,
+      "covered_source_seconds": 59.74989541200193,
+      "scorable_opportunity_seconds": 53.99772762400244,
+      "unmatched_per_covered_minute": 8.033486865377553,
+      "unmatched_per_scorable_minute": 8.889262958292267,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "trend",
+      "scenario": "ramp",
+      "seed": 32,
+      "run": "20261115-220516-053845-policy-fixed-ramp-seed32",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 1,
+      "unmatched_episodes": 4,
+      "late_unmatched_episodes": 4,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 0,
+      "covered_source_seconds": 59.761458177999884,
+      "scorable_opportunity_seconds": 54.00591490250372,
+      "unmatched_per_covered_minute": 4.015966265166396,
+      "unmatched_per_scorable_minute": 4.443957674511567,
+      "lead_at_least_0_5s": 1,
+      "lead_at_least_1s": 1,
+      "lead_s": [
+        1.7556038680049824
+      ]
+    },
+    {
+      "method": "trend",
+      "scenario": "ramp",
+      "seed": 33,
+      "run": "20261115-220624-888992-policy-fixed-ramp-seed33",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 1,
+      "unmatched_episodes": 4,
+      "late_unmatched_episodes": 4,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 0,
+      "covered_source_seconds": 59.74826647549344,
+      "scorable_opportunity_seconds": 53.99861694300489,
+      "unmatched_per_covered_minute": 4.0168529424772395,
+      "unmatched_per_scorable_minute": 4.444558279211448,
+      "lead_at_least_0_5s": 1,
+      "lead_at_least_1s": 1,
+      "lead_s": [
+        1.9908946819996345
+      ]
+    },
+    {
+      "method": "trend",
+      "scenario": "bursty",
+      "seed": 33,
+      "run": "20261115-220733-371316-policy-fixed-bursty-seed33",
+      "events": 8,
+      "scorable_events": 8,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 8,
+      "late_unmatched_episodes": 8,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 8,
+      "covered_source_seconds": 59.74591514299391,
+      "scorable_opportunity_seconds": 53.747645320996526,
+      "unmatched_per_covered_minute": 8.034022055753667,
+      "unmatched_per_scorable_minute": 8.930623790740986,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "always_negative",
+      "scenario": "ramp",
+      "seed": 31,
+      "run": "20261115-220149-140313-policy-fixed-ramp-seed31",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 1,
+      "covered_source_seconds": 59.74734290950437,
+      "scorable_opportunity_seconds": 53.99134432899882,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "always_negative",
+      "scenario": "bursty",
+      "seed": 31,
+      "run": "20261115-220257-992148-policy-fixed-bursty-seed31",
+      "events": 9,
+      "scorable_events": 8,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 8,
+      "covered_source_seconds": 59.74448862700228,
+      "scorable_opportunity_seconds": 53.750938304001465,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "always_negative",
+      "scenario": "bursty",
+      "seed": 32,
+      "run": "20261115-220406-813728-policy-fixed-bursty-seed32",
+      "events": 9,
+      "scorable_events": 9,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 9,
+      "covered_source_seconds": 59.74989541200193,
+      "scorable_opportunity_seconds": 53.99772762400244,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "always_negative",
+      "scenario": "ramp",
+      "seed": 32,
+      "run": "20261115-220516-053845-policy-fixed-ramp-seed32",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 1,
+      "covered_source_seconds": 59.761458177999884,
+      "scorable_opportunity_seconds": 54.00591490250372,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "always_negative",
+      "scenario": "ramp",
+      "seed": 33,
+      "run": "20261115-220624-888992-policy-fixed-ramp-seed33",
+      "events": 1,
+      "scorable_events": 1,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 1,
+      "covered_source_seconds": 59.74826647549344,
+      "scorable_opportunity_seconds": 53.99861694300489,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    },
+    {
+      "method": "always_negative",
+      "scenario": "bursty",
+      "seed": 33,
+      "run": "20261115-220733-371316-policy-fixed-bursty-seed33",
+      "events": 8,
+      "scorable_events": 8,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 8,
+      "covered_source_seconds": 59.74591514299391,
+      "scorable_opportunity_seconds": 53.747645320996526,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "lead_s": []
+    }
+  ],
+  "warning_by_scenario": [
+    {
+      "method": "ML",
+      "scenario": "ramp",
+      "independent_runs": 3,
+      "events": 3,
+      "scorable_events": 3,
+      "true_advance_episodes": 2,
+      "unmatched_episodes": 8,
+      "late_unmatched_episodes": 7,
+      "other_unmatched_episodes": 1,
+      "censored_episodes": 2,
+      "missed_scorable_events": 1,
+      "covered_source_seconds": 179.2570675629977,
+      "scorable_opportunity_seconds": 161.99587617450743,
+      "lead_at_least_0_5s": 2,
+      "lead_at_least_1s": 2,
+      "unmatched_per_covered_minute": 2.677718689285765,
+      "unmatched_per_scorable_minute": 2.9630383892175614,
+      "other_unmatched_per_scorable_minute": 0.37037979865219517,
+      "event_recall_scorable": 0.6666666666666666,
+      "lead_median_s": 1.877077341752738,
+      "lead_min_s": 1.7556038680049824,
+      "lead_max_s": 1.9985508155004936
+    },
+    {
+      "method": "ML",
+      "scenario": "bursty",
+      "independent_runs": 3,
+      "events": 26,
+      "scorable_events": 25,
+      "true_advance_episodes": 9,
+      "unmatched_episodes": 16,
+      "late_unmatched_episodes": 13,
+      "other_unmatched_episodes": 3,
+      "censored_episodes": 3,
+      "missed_scorable_events": 16,
+      "covered_source_seconds": 179.24029918199813,
+      "scorable_opportunity_seconds": 161.49631124900043,
+      "lead_at_least_0_5s": 8,
+      "lead_at_least_1s": 7,
+      "unmatched_per_covered_minute": 5.355938393213846,
+      "unmatched_per_scorable_minute": 5.9444082194536305,
+      "other_unmatched_per_scorable_minute": 1.1145765411475557,
+      "event_recall_scorable": 0.36,
+      "lead_median_s": 1.4892874459983432,
+      "lead_min_s": 0.2464621809995151,
+      "lead_max_s": 1.9971717385051306
+    },
+    {
+      "method": "trend",
+      "scenario": "ramp",
+      "independent_runs": 3,
+      "events": 3,
+      "scorable_events": 3,
+      "true_advance_episodes": 2,
+      "unmatched_episodes": 13,
+      "late_unmatched_episodes": 12,
+      "other_unmatched_episodes": 1,
+      "censored_episodes": 0,
+      "missed_scorable_events": 1,
+      "covered_source_seconds": 179.2570675629977,
+      "scorable_opportunity_seconds": 161.99587617450743,
+      "lead_at_least_0_5s": 2,
+      "lead_at_least_1s": 2,
+      "unmatched_per_covered_minute": 4.3512928700893685,
+      "unmatched_per_scorable_minute": 4.814937382478537,
+      "other_unmatched_per_scorable_minute": 0.37037979865219517,
+      "event_recall_scorable": 0.6666666666666666,
+      "lead_median_s": 1.8732492750023084,
+      "lead_min_s": 1.7556038680049824,
+      "lead_max_s": 1.9908946819996345
+    },
+    {
+      "method": "trend",
+      "scenario": "bursty",
+      "independent_runs": 3,
+      "events": 26,
+      "scorable_events": 25,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 24,
+      "late_unmatched_episodes": 24,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 1,
+      "missed_scorable_events": 25,
+      "covered_source_seconds": 179.24029918199813,
+      "scorable_opportunity_seconds": 161.49631124900043,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "unmatched_per_covered_minute": 8.03390758982077,
+      "unmatched_per_scorable_minute": 8.916612329180445,
+      "other_unmatched_per_scorable_minute": 0.0,
+      "event_recall_scorable": 0.0,
+      "lead_median_s": null,
+      "lead_min_s": null,
+      "lead_max_s": null
+    },
+    {
+      "method": "always_negative",
+      "scenario": "ramp",
+      "independent_runs": 3,
+      "events": 3,
+      "scorable_events": 3,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 3,
+      "covered_source_seconds": 179.2570675629977,
+      "scorable_opportunity_seconds": 161.99587617450743,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "other_unmatched_per_scorable_minute": 0.0,
+      "event_recall_scorable": 0.0,
+      "lead_median_s": null,
+      "lead_min_s": null,
+      "lead_max_s": null
+    },
+    {
+      "method": "always_negative",
+      "scenario": "bursty",
+      "independent_runs": 3,
+      "events": 26,
+      "scorable_events": 25,
+      "true_advance_episodes": 0,
+      "unmatched_episodes": 0,
+      "late_unmatched_episodes": 0,
+      "other_unmatched_episodes": 0,
+      "censored_episodes": 0,
+      "missed_scorable_events": 25,
+      "covered_source_seconds": 179.24029918199813,
+      "scorable_opportunity_seconds": 161.49631124900043,
+      "lead_at_least_0_5s": 0,
+      "lead_at_least_1s": 0,
+      "unmatched_per_covered_minute": 0.0,
+      "unmatched_per_scorable_minute": 0.0,
+      "other_unmatched_per_scorable_minute": 0.0,
+      "event_recall_scorable": 0.0,
+      "lead_median_s": null,
+      "lead_min_s": null,
+      "lead_max_s": null
+    }
+  ],
+  "development_event_association": [
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 11,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 6292,
+      "feature_available_interval_root_drops": 6292.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 11,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 10837,
+      "feature_available_interval_root_drops": 10889.0,
+      "minimum_event_peak_queue": 49,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 12,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 10179,
+      "feature_available_interval_root_drops": 10293.0,
+      "minimum_event_peak_queue": 49,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 12,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 6893,
+      "feature_available_interval_root_drops": 6893.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 13,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 6905,
+      "feature_available_interval_root_drops": 6905.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 13,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 10208,
+      "feature_available_interval_root_drops": 10390.0,
+      "minimum_event_peak_queue": 49,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 14,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 9290,
+      "feature_available_interval_root_drops": 9354.0,
+      "minimum_event_peak_queue": 49,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 14,
+      "observed_events": 2,
+      "events_with_root_drops": 2,
+      "event_root_drops": 6742,
+      "feature_available_interval_root_drops": 6836.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "ramp",
+      "seed": 15,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 4195,
+      "feature_available_interval_root_drops": 4195.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "train",
+      "scenario": "bursty",
+      "seed": 15,
+      "observed_events": 8,
+      "events_with_root_drops": 8,
+      "event_root_drops": 8891,
+      "feature_available_interval_root_drops": 9045.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "ramp",
+      "seed": 21,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 6781,
+      "feature_available_interval_root_drops": 6781.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "bursty",
+      "seed": 21,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 9096,
+      "feature_available_interval_root_drops": 9258.0,
+      "minimum_event_peak_queue": 46,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "bursty",
+      "seed": 22,
+      "observed_events": 8,
+      "events_with_root_drops": 8,
+      "event_root_drops": 8013,
+      "feature_available_interval_root_drops": 8054.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "ramp",
+      "seed": 22,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 4671,
+      "feature_available_interval_root_drops": 4671.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "ramp",
+      "seed": 23,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 8599,
+      "feature_available_interval_root_drops": 8599.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "development",
+      "split": "validation",
+      "scenario": "bursty",
+      "seed": 23,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 10423,
+      "feature_available_interval_root_drops": 10516.0,
+      "minimum_event_peak_queue": 48,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "ramp",
+      "seed": 31,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 4142,
+      "feature_available_interval_root_drops": 4142.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "bursty",
+      "seed": 31,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 7390,
+      "feature_available_interval_root_drops": 7503.0,
+      "minimum_event_peak_queue": 49,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "bursty",
+      "seed": 32,
+      "observed_events": 9,
+      "events_with_root_drops": 9,
+      "event_root_drops": 10167,
+      "feature_available_interval_root_drops": 10365.0,
+      "minimum_event_peak_queue": 49,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "ramp",
+      "seed": 32,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 4581,
+      "feature_available_interval_root_drops": 4581.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "ramp",
+      "seed": 33,
+      "observed_events": 1,
+      "events_with_root_drops": 1,
+      "event_root_drops": 6776,
+      "feature_available_interval_root_drops": 6776.0,
+      "minimum_event_peak_queue": 50,
+      "maximum_event_peak_queue": 50
+    },
+    {
+      "phase": "test",
+      "split": "test",
+      "scenario": "bursty",
+      "seed": 33,
+      "observed_events": 8,
+      "events_with_root_drops": 8,
+      "event_root_drops": 10247,
+      "feature_available_interval_root_drops": 10426.0,
+      "minimum_event_peak_queue": 48,
+      "maximum_event_peak_queue": 50
+    }
+  ],
+  "original_aggregates": [
+    {
+      "scenario": "steady",
+      "policy": "fixed",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 2.9993085468152354,
+      "sd": 0.0002462288236771335,
+      "min": 2.9990354450028995,
+      "max": 2.9995135826371406
+    },
+    {
+      "scenario": "steady",
+      "policy": "fixed",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "scenario": "steady",
+      "policy": "fixed",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 26.766666666666666,
+      "sd": 15.71188509801842,
+      "min": 17.2,
+      "max": 44.9
+    },
+    {
+      "scenario": "steady",
+      "policy": "fixed",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 4.319104613731805,
+      "sd": 2.025762223634464,
+      "min": 2.991090014245677,
+      "max": 6.650743618728827
+    },
+    {
+      "scenario": "steady",
+      "policy": "fixed",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 1.2115849141218555,
+      "sd": 0.6997901479808617,
+      "min": 0.7945161745163357,
+      "max": 2.0194910392184178
+    },
+    {
+      "scenario": "steady",
+      "policy": "reactive",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 2.999300591962131,
+      "sd": 0.00036978345333006857,
+      "min": 2.9989357798983503,
+      "max": 2.999675153974794
+    },
+    {
+      "scenario": "steady",
+      "policy": "reactive",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "scenario": "steady",
+      "policy": "reactive",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 15.933333333333334,
+      "sd": 1.517673658377628,
+      "min": 14.3,
+      "max": 17.3
+    },
+    {
+      "scenario": "steady",
+      "policy": "reactive",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 4.096910904658548,
+      "sd": 1.9135254471427114,
+      "min": 2.8539157756394737,
+      "max": 6.300433111450517
+    },
+    {
+      "scenario": "steady",
+      "policy": "reactive",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 1.216042367818678,
+      "sd": 0.6370157778996124,
+      "min": 0.8366544444254481,
+      "max": 1.9514814201762882
+    },
+    {
+      "scenario": "steady",
+      "policy": "early_warning",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 2.9996430974481263,
+      "sd": 4.452844256993608e-05,
+      "min": 2.9995917835554344,
+      "max": 2.999671573172633
+    },
+    {
+      "scenario": "steady",
+      "policy": "early_warning",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "scenario": "steady",
+      "policy": "early_warning",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 17.3,
+      "sd": 0.4582575694955851,
+      "min": 16.9,
+      "max": 17.8
+    },
+    {
+      "scenario": "steady",
+      "policy": "early_warning",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 4.022454645702615,
+      "sd": 1.7032657800374817,
+      "min": 2.626966411889829,
+      "max": 5.920437805222705
+    },
+    {
+      "scenario": "steady",
+      "policy": "early_warning",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 1.171772997647887,
+      "sd": 0.585402338275859,
+      "min": 0.8220658020324183,
+      "max": 1.847600203203491
+    },
+    {
+      "scenario": "steady",
+      "policy": "ml",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 2.9992594916815096,
+      "sd": 0.0007095793682303305,
+      "min": 2.998440142902402,
+      "max": 2.999671053781049
+    },
+    {
+      "scenario": "steady",
+      "policy": "ml",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "scenario": "steady",
+      "policy": "ml",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 17.266666666666666,
+      "sd": 1.680277754817142,
+      "min": 15.8,
+      "max": 19.1
+    },
+    {
+      "scenario": "steady",
+      "policy": "ml",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 4.285580748776639,
+      "sd": 2.448201888605969,
+      "min": 2.7972539792912636,
+      "max": 7.111175145539363
+    },
+    {
+      "scenario": "steady",
+      "policy": "ml",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 1.175006138550868,
+      "sd": 0.6602468631229361,
+      "min": 0.7653601083564556,
+      "max": 1.9366671172632952
+    },
+    {
+      "scenario": "ramp",
+      "policy": "fixed",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 7.510253532810412,
+      "sd": 0.01573721471114342,
+      "min": 7.492603096557092,
+      "max": 7.522821277077962
+    },
+    {
+      "scenario": "ramp",
+      "policy": "fixed",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 9.740576612739648,
+      "sd": 2.3357946738234006,
+      "min": 7.762154105626483,
+      "max": 12.31733945467779
+    },
+    {
+      "scenario": "ramp",
+      "policy": "fixed",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 60.0,
+      "sd": 2.3430749027719986,
+      "min": 58.5,
+      "max": 62.7
+    },
+    {
+      "scenario": "ramp",
+      "policy": "fixed",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 3.582561501206763,
+      "sd": 0.9364950878186364,
+      "min": 2.7961974267402363,
+      "max": 4.6185862146056165
+    },
+    {
+      "scenario": "ramp",
+      "policy": "fixed",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.8515518958389432,
+      "sd": 0.07389526996786903,
+      "min": 0.7959278145307757,
+      "max": 0.9353994797454219
+    },
+    {
+      "scenario": "ramp",
+      "policy": "reactive",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 8.319360597004964,
+      "sd": 0.23216296473389111,
+      "min": 8.155926825720949,
+      "max": 8.58510654012688
+    },
+    {
+      "scenario": "ramp",
+      "policy": "reactive",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.0019468130670093058,
+      "sd": 0.003371979144899111,
+      "min": 0.0,
+      "max": 0.005840439201027918
+    },
+    {
+      "scenario": "ramp",
+      "policy": "reactive",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 19.333333333333332,
+      "sd": 0.8386497083606088,
+      "min": 18.8,
+      "max": 20.3
+    },
+    {
+      "scenario": "ramp",
+      "policy": "reactive",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 3.923064551265067,
+      "sd": 0.45175270117628036,
+      "min": 3.6507217048930283,
+      "max": 4.444531359243777
+    },
+    {
+      "scenario": "ramp",
+      "policy": "reactive",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.9189390392388037,
+      "sd": 0.16227215671165152,
+      "min": 0.7614763208046751,
+      "max": 1.085627047274201
+    },
+    {
+      "scenario": "ramp",
+      "policy": "early_warning",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 8.328789790622139,
+      "sd": 0.2255295070236519,
+      "min": 8.156402404476381,
+      "max": 8.5840263787297
+    },
+    {
+      "scenario": "ramp",
+      "policy": "early_warning",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "scenario": "ramp",
+      "policy": "early_warning",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 18.1,
+      "sd": 1.6522711641858305,
+      "min": 17.0,
+      "max": 20.0
+    },
+    {
+      "scenario": "ramp",
+      "policy": "early_warning",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 3.4249136514425653,
+      "sd": 0.22737546128266914,
+      "min": 3.2484180801614744,
+      "max": 3.681496179136341
+    },
+    {
+      "scenario": "ramp",
+      "policy": "early_warning",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.8565153784002766,
+      "sd": 0.0483194272204091,
+      "min": 0.8139221662902417,
+      "max": 0.9090230523402703
+    },
+    {
+      "scenario": "ramp",
+      "policy": "ml",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 8.328941294452706,
+      "sd": 0.22439214319477246,
+      "min": 8.158124570304299,
+      "max": 8.583074488697365
+    },
+    {
+      "scenario": "ramp",
+      "policy": "ml",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.0,
+      "sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "scenario": "ramp",
+      "policy": "ml",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 18.266666666666666,
+      "sd": 1.0263202878893767,
+      "min": 17.4,
+      "max": 19.4
+    },
+    {
+      "scenario": "ramp",
+      "policy": "ml",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 3.498752605374444,
+      "sd": 0.2734327070737265,
+      "min": 3.2012235575143744,
+      "max": 3.739020104978916
+    },
+    {
+      "scenario": "ramp",
+      "policy": "ml",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.8341652735981201,
+      "sd": 0.11748676961765729,
+      "min": 0.7552892271137539,
+      "max": 0.9691913086589384
+    },
+    {
+      "scenario": "bursty",
+      "policy": "fixed",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 6.121006773039686,
+      "sd": 0.3581326039094444,
+      "min": 5.812380606859876,
+      "max": 6.513692210115583
+    },
+    {
+      "scenario": "bursty",
+      "policy": "fixed",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 18.68171851294276,
+      "sd": 1.498499663336938,
+      "min": 17.701919594349874,
+      "max": 20.40672800797046
+    },
+    {
+      "scenario": "bursty",
+      "policy": "fixed",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 61.5,
+      "sd": 0.3605551275463972,
+      "min": 61.1,
+      "max": 61.8
+    },
+    {
+      "scenario": "bursty",
+      "policy": "fixed",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 3.587738771859776,
+      "sd": 0.1866303123407861,
+      "min": 3.473569500776181,
+      "max": 3.80311082521992
+    },
+    {
+      "scenario": "bursty",
+      "policy": "fixed",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.8541930381459956,
+      "sd": 0.05446472908307636,
+      "min": 0.7947341525513031,
+      "max": 0.9016675480598916
+    },
+    {
+      "scenario": "bursty",
+      "policy": "reactive",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 7.137489709257524,
+      "sd": 1.0779718026610252,
+      "min": 5.997837331168113,
+      "max": 8.1408104774709
+    },
+    {
+      "scenario": "bursty",
+      "policy": "reactive",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 5.591033527909637,
+      "sd": 8.179025605570136,
+      "min": 0.6055278835823811,
+      "max": 15.030368960203065
+    },
+    {
+      "scenario": "bursty",
+      "policy": "reactive",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 33.03333333333333,
+      "sd": 24.574851644177496,
+      "min": 18.2,
+      "max": 61.4
+    },
+    {
+      "scenario": "bursty",
+      "policy": "reactive",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 3.0693278177356182,
+      "sd": 0.16498033546686308,
+      "min": 2.9649910825880483,
+      "max": 3.2595320334243696
+    },
+    {
+      "scenario": "bursty",
+      "policy": "reactive",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.951653105322318,
+      "sd": 0.067480212810394,
+      "min": 0.8766506055557877,
+      "max": 1.0074450056181512
+    },
+    {
+      "scenario": "bursty",
+      "policy": "early_warning",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 7.5370091704306175,
+      "sd": 0.5830904259199319,
+      "min": 7.067013835794676,
+      "max": 8.189526578437366
+    },
+    {
+      "scenario": "bursty",
+      "policy": "early_warning",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.012665901438290444,
+      "sd": 0.005319420876535247,
+      "min": 0.006524859715516116,
+      "max": 0.015845708076783774
+    },
+    {
+      "scenario": "bursty",
+      "policy": "early_warning",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 18.033333333333335,
+      "sd": 1.8009256878986806,
+      "min": 16.2,
+      "max": 19.8
+    },
+    {
+      "scenario": "bursty",
+      "policy": "early_warning",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 3.420185100185621,
+      "sd": 0.7825224220536795,
+      "min": 2.53485812585282,
+      "max": 4.0193364539928655
+    },
+    {
+      "scenario": "bursty",
+      "policy": "early_warning",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.8248569657625978,
+      "sd": 0.036796163088810674,
+      "min": 0.7874373847776058,
+      "max": 0.86099629546986
+    },
+    {
+      "scenario": "bursty",
+      "policy": "ml",
+      "metric": "receiver_mbps",
+      "n": 3,
+      "mean": 7.521429730828415,
+      "sd": 0.5580527303587748,
+      "min": 7.063528287003807,
+      "max": 8.143022211432262
+    },
+    {
+      "scenario": "bursty",
+      "policy": "ml",
+      "metric": "udp_loss_percent",
+      "n": 3,
+      "mean": 0.1946880758437026,
+      "sd": 0.3372096389891159,
+      "min": 0.0,
+      "max": 0.5840642275311078
+    },
+    {
+      "scenario": "bursty",
+      "policy": "ml",
+      "metric": "traffic_reply_p95_ms",
+      "n": 3,
+      "mean": 16.233333333333334,
+      "sd": 2.1361959960016157,
+      "min": 13.8,
+      "max": 17.8
+    },
+    {
+      "scenario": "bursty",
+      "policy": "ml",
+      "metric": "collector_cpu_percent_one_core",
+      "n": 3,
+      "mean": 2.7807341763930506,
+      "sd": 0.4079656282678965,
+      "min": 2.4468757240111936,
+      "max": 3.235482537072833
+    },
+    {
+      "scenario": "bursty",
+      "policy": "ml",
+      "metric": "policy_cpu_percent_one_core",
+      "n": 3,
+      "mean": 0.8393201464893838,
+      "sd": 0.03754246195816975,
+      "min": 0.8022619267735134,
+      "max": 0.8773288023763806
+    }
+  ],
+  "paired_ml_minus_trend": [
+    {
+      "cohort": "original",
+      "scenario": "steady",
+      "seed": 41,
+      "delta_receiver_mbps": -0.0012257927139089908,
+      "delta_loss_pp": 0.0,
+      "delta_rtt_p95_ms": 1.9000000000000021,
+      "ml_actions": 1,
+      "trend_actions": 0
+    },
+    {
+      "cohort": "original",
+      "scenario": "steady",
+      "seed": 42,
+      "delta_receiver_mbps": -5.193915839640795e-07,
+      "delta_loss_pp": 0.0,
+      "delta_rtt_p95_ms": 0.0,
+      "ml_actions": 0,
+      "trend_actions": 0
+    },
+    {
+      "cohort": "original",
+      "scenario": "steady",
+      "seed": 43,
+      "delta_receiver_mbps": 7.54948056438387e-05,
+      "delta_loss_pp": 0.0,
+      "delta_rtt_p95_ms": -2.0,
+      "ml_actions": 0,
+      "trend_actions": 0
+    },
+    {
+      "cohort": "original",
+      "scenario": "ramp",
+      "seed": 41,
+      "delta_receiver_mbps": -0.000315764303882915,
+      "delta_loss_pp": 0.0,
+      "delta_rtt_p95_ms": 2.3999999999999986,
+      "ml_actions": 1,
+      "trend_actions": 1
+    },
+    {
+      "cohort": "original",
+      "scenario": "ramp",
+      "seed": 42,
+      "delta_receiver_mbps": 0.001722165827917621,
+      "delta_loss_pp": 0.0,
+      "delta_rtt_p95_ms": -2.6000000000000014,
+      "ml_actions": 1,
+      "trend_actions": 1
+    },
+    {
+      "cohort": "original",
+      "scenario": "ramp",
+      "seed": 43,
+      "delta_receiver_mbps": -0.0009518900323346458,
+      "delta_loss_pp": 0.0,
+      "delta_rtt_p95_ms": 0.6999999999999993,
+      "ml_actions": 1,
+      "trend_actions": 1
+    },
+    {
+      "cohort": "original",
+      "scenario": "bursty",
+      "seed": 41,
+      "delta_receiver_mbps": 0.003251596989366945,
+      "delta_loss_pp": -0.006524859715516116,
+      "delta_rtt_p95_ms": -4.300000000000001,
+      "ml_actions": 1,
+      "trend_actions": 1
+    },
+    {
+      "cohort": "original",
+      "scenario": "bursty",
+      "seed": 42,
+      "delta_receiver_mbps": -0.003485548790869153,
+      "delta_loss_pp": -0.015845708076783774,
+      "delta_rtt_p95_ms": 1.6000000000000014,
+      "ml_actions": 1,
+      "trend_actions": 1
+    },
+    {
+      "cohort": "original",
+      "scenario": "bursty",
+      "seed": 43,
+      "delta_receiver_mbps": -0.046504367005104186,
+      "delta_loss_pp": 0.5684370910085363,
+      "delta_rtt_p95_ms": -2.6999999999999993,
+      "ml_actions": 1,
+      "trend_actions": 1
+    },
+    {
+      "cohort": "separate_followup",
+      "scenario": "bursty",
+      "seed": 51,
+      "delta_receiver_mbps": 0.0021248024110169794,
+      "delta_loss_pp": -0.07722974806403807,
+      "delta_rtt_p95_ms": 0.6000000000000014,
+      "ml_actions": 1,
+      "trend_actions": 1
+    }
+  ],
+  "control_timing": {
+    "applied_actions": 19,
+    "full_decision_to_readback_ms": {
+      "min": 90.52469200105406,
+      "median": 159.71370099578053,
+      "max": 413.1058939965442
+    },
+    "programming_to_readback_ms": {
+      "min": 44.23367300478276,
+      "median": 78.9683690018137,
+      "max": 210.67322499584407
+    }
+  },
+  "alternate_controls": [
+    {
+      "identity": {
+        "stage": "controls",
+        "policy": "fixed_alternate",
+        "scenario": "ramp",
+        "seed": 41,
+        "requested_bps": 11500000,
+        "duration": 60
+      },
+      "status": "accepted",
+      "folder": "20261120-173253-865453-schedule-path-control-alternate-ramp-seed41",
+      "trial": "20261120-173259-346146-alternate-continuous-ramp-8246914bps",
+      "report": {
+        "control": "20261120-173253-865453-schedule-path-control-alternate-ramp-seed41",
+        "route": "alternate",
+        "outcome": "completed",
+        "scenario": "ramp",
+        "seed": 41,
+        "requested_scale_bps": 11500000,
+        "source_audit": {
+          "policy": {
+            "id": "measured-fixed-source-integrity-v1",
+            "source_protocol": "dual-fixed-highutil-v1",
+            "max_discard_fraction": 0.05,
+            "threshold_origin": "Existing inspect_trial acquisition limit, unchanged; not fitted to this dataset",
+            "scope": "Fixed-primary observed-counter prediction data. Not a perfect-source schedule certificate.",
+            "amendment": "Replace blanket zero-discard rejection with integrity checks, inherited acquisition limit and explicit pacing diagnostics, before model fitting or fresh test use."
+          },
+          "samples": 237,
+          "max_sample_gap_s": 0.257941882,
+          "tail_sample_gap_s": 0.08496185,
+          "unlogged_tail_packets": 23,
+          "native_discarded_budget_bits": 0.0,
+          "discard_fraction": 0.0,
+          "discard_percent": 0.0,
+          "discarded_payload_datagram_equivalents": 0.0,
+          "sampled_discard_increments": [],
+          "unlogged_tail_discard_bits": 0.0,
+          "max_pacer_gap_s": 0.04222402300365502,
+          "legacy_zero_discard_passed": true,
+          "note": "Pacing metrics and planned rates are audit-only, not model inputs. Labels/features come from measured counters. Nonzero discard is a retained source limitation, not network packet loss."
+        },
+        "trial": {
+          "run": "20261120-173259-346146-alternate-continuous-ramp-8246914bps",
+          "route": "alternate",
+          "requested_bps": 8246914,
+          "sender": {
+            "start": 0,
+            "packets": 51541,
+            "lost_packets": 0,
+            "lost_percent": 0,
+            "jitter_ms": 0,
+            "end": 60.000380128,
+            "seconds": 60.000380128,
+            "bytes": 61849200,
+            "bits_per_second": 8246507.754525004,
+            "sender": true
+          },
+          "receiver": {
+            "start": 0,
+            "packets": 51541,
+            "lost_packets": 0,
+            "lost_percent": 0.0,
+            "jitter_ms": 0.5243905754352006,
+            "end": 60.003009333,
+            "seconds": 60.003009333,
+            "bytes": 61849200,
+            "bits_per_second": 8246146.409991426,
+            "sender": false
+          },
+          "queue_drop_deltas": {
+            "h1-eth0": 0,
+            "s1-eth4": 0,
+            "s3-eth2": 0,
+            "s4-eth1": 0
+          },
+          "udp_error_deltas": {
+            "h1": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            },
+            "h2": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            }
+          },
+          "screen_failures": [],
+          "max_resource_gap_s": 1.0,
+          "traffic_engine": "continuous-udp-v1",
+          "scenario": "ramp",
+          "pacer": {
+            "discarded_budget_bits": 0.0,
+            "planned_bits": 494814840.0,
+            "skipped_ticks": 91,
+            "max_pacer_gap_s": 0.04222402300365502,
+            "send_errors": {}
+          },
+          "mixed_schedule_note": "Whole-run average is not a congestion label; inspect per-window data.",
+          "sender_based_missing_datagrams": 0.0,
+          "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+        },
+        "collector": {
+          "qdiscs": {
+            "s1-eth3": {
+              "samples": 261,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.19028024050203385,
+                "median": 0.24998121050157351,
+                "p95": 0.26135137799428776,
+                "max": 0.32049026550521376
+              },
+              "query_duration_s": {
+                "min": 0.004089043999556452,
+                "median": 0.0061968770023668185,
+                "p95": 0.02907052500086138,
+                "max": 0.1281331750069512
+              },
+              "invalid_intervals": 0,
+              "interval_count": 260,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s2-eth2": {
+              "samples": 261,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.19028024050203385,
+                "median": 0.24998121050157351,
+                "p95": 0.26135137799428776,
+                "max": 0.32049026550521376
+              },
+              "query_duration_s": {
+                "min": 0.004089043999556452,
+                "median": 0.0061968770023668185,
+                "p95": 0.02907052500086138,
+                "max": 0.1281331750069512
+              },
+              "invalid_intervals": 0,
+              "interval_count": 260,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s1-eth4": {
+              "samples": 261,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.19028024050203385,
+                "median": 0.24998121050157351,
+                "p95": 0.26135137799428776,
+                "max": 0.32049026550521376
+              },
+              "query_duration_s": {
+                "min": 0.004089043999556452,
+                "median": 0.0061968770023668185,
+                "p95": 0.02907052500086138,
+                "max": 0.1281331750069512
+              },
+              "invalid_intervals": 0,
+              "interval_count": 260,
+              "max_queue_packets": 9,
+              "max_backlog_bytes": 11178,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 8002528.836359205,
+                "p95": 13571407.595875727,
+                "max": 14189193.621920802
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s3-eth2": {
+              "samples": 261,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.19028024050203385,
+                "median": 0.24998121050157351,
+                "p95": 0.26135137799428776,
+                "max": 0.32049026550521376
+              },
+              "query_duration_s": {
+                "min": 0.004089043999556452,
+                "median": 0.0061968770023668185,
+                "p95": 0.02907052500086138,
+                "max": 0.1281331750069512
+              },
+              "invalid_intervals": 0,
+              "interval_count": 260,
+              "max_queue_packets": 10,
+              "max_backlog_bytes": 12420,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 8049880.366898897,
+                "p95": 13673586.009735662,
+                "max": 14189193.621920802
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            }
+          },
+          "process_overhead": {
+            "route": "alternate",
+            "schema_version": 6,
+            "coverage": "all",
+            "backend": "one-tc-json-dump-per-cycle",
+            "tc_processes_per_sample": 1,
+            "interval_s": 0.25,
+            "samples": 261,
+            "elapsed_s": 65.25095796000096,
+            "queried_qdiscs": [
+              "s1-eth3",
+              "s2-eth2",
+              "s1-eth4",
+              "s3-eth2"
+            ],
+            "cpu_seconds": {
+              "self_s": 0.68153,
+              "children_s": 1.85631
+            },
+            "cpu_percent_one_core": {
+              "self_s": 1.044475087120989,
+              "children_s": 2.844877773500159
+            },
+            "stopped_by_signal": true
+          }
+        },
+        "rtt": {
+          "idle": {
+            "replies": 10,
+            "milliseconds": {
+              "min": 9.61,
+              "median": 12.5,
+              "p95": 20.0,
+              "max": 20.0
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "loaded": {
+            "replies": 314,
+            "milliseconds": {
+              "min": 8.63,
+              "median": 9.55,
+              "p95": 13.5,
+              "max": 44.1
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "traffic_only": {
+            "replies": 298,
+            "milliseconds": {
+              "min": 8.63,
+              "median": 9.52,
+              "p95": 13.0,
+              "max": 33.4
+            },
+            "loss_percent": null,
+            "censored_below_1ms": 0
+          }
+        },
+        "route_counter_deltas": {
+          "s1-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s1-eth4": {
+            "tx_bytes": 64045674,
+            "tx_packets": 51865,
+            "rx_bytes": 31752,
+            "rx_packets": 324
+          },
+          "s2-eth2": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s3-eth2": {
+            "tx_bytes": 64045674,
+            "tx_packets": 51865,
+            "rx_bytes": 31752,
+            "rx_packets": 324
+          },
+          "s4-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s4-eth4": {
+            "tx_bytes": 31752,
+            "tx_packets": 324,
+            "rx_bytes": 64045674,
+            "rx_packets": 51865
+          }
+        },
+        "profile": {
+          "id": "dual-forward-cburst16k-source250-v1",
+          "forward_links": [
+            [
+              "h1",
+              "h1-eth0",
+              100
+            ],
+            [
+              "s1",
+              "s1-eth3",
+              100
+            ],
+            [
+              "s2",
+              "s2-eth2",
+              10
+            ],
+            [
+              "s1",
+              "s1-eth4",
+              20
+            ],
+            [
+              "s3",
+              "s3-eth2",
+              20
+            ],
+            [
+              "s4",
+              "s4-eth1",
+              100
+            ]
+          ],
+          "cburst_bytes": 16384,
+          "burst_bytes": 15360,
+          "source_queue_packets": 250,
+          "bottleneck_queue_packets": 50,
+          "delay_ms": 1
+        },
+        "restoration": {
+          "failures": []
+        },
+        "route_restoration": {
+          "verified": true,
+          "failures": []
+        },
+        "control_screen_failures": [],
+        "note": "Fixed manual path control, not reactive/ML QoS evidence; readback times include CLI overhead"
+      }
+    },
+    {
+      "identity": {
+        "stage": "controls",
+        "policy": "fixed_alternate",
+        "scenario": "bursty",
+        "seed": 41,
+        "requested_bps": 11500000,
+        "duration": 60
+      },
+      "status": "accepted",
+      "folder": "20261120-195251-741981-schedule-path-control-alternate-bursty-seed41",
+      "trial": "20261120-195257-182790-alternate-continuous-bursty-7358693bps",
+      "report": {
+        "control": "20261120-195251-741981-schedule-path-control-alternate-bursty-seed41",
+        "route": "alternate",
+        "outcome": "completed",
+        "scenario": "bursty",
+        "seed": 41,
+        "requested_scale_bps": 11500000,
+        "source_audit": {
+          "policy": {
+            "id": "measured-fixed-source-integrity-v1",
+            "source_protocol": "dual-fixed-highutil-v1",
+            "max_discard_fraction": 0.05,
+            "threshold_origin": "Existing inspect_trial acquisition limit, unchanged; not fitted to this dataset",
+            "scope": "Fixed-primary observed-counter prediction data. Not a perfect-source schedule certificate.",
+            "amendment": "Replace blanket zero-discard rejection with integrity checks, inherited acquisition limit and explicit pacing diagnostics, before model fitting or fresh test use."
+          },
+          "samples": 236,
+          "max_sample_gap_s": 0.322132496,
+          "tail_sample_gap_s": 0.23543991,
+          "unlogged_tail_packets": 69,
+          "native_discarded_budget_bits": 1924345.811812818,
+          "discard_fraction": 0.004358441386887995,
+          "discard_percent": 0.4358441386887995,
+          "discarded_payload_datagram_equivalents": 200.45268873050188,
+          "sampled_discard_increments": [
+            {
+              "sample": 45,
+              "elapsed_s": 11.717338863003533,
+              "discard_delta_bits": 6453.366256862879
+            },
+            {
+              "sample": 46,
+              "elapsed_s": 11.97038179798983,
+              "discard_delta_bits": 830469.1447522938
+            },
+            {
+              "sample": 50,
+              "elapsed_s": 12.975645585989696,
+              "discard_delta_bits": 125504.26341053843
+            },
+            {
+              "sample": 104,
+              "elapsed_s": 26.620702639993397,
+              "discard_delta_bits": 746350.5180089176
+            },
+            {
+              "sample": 167,
+              "elapsed_s": 42.58110961499915,
+              "discard_delta_bits": 5496.039158046246
+            },
+            {
+              "sample": 228,
+              "elapsed_s": 57.99662510299822,
+              "discard_delta_bits": 210072.4802261591
+            }
+          ],
+          "unlogged_tail_discard_bits": 0.0,
+          "max_pacer_gap_s": 0.0843709650071105,
+          "legacy_zero_discard_passed": false,
+          "note": "Pacing metrics and planned rates are audit-only, not model inputs. Labels/features come from measured counters. Nonzero discard is a retained source limitation, not network packet loss."
+        },
+        "trial": {
+          "run": "20261120-195257-182790-alternate-continuous-bursty-7358693bps",
+          "route": "alternate",
+          "requested_bps": 7358693,
+          "sender": {
+            "start": 0,
+            "packets": 45790,
+            "lost_packets": 0,
+            "lost_percent": 0,
+            "jitter_ms": 0,
+            "end": 60.000785095,
+            "seconds": 60.000785095,
+            "bytes": 54948000,
+            "bits_per_second": 7326304.135920907,
+            "sender": true
+          },
+          "receiver": {
+            "start": 0,
+            "packets": 45790,
+            "lost_packets": 0,
+            "lost_percent": 0.0,
+            "jitter_ms": 1.1238507261630135,
+            "end": 60.015410407,
+            "seconds": 60.015410407,
+            "bytes": 54948000,
+            "bits_per_second": 7324518.769744652,
+            "sender": false
+          },
+          "queue_drop_deltas": {
+            "h1-eth0": 0,
+            "s1-eth4": 0,
+            "s3-eth2": 0,
+            "s4-eth1": 0
+          },
+          "udp_error_deltas": {
+            "h1": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            },
+            "h2": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            }
+          },
+          "screen_failures": [],
+          "max_resource_gap_s": 1.0,
+          "traffic_engine": "continuous-udp-v1",
+          "scenario": "bursty",
+          "pacer": {
+            "discarded_budget_bits": 1924345.811812818,
+            "planned_bits": 441521553.46221954,
+            "skipped_ticks": 402,
+            "max_pacer_gap_s": 0.0843709650071105,
+            "send_errors": {}
+          },
+          "mixed_schedule_note": "Whole-run average is not a congestion label; inspect per-window data.",
+          "sender_based_missing_datagrams": 0.0,
+          "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+        },
+        "collector": {
+          "qdiscs": {
+            "s1-eth3": {
+              "samples": 265,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.18495324401010294,
+                "median": 0.24962911651527975,
+                "p95": 0.28289101948030293,
+                "max": 0.3173822594981175
+              },
+              "query_duration_s": {
+                "min": 0.0055037339916452765,
+                "median": 0.02635279500100296,
+                "p95": 0.08575836900854483,
+                "max": 0.14343396699405275
+              },
+              "invalid_intervals": 0,
+              "interval_count": 264,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s2-eth2": {
+              "samples": 265,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.18495324401010294,
+                "median": 0.24962911651527975,
+                "p95": 0.28289101948030293,
+                "max": 0.3173822594981175
+              },
+              "query_duration_s": {
+                "min": 0.0055037339916452765,
+                "median": 0.02635279500100296,
+                "p95": 0.08575836900854483,
+                "max": 0.14343396699405275
+              },
+              "invalid_intervals": 0,
+              "interval_count": 264,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s1-eth4": {
+              "samples": 265,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.18495324401010294,
+                "median": 0.24962911651527975,
+                "p95": 0.28289101948030293,
+                "max": 0.3173822594981175
+              },
+              "query_duration_s": {
+                "min": 0.0055037339916452765,
+                "median": 0.02635279500100296,
+                "p95": 0.08575836900854483,
+                "max": 0.14343396699405275
+              },
+              "invalid_intervals": 0,
+              "interval_count": 264,
+              "max_queue_packets": 22,
+              "max_backlog_bytes": 27324,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 3081026.6849764925,
+                "p95": 14364348.574385261,
+                "max": 16082599.03225927
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s3-eth2": {
+              "samples": 265,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.18495324401010294,
+                "median": 0.24962911651527975,
+                "p95": 0.28289101948030293,
+                "max": 0.3173822594981175
+              },
+              "query_duration_s": {
+                "min": 0.0055037339916452765,
+                "median": 0.02635279500100296,
+                "p95": 0.08575836900854483,
+                "max": 0.14343396699405275
+              },
+              "invalid_intervals": 0,
+              "interval_count": 264,
+              "max_queue_packets": 14,
+              "max_backlog_bytes": 17388,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 3081229.618232217,
+                "p95": 14290210.668653613,
+                "max": 16082599.03225927
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            }
+          },
+          "process_overhead": {
+            "route": "alternate",
+            "schema_version": 6,
+            "coverage": "all",
+            "backend": "one-tc-json-dump-per-cycle",
+            "tc_processes_per_sample": 1,
+            "interval_s": 0.25,
+            "samples": 265,
+            "elapsed_s": 66.2516029769904,
+            "queried_qdiscs": [
+              "s1-eth3",
+              "s2-eth2",
+              "s1-eth4",
+              "s3-eth2"
+            ],
+            "cpu_seconds": {
+              "self_s": 1.35114,
+              "children_s": 6.138146
+            },
+            "cpu_percent_one_core": {
+              "self_s": 2.0394072585221212,
+              "children_s": 9.26490186529044
+            },
+            "stopped_by_signal": true
+          }
+        },
+        "rtt": {
+          "idle": {
+            "replies": 10,
+            "milliseconds": {
+              "min": 9.31,
+              "median": 12.8,
+              "p95": 77.0,
+              "max": 77.0
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "loaded": {
+            "replies": 319,
+            "milliseconds": {
+              "min": 8.97,
+              "median": 12.0,
+              "p95": 20.3,
+              "max": 105.0
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "traffic_only": {
+            "replies": 298,
+            "milliseconds": {
+              "min": 8.97,
+              "median": 11.9,
+              "p95": 20.0,
+              "max": 105.0
+            },
+            "loss_percent": null,
+            "censored_below_1ms": 0
+          }
+        },
+        "route_counter_deltas": {
+          "s1-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s1-eth4": {
+            "tx_bytes": 56903422,
+            "tx_packets": 46119,
+            "rx_bytes": 32242,
+            "rx_packets": 329
+          },
+          "s2-eth2": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s3-eth2": {
+            "tx_bytes": 56903422,
+            "tx_packets": 46119,
+            "rx_bytes": 32242,
+            "rx_packets": 329
+          },
+          "s4-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s4-eth4": {
+            "tx_bytes": 32242,
+            "tx_packets": 329,
+            "rx_bytes": 56903422,
+            "rx_packets": 46119
+          }
+        },
+        "profile": {
+          "id": "dual-forward-cburst16k-source250-v1",
+          "forward_links": [
+            [
+              "h1",
+              "h1-eth0",
+              100
+            ],
+            [
+              "s1",
+              "s1-eth3",
+              100
+            ],
+            [
+              "s2",
+              "s2-eth2",
+              10
+            ],
+            [
+              "s1",
+              "s1-eth4",
+              20
+            ],
+            [
+              "s3",
+              "s3-eth2",
+              20
+            ],
+            [
+              "s4",
+              "s4-eth1",
+              100
+            ]
+          ],
+          "cburst_bytes": 16384,
+          "burst_bytes": 15360,
+          "source_queue_packets": 250,
+          "bottleneck_queue_packets": 50,
+          "delay_ms": 1
+        },
+        "restoration": {
+          "failures": []
+        },
+        "route_restoration": {
+          "verified": true,
+          "failures": []
+        },
+        "control_screen_failures": [],
+        "note": "Fixed manual path control, not reactive/ML QoS evidence; readback times include CLI overhead"
+      }
+    },
+    {
+      "identity": {
+        "stage": "controls",
+        "policy": "fixed_alternate",
+        "scenario": "ramp",
+        "seed": 42,
+        "requested_bps": 11500000,
+        "duration": 60
+      },
+      "status": "accepted",
+      "folder": "20261120-195403-460968-schedule-path-control-alternate-ramp-seed42",
+      "trial": "20261120-195410-119182-alternate-continuous-ramp-8158933bps",
+      "report": {
+        "control": "20261120-195403-460968-schedule-path-control-alternate-ramp-seed42",
+        "route": "alternate",
+        "outcome": "completed",
+        "scenario": "ramp",
+        "seed": 42,
+        "requested_scale_bps": 11500000,
+        "source_audit": {
+          "policy": {
+            "id": "measured-fixed-source-integrity-v1",
+            "source_protocol": "dual-fixed-highutil-v1",
+            "max_discard_fraction": 0.05,
+            "threshold_origin": "Existing inspect_trial acquisition limit, unchanged; not fitted to this dataset",
+            "scope": "Fixed-primary observed-counter prediction data. Not a perfect-source schedule certificate.",
+            "amendment": "Replace blanket zero-discard rejection with integrity checks, inherited acquisition limit and explicit pacing diagnostics, before model fitting or fresh test use."
+          },
+          "samples": 237,
+          "max_sample_gap_s": 0.258833037,
+          "tail_sample_gap_s": 0.049854605,
+          "unlogged_tail_packets": 14,
+          "native_discarded_budget_bits": 47073.378717422485,
+          "discard_fraction": 9.61591806130828e-05,
+          "discard_percent": 0.009615918061308279,
+          "discarded_payload_datagram_equivalents": 4.903476949731509,
+          "sampled_discard_increments": [
+            {
+              "sample": 62,
+              "elapsed_s": 15.930202173010912,
+              "discard_delta_bits": 27945.54752573371
+            },
+            {
+              "sample": 86,
+              "elapsed_s": 21.99546275001194,
+              "discard_delta_bits": 19127.831191688776
+            }
+          ],
+          "unlogged_tail_discard_bits": 0.0,
+          "max_pacer_gap_s": 0.04613785000401549,
+          "legacy_zero_discard_passed": false,
+          "note": "Pacing metrics and planned rates are audit-only, not model inputs. Labels/features come from measured counters. Nonzero discard is a retained source limitation, not network packet loss."
+        },
+        "trial": {
+          "run": "20261120-195410-119182-alternate-continuous-ramp-8158933bps",
+          "route": "alternate",
+          "requested_bps": 8158933,
+          "sender": {
+            "start": 0,
+            "packets": 50986,
+            "lost_packets": 0,
+            "lost_percent": 0,
+            "jitter_ms": 0,
+            "end": 60.000781439,
+            "seconds": 60.000781439,
+            "bytes": 61183200,
+            "bits_per_second": 8157653.754853457,
+            "sender": true
+          },
+          "receiver": {
+            "start": 0,
+            "packets": 50986,
+            "lost_packets": 0,
+            "lost_percent": 0.0,
+            "jitter_ms": 1.4146451349856244,
+            "end": 60.017450907,
+            "seconds": 60.017450907,
+            "bytes": 61183200,
+            "bits_per_second": 8155388.018035806,
+            "sender": false
+          },
+          "queue_drop_deltas": {
+            "h1-eth0": 0,
+            "s1-eth4": 0,
+            "s3-eth2": 0,
+            "s4-eth1": 0
+          },
+          "udp_error_deltas": {
+            "h1": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            },
+            "h2": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            }
+          },
+          "screen_failures": [],
+          "max_resource_gap_s": 1.0,
+          "traffic_engine": "continuous-udp-v1",
+          "scenario": "ramp",
+          "pacer": {
+            "discarded_budget_bits": 47073.378717422485,
+            "planned_bits": 489535980.0,
+            "skipped_ticks": 193,
+            "max_pacer_gap_s": 0.04613785000401549,
+            "send_errors": {}
+          },
+          "mixed_schedule_note": "Whole-run average is not a congestion label; inspect per-window data.",
+          "sender_based_missing_datagrams": 0.0,
+          "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+        },
+        "collector": {
+          "qdiscs": {
+            "s1-eth3": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.14610567448835354,
+                "median": 0.2492436960019404,
+                "p95": 0.271694542010664,
+                "max": 0.35856513152248226
+              },
+              "query_duration_s": {
+                "min": 0.004482972988625988,
+                "median": 0.017188526995596476,
+                "p95": 0.05495986501045991,
+                "max": 0.09575189099996351
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s2-eth2": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.14610567448835354,
+                "median": 0.2492436960019404,
+                "p95": 0.271694542010664,
+                "max": 0.35856513152248226
+              },
+              "query_duration_s": {
+                "min": 0.004482972988625988,
+                "median": 0.017188526995596476,
+                "p95": 0.05495986501045991,
+                "max": 0.09575189099996351
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s1-eth4": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.14610567448835354,
+                "median": 0.2492436960019404,
+                "p95": 0.271694542010664,
+                "max": 0.35856513152248226
+              },
+              "query_duration_s": {
+                "min": 0.004482972988625988,
+                "median": 0.017188526995596476,
+                "p95": 0.05495986501045991,
+                "max": 0.09575189099996351
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 8,
+              "max_backlog_bytes": 9936,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 7925599.372547342,
+                "p95": 13145549.356498003,
+                "max": 14260392.665035712
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s3-eth2": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.14610567448835354,
+                "median": 0.2492436960019404,
+                "p95": 0.271694542010664,
+                "max": 0.35856513152248226
+              },
+              "query_duration_s": {
+                "min": 0.004482972988625988,
+                "median": 0.017188526995596476,
+                "p95": 0.05495986501045991,
+                "max": 0.09575189099996351
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 9,
+              "max_backlog_bytes": 11178,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 7925599.372547342,
+                "p95": 13028157.150761032,
+                "max": 14260392.665035712
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            }
+          },
+          "process_overhead": {
+            "route": "alternate",
+            "schema_version": 6,
+            "coverage": "all",
+            "backend": "one-tc-json-dump-per-cycle",
+            "tc_processes_per_sample": 1,
+            "interval_s": 0.25,
+            "samples": 263,
+            "elapsed_s": 65.75033238201286,
+            "queried_qdiscs": [
+              "s1-eth3",
+              "s2-eth2",
+              "s1-eth4",
+              "s3-eth2"
+            ],
+            "cpu_seconds": {
+              "self_s": 1.175414,
+              "children_s": 4.320015
+            },
+            "cpu_percent_one_core": {
+              "self_s": 1.787692863924677,
+              "children_s": 6.570331804408968
+            },
+            "stopped_by_signal": true
+          }
+        },
+        "rtt": {
+          "idle": {
+            "replies": 10,
+            "milliseconds": {
+              "min": 9.65,
+              "median": 11.0,
+              "p95": 16.1,
+              "max": 16.1
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "loaded": {
+            "replies": 317,
+            "milliseconds": {
+              "min": 8.74,
+              "median": 11.2,
+              "p95": 19.4,
+              "max": 75.8
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "traffic_only": {
+            "replies": 299,
+            "milliseconds": {
+              "min": 8.74,
+              "median": 11.1,
+              "p95": 18.3,
+              "max": 75.8
+            },
+            "loss_percent": null,
+            "censored_below_1ms": 0
+          }
+        },
+        "route_counter_deltas": {
+          "s1-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s1-eth4": {
+            "tx_bytes": 63356658,
+            "tx_packets": 51313,
+            "rx_bytes": 32046,
+            "rx_packets": 327
+          },
+          "s2-eth2": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s3-eth2": {
+            "tx_bytes": 63356658,
+            "tx_packets": 51313,
+            "rx_bytes": 32046,
+            "rx_packets": 327
+          },
+          "s4-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s4-eth4": {
+            "tx_bytes": 32046,
+            "tx_packets": 327,
+            "rx_bytes": 63356658,
+            "rx_packets": 51313
+          }
+        },
+        "profile": {
+          "id": "dual-forward-cburst16k-source250-v1",
+          "forward_links": [
+            [
+              "h1",
+              "h1-eth0",
+              100
+            ],
+            [
+              "s1",
+              "s1-eth3",
+              100
+            ],
+            [
+              "s2",
+              "s2-eth2",
+              10
+            ],
+            [
+              "s1",
+              "s1-eth4",
+              20
+            ],
+            [
+              "s3",
+              "s3-eth2",
+              20
+            ],
+            [
+              "s4",
+              "s4-eth1",
+              100
+            ]
+          ],
+          "cburst_bytes": 16384,
+          "burst_bytes": 15360,
+          "source_queue_packets": 250,
+          "bottleneck_queue_packets": 50,
+          "delay_ms": 1
+        },
+        "restoration": {
+          "failures": []
+        },
+        "route_restoration": {
+          "verified": true,
+          "failures": []
+        },
+        "control_screen_failures": [],
+        "note": "Fixed manual path control, not reactive/ML QoS evidence; readback times include CLI overhead"
+      }
+    },
+    {
+      "identity": {
+        "stage": "controls",
+        "policy": "fixed_alternate",
+        "scenario": "bursty",
+        "seed": 42,
+        "requested_bps": 11500000,
+        "duration": 60
+      },
+      "status": "accepted",
+      "folder": "20261120-195515-673787-schedule-path-control-alternate-bursty-seed42",
+      "trial": "20261120-195521-726598-alternate-continuous-bursty-7069358bps",
+      "report": {
+        "control": "20261120-195515-673787-schedule-path-control-alternate-bursty-seed42",
+        "route": "alternate",
+        "outcome": "completed",
+        "scenario": "bursty",
+        "seed": 42,
+        "requested_scale_bps": 11500000,
+        "source_audit": {
+          "policy": {
+            "id": "measured-fixed-source-integrity-v1",
+            "source_protocol": "dual-fixed-highutil-v1",
+            "max_discard_fraction": 0.05,
+            "threshold_origin": "Existing inspect_trial acquisition limit, unchanged; not fitted to this dataset",
+            "scope": "Fixed-primary observed-counter prediction data. Not a perfect-source schedule certificate.",
+            "amendment": "Replace blanket zero-discard rejection with integrity checks, inherited acquisition limit and explicit pacing diagnostics, before model fitting or fresh test use."
+          },
+          "samples": 237,
+          "max_sample_gap_s": 0.263245275,
+          "tail_sample_gap_s": 0.035866965,
+          "unlogged_tail_packets": 42,
+          "native_discarded_budget_bits": 2704399.8449549973,
+          "discard_fraction": 0.0063758732153224515,
+          "discard_percent": 0.6375873215322452,
+          "discarded_payload_datagram_equivalents": 281.7083171828122,
+          "sampled_discard_increments": [
+            {
+              "sample": 35,
+              "elapsed_s": 9.11034264099726,
+              "discard_delta_bits": 502861.1356385797
+            },
+            {
+              "sample": 39,
+              "elapsed_s": 10.120492368005216,
+              "discard_delta_bits": 62706.172189347446
+            },
+            {
+              "sample": 40,
+              "elapsed_s": 10.370579416005057,
+              "discard_delta_bits": 228038.9643784538
+            },
+            {
+              "sample": 42,
+              "elapsed_s": 10.87769657401077,
+              "discard_delta_bits": 49855.69941832125
+            },
+            {
+              "sample": 45,
+              "elapsed_s": 11.642432325010304,
+              "discard_delta_bits": 79546.17301738262
+            },
+            {
+              "sample": 48,
+              "elapsed_s": 12.397326931008138,
+              "discard_delta_bits": 158624.85112826526
+            },
+            {
+              "sample": 74,
+              "elapsed_s": 18.98578196100425,
+              "discard_delta_bits": 116537.61914585531
+            },
+            {
+              "sample": 88,
+              "elapsed_s": 22.52544370701071,
+              "discard_delta_bits": 294106.2655220628
+            },
+            {
+              "sample": 89,
+              "elapsed_s": 22.775705236999784,
+              "discard_delta_bits": 82950.76424255967
+            },
+            {
+              "sample": 91,
+              "elapsed_s": 23.28090786500252,
+              "discard_delta_bits": 25711.143520712852
+            },
+            {
+              "sample": 110,
+              "elapsed_s": 28.086283306998666,
+              "discard_delta_bits": 76005.04606574774
+            },
+            {
+              "sample": 111,
+              "elapsed_s": 28.34034789299767,
+              "discard_delta_bits": 259889.52067151666
+            },
+            {
+              "sample": 113,
+              "elapsed_s": 28.845143899001414,
+              "discard_delta_bits": 156673.54708501697
+            },
+            {
+              "sample": 140,
+              "elapsed_s": 35.67040375900979,
+              "discard_delta_bits": 189653.90150260925
+            },
+            {
+              "sample": 184,
+              "elapsed_s": 46.81312158200308,
+              "discard_delta_bits": 60118.056628882885
+            },
+            {
+              "sample": 185,
+              "elapsed_s": 47.065409215007094,
+              "discard_delta_bits": 140216.74868935347
+            },
+            {
+              "sample": 186,
+              "elapsed_s": 47.320234832004644,
+              "discard_delta_bits": 137200.2683196664
+            },
+            {
+              "sample": 188,
+              "elapsed_s": 47.82027064899739,
+              "discard_delta_bits": 83703.96779066324
+            }
+          ],
+          "unlogged_tail_discard_bits": 0.0,
+          "max_pacer_gap_s": 0.05376033499487676,
+          "legacy_zero_discard_passed": false,
+          "note": "Pacing metrics and planned rates are audit-only, not model inputs. Labels/features come from measured counters. Nonzero discard is a retained source limitation, not network packet loss."
+        },
+        "trial": {
+          "run": "20261120-195521-726598-alternate-continuous-bursty-7069358bps",
+          "route": "alternate",
+          "requested_bps": 7069358,
+          "sender": {
+            "start": 0,
+            "packets": 43895,
+            "lost_packets": 0,
+            "lost_percent": 0,
+            "jitter_ms": 0,
+            "end": 60.001366495,
+            "seconds": 60.001366495,
+            "bytes": 52674000,
+            "bits_per_second": 7023040.050848096,
+            "sender": true
+          },
+          "receiver": {
+            "start": 0,
+            "packets": 43895,
+            "lost_packets": 0,
+            "lost_percent": 0.0,
+            "jitter_ms": 0.5739967559901511,
+            "end": 60.014419814,
+            "seconds": 60.014419814,
+            "bytes": 52674000,
+            "bits_per_second": 7021512.518258134,
+            "sender": false
+          },
+          "queue_drop_deltas": {
+            "h1-eth0": 0,
+            "s1-eth4": 0,
+            "s3-eth2": 0,
+            "s4-eth1": 0
+          },
+          "udp_error_deltas": {
+            "h1": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            },
+            "h2": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            }
+          },
+          "screen_failures": [],
+          "max_resource_gap_s": 1.0,
+          "traffic_engine": "continuous-udp-v1",
+          "scenario": "bursty",
+          "pacer": {
+            "discarded_budget_bits": 2704399.8449549973,
+            "planned_bits": 424161484.02320856,
+            "skipped_ticks": 436,
+            "max_pacer_gap_s": 0.05376033499487676,
+            "send_errors": {}
+          },
+          "mixed_schedule_note": "Whole-run average is not a congestion label; inspect per-window data.",
+          "sender_based_missing_datagrams": 0.0,
+          "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+        },
+        "collector": {
+          "qdiscs": {
+            "s1-eth3": {
+              "samples": 264,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.1833497894986067,
+                "median": 0.24940274050459266,
+                "p95": 0.26421274499443825,
+                "max": 0.3203797205060255
+              },
+              "query_duration_s": {
+                "min": 0.005386842996813357,
+                "median": 0.015447095996933058,
+                "p95": 0.039462946995627135,
+                "max": 0.14602132899744902
+              },
+              "invalid_intervals": 0,
+              "interval_count": 263,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s2-eth2": {
+              "samples": 264,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.1833497894986067,
+                "median": 0.24940274050459266,
+                "p95": 0.26421274499443825,
+                "max": 0.3203797205060255
+              },
+              "query_duration_s": {
+                "min": 0.005386842996813357,
+                "median": 0.015447095996933058,
+                "p95": 0.039462946995627135,
+                "max": 0.14602132899744902
+              },
+              "invalid_intervals": 0,
+              "interval_count": 263,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s1-eth4": {
+              "samples": 264,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.1833497894986067,
+                "median": 0.24940274050459266,
+                "p95": 0.26421274499443825,
+                "max": 0.3203797205060255
+              },
+              "query_duration_s": {
+                "min": 0.005386842996813357,
+                "median": 0.015447095996933058,
+                "p95": 0.039462946995627135,
+                "max": 0.14602132899744902
+              },
+              "invalid_intervals": 0,
+              "interval_count": 263,
+              "max_queue_packets": 17,
+              "max_backlog_bytes": 21114,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 3039310.5910888803,
+                "p95": 14202871.02976885,
+                "max": 14604226.329869531
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s3-eth2": {
+              "samples": 264,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.1833497894986067,
+                "median": 0.24940274050459266,
+                "p95": 0.26421274499443825,
+                "max": 0.3203797205060255
+              },
+              "query_duration_s": {
+                "min": 0.005386842996813357,
+                "median": 0.015447095996933058,
+                "p95": 0.039462946995627135,
+                "max": 0.14602132899744902
+              },
+              "invalid_intervals": 0,
+              "interval_count": 263,
+              "max_queue_packets": 12,
+              "max_backlog_bytes": 14904,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 3053583.7142352355,
+                "p95": 14124463.622594457,
+                "max": 14899736.347760553
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            }
+          },
+          "process_overhead": {
+            "route": "alternate",
+            "schema_version": 6,
+            "coverage": "all",
+            "backend": "one-tc-json-dump-per-cycle",
+            "tc_processes_per_sample": 1,
+            "interval_s": 0.25,
+            "samples": 264,
+            "elapsed_s": 66.00079040499986,
+            "queried_qdiscs": [
+              "s1-eth3",
+              "s2-eth2",
+              "s1-eth4",
+              "s3-eth2"
+            ],
+            "cpu_seconds": {
+              "self_s": 2.1620120000000003,
+              "children_s": 3.6754130000000003
+            },
+            "cpu_percent_one_core": {
+              "self_s": 3.2757365279010626,
+              "children_s": 5.568740885444868
+            },
+            "stopped_by_signal": true
+          }
+        },
+        "rtt": {
+          "idle": {
+            "replies": 10,
+            "milliseconds": {
+              "min": 10.4,
+              "median": 12.6,
+              "p95": 15.5,
+              "max": 15.5
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "loaded": {
+            "replies": 317,
+            "milliseconds": {
+              "min": 8.76,
+              "median": 11.3,
+              "p95": 21.0,
+              "max": 55.0
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "traffic_only": {
+            "replies": 297,
+            "milliseconds": {
+              "min": 8.76,
+              "median": 11.3,
+              "p95": 19.9,
+              "max": 49.8
+            },
+            "loss_percent": null,
+            "censored_below_1ms": 0
+          }
+        },
+        "route_counter_deltas": {
+          "s1-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s1-eth4": {
+            "tx_bytes": 54549636,
+            "tx_packets": 44222,
+            "rx_bytes": 32046,
+            "rx_packets": 327
+          },
+          "s2-eth2": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s3-eth2": {
+            "tx_bytes": 54549636,
+            "tx_packets": 44222,
+            "rx_bytes": 32046,
+            "rx_packets": 327
+          },
+          "s4-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s4-eth4": {
+            "tx_bytes": 32046,
+            "tx_packets": 327,
+            "rx_bytes": 54549636,
+            "rx_packets": 44222
+          }
+        },
+        "profile": {
+          "id": "dual-forward-cburst16k-source250-v1",
+          "forward_links": [
+            [
+              "h1",
+              "h1-eth0",
+              100
+            ],
+            [
+              "s1",
+              "s1-eth3",
+              100
+            ],
+            [
+              "s2",
+              "s2-eth2",
+              10
+            ],
+            [
+              "s1",
+              "s1-eth4",
+              20
+            ],
+            [
+              "s3",
+              "s3-eth2",
+              20
+            ],
+            [
+              "s4",
+              "s4-eth1",
+              100
+            ]
+          ],
+          "cburst_bytes": 16384,
+          "burst_bytes": 15360,
+          "source_queue_packets": 250,
+          "bottleneck_queue_packets": 50,
+          "delay_ms": 1
+        },
+        "restoration": {
+          "failures": []
+        },
+        "route_restoration": {
+          "verified": true,
+          "failures": []
+        },
+        "control_screen_failures": [],
+        "note": "Fixed manual path control, not reactive/ML QoS evidence; readback times include CLI overhead"
+      }
+    },
+    {
+      "identity": {
+        "stage": "controls",
+        "policy": "fixed_alternate",
+        "scenario": "ramp",
+        "seed": 43,
+        "requested_bps": 11500000,
+        "duration": 60
+      },
+      "status": "accepted",
+      "folder": "20261120-195627-441460-schedule-path-control-alternate-ramp-seed43",
+      "trial": "20261120-195633-992821-alternate-continuous-ramp-8585326bps",
+      "report": {
+        "control": "20261120-195627-441460-schedule-path-control-alternate-ramp-seed43",
+        "route": "alternate",
+        "outcome": "completed",
+        "scenario": "ramp",
+        "seed": 43,
+        "requested_scale_bps": 11500000,
+        "source_audit": {
+          "policy": {
+            "id": "measured-fixed-source-integrity-v1",
+            "source_protocol": "dual-fixed-highutil-v1",
+            "max_discard_fraction": 0.05,
+            "threshold_origin": "Existing inspect_trial acquisition limit, unchanged; not fitted to this dataset",
+            "scope": "Fixed-primary observed-counter prediction data. Not a perfect-source schedule certificate.",
+            "amendment": "Replace blanket zero-discard rejection with integrity checks, inherited acquisition limit and explicit pacing diagnostics, before model fitting or fresh test use."
+          },
+          "samples": 236,
+          "max_sample_gap_s": 0.283878036,
+          "tail_sample_gap_s": 0.254397876,
+          "unlogged_tail_packets": 62,
+          "native_discarded_budget_bits": 143174.7303569913,
+          "discard_fraction": 0.00027794467500968424,
+          "discard_percent": 0.027794467500968423,
+          "discarded_payload_datagram_equivalents": 14.914034412186593,
+          "sampled_discard_increments": [
+            {
+              "sample": 126,
+              "elapsed_s": 32.120544652003446,
+              "discard_delta_bits": 34698.06330806017
+            },
+            {
+              "sample": 154,
+              "elapsed_s": 39.21080754400464,
+              "discard_delta_bits": 108476.66704893112
+            }
+          ],
+          "unlogged_tail_discard_bits": 0.0,
+          "max_pacer_gap_s": 0.043961422008578666,
+          "legacy_zero_discard_passed": false,
+          "note": "Pacing metrics and planned rates are audit-only, not model inputs. Labels/features come from measured counters. Nonzero discard is a retained source limitation, not network packet loss."
+        },
+        "trial": {
+          "run": "20261120-195633-992821-alternate-continuous-ramp-8585326bps",
+          "route": "alternate",
+          "requested_bps": 8585326,
+          "sender": {
+            "start": 0,
+            "packets": 53642,
+            "lost_packets": 0,
+            "lost_percent": 0,
+            "jitter_ms": 0,
+            "end": 60.000568163,
+            "seconds": 60.000568163,
+            "bytes": 64370400,
+            "bits_per_second": 8582638.727703877,
+            "sender": true
+          },
+          "receiver": {
+            "start": 0,
+            "packets": 53642,
+            "lost_packets": 0,
+            "lost_percent": 0.0,
+            "jitter_ms": 1.456678379549039,
+            "end": 60.014987077,
+            "seconds": 60.014987077,
+            "bytes": 64370400,
+            "bits_per_second": 8580576.703937229,
+            "sender": false
+          },
+          "queue_drop_deltas": {
+            "h1-eth0": 0,
+            "s1-eth4": 0,
+            "s3-eth2": 0,
+            "s4-eth1": 0
+          },
+          "udp_error_deltas": {
+            "h1": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            },
+            "h2": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            }
+          },
+          "screen_failures": [],
+          "max_resource_gap_s": 1.0,
+          "traffic_engine": "continuous-udp-v1",
+          "scenario": "ramp",
+          "pacer": {
+            "discarded_budget_bits": 143174.7303569913,
+            "planned_bits": 515119530.0,
+            "skipped_ticks": 222,
+            "max_pacer_gap_s": 0.043961422008578666,
+            "send_errors": {}
+          },
+          "mixed_schedule_note": "Whole-run average is not a congestion label; inspect per-window data.",
+          "sender_based_missing_datagrams": 0.0,
+          "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+        },
+        "collector": {
+          "qdiscs": {
+            "s1-eth3": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.2019340950064361,
+                "median": 0.2499143345048651,
+                "p95": 0.26888736100227106,
+                "max": 0.3046140679944074
+              },
+              "query_duration_s": {
+                "min": 0.0053481840004678816,
+                "median": 0.02140633801172953,
+                "p95": 0.04409257500083186,
+                "max": 0.13102028700814117
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s2-eth2": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.2019340950064361,
+                "median": 0.2499143345048651,
+                "p95": 0.26888736100227106,
+                "max": 0.3046140679944074
+              },
+              "query_duration_s": {
+                "min": 0.0053481840004678816,
+                "median": 0.02140633801172953,
+                "p95": 0.04409257500083186,
+                "max": 0.13102028700814117
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s1-eth4": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.2019340950064361,
+                "median": 0.2499143345048651,
+                "p95": 0.26888736100227106,
+                "max": 0.3046140679944074
+              },
+              "query_duration_s": {
+                "min": 0.0053481840004678816,
+                "median": 0.02140633801172953,
+                "p95": 0.04409257500083186,
+                "max": 0.13102028700814117
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 11,
+              "max_backlog_bytes": 13662,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 8218699.45095077,
+                "p95": 14579752.501226885,
+                "max": 17977843.361129805
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s3-eth2": {
+              "samples": 263,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.2019340950064361,
+                "median": 0.2499143345048651,
+                "p95": 0.26888736100227106,
+                "max": 0.3046140679944074
+              },
+              "query_duration_s": {
+                "min": 0.0053481840004678816,
+                "median": 0.02140633801172953,
+                "p95": 0.04409257500083186,
+                "max": 0.13102028700814117
+              },
+              "invalid_intervals": 0,
+              "interval_count": 262,
+              "max_queue_packets": 12,
+              "max_backlog_bytes": 14904,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 8208103.747539106,
+                "p95": 14465159.295555674,
+                "max": 17814751.747117706
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            }
+          },
+          "process_overhead": {
+            "route": "alternate",
+            "schema_version": 6,
+            "coverage": "all",
+            "backend": "one-tc-json-dump-per-cycle",
+            "tc_processes_per_sample": 1,
+            "interval_s": 0.25,
+            "samples": 263,
+            "elapsed_s": 65.75161759300681,
+            "queried_qdiscs": [
+              "s1-eth3",
+              "s2-eth2",
+              "s1-eth4",
+              "s3-eth2"
+            ],
+            "cpu_seconds": {
+              "self_s": 1.1629639999999999,
+              "children_s": 4.19099
+            },
+            "cpu_percent_one_core": {
+              "self_s": 1.7687230254905395,
+              "children_s": 6.373972463980482
+            },
+            "stopped_by_signal": true
+          }
+        },
+        "rtt": {
+          "idle": {
+            "replies": 10,
+            "milliseconds": {
+              "min": 9.56,
+              "median": 12.9,
+              "p95": 22.4,
+              "max": 22.4
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "loaded": {
+            "replies": 317,
+            "milliseconds": {
+              "min": 8.86,
+              "median": 11.2,
+              "p95": 19.3,
+              "max": 55.2
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "traffic_only": {
+            "replies": 298,
+            "milliseconds": {
+              "min": 8.86,
+              "median": 11.1,
+              "p95": 18.8,
+              "max": 41.5
+            },
+            "loss_percent": null,
+            "censored_below_1ms": 0
+          }
+        },
+        "route_counter_deltas": {
+          "s1-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s1-eth4": {
+            "tx_bytes": 66655410,
+            "tx_packets": 53969,
+            "rx_bytes": 32046,
+            "rx_packets": 327
+          },
+          "s2-eth2": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s3-eth2": {
+            "tx_bytes": 66655410,
+            "tx_packets": 53969,
+            "rx_bytes": 32046,
+            "rx_packets": 327
+          },
+          "s4-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s4-eth4": {
+            "tx_bytes": 32046,
+            "tx_packets": 327,
+            "rx_bytes": 66655410,
+            "rx_packets": 53969
+          }
+        },
+        "profile": {
+          "id": "dual-forward-cburst16k-source250-v1",
+          "forward_links": [
+            [
+              "h1",
+              "h1-eth0",
+              100
+            ],
+            [
+              "s1",
+              "s1-eth3",
+              100
+            ],
+            [
+              "s2",
+              "s2-eth2",
+              10
+            ],
+            [
+              "s1",
+              "s1-eth4",
+              20
+            ],
+            [
+              "s3",
+              "s3-eth2",
+              20
+            ],
+            [
+              "s4",
+              "s4-eth1",
+              100
+            ]
+          ],
+          "cburst_bytes": 16384,
+          "burst_bytes": 15360,
+          "source_queue_packets": 250,
+          "bottleneck_queue_packets": 50,
+          "delay_ms": 1
+        },
+        "restoration": {
+          "failures": []
+        },
+        "route_restoration": {
+          "verified": true,
+          "failures": []
+        },
+        "control_screen_failures": [],
+        "note": "Fixed manual path control, not reactive/ML QoS evidence; readback times include CLI overhead"
+      }
+    },
+    {
+      "identity": {
+        "stage": "controls",
+        "policy": "fixed_alternate",
+        "scenario": "bursty",
+        "seed": 43,
+        "requested_bps": 11500000,
+        "duration": 60
+      },
+      "status": "accepted",
+      "folder": "20261120-195739-272843-schedule-path-control-alternate-bursty-seed43",
+      "trial": "20261120-195745-583234-alternate-continuous-bursty-8191985bps",
+      "report": {
+        "control": "20261120-195739-272843-schedule-path-control-alternate-bursty-seed43",
+        "route": "alternate",
+        "outcome": "completed",
+        "scenario": "bursty",
+        "seed": 43,
+        "requested_scale_bps": 11500000,
+        "source_audit": {
+          "policy": {
+            "id": "measured-fixed-source-integrity-v1",
+            "source_protocol": "dual-fixed-highutil-v1",
+            "max_discard_fraction": 0.05,
+            "threshold_origin": "Existing inspect_trial acquisition limit, unchanged; not fitted to this dataset",
+            "scope": "Fixed-primary observed-counter prediction data. Not a perfect-source schedule certificate.",
+            "amendment": "Replace blanket zero-discard rejection with integrity checks, inherited acquisition limit and explicit pacing diagnostics, before model fitting or fresh test use."
+          },
+          "samples": 237,
+          "max_sample_gap_s": 0.264684331,
+          "tail_sample_gap_s": 0.095973315,
+          "unlogged_tail_packets": 118,
+          "native_discarded_budget_bits": 542297.5264408067,
+          "discard_fraction": 0.001103309134230949,
+          "discard_percent": 0.11033091342309491,
+          "discarded_payload_datagram_equivalents": 56.48932567091736,
+          "sampled_discard_increments": [
+            {
+              "sample": 20,
+              "elapsed_s": 5.31036469200626,
+              "discard_delta_bits": 37889.12850188464
+            },
+            {
+              "sample": 46,
+              "elapsed_s": 11.872266413003672,
+              "discard_delta_bits": 156451.49958892167
+            },
+            {
+              "sample": 79,
+              "elapsed_s": 20.22557746199891,
+              "discard_delta_bits": 135814.63767760992
+            },
+            {
+              "sample": 211,
+              "elapsed_s": 53.61027618301159,
+              "discard_delta_bits": 212142.26067239046
+            }
+          ],
+          "unlogged_tail_discard_bits": 0.0,
+          "max_pacer_gap_s": 0.03862990099878516,
+          "legacy_zero_discard_passed": false,
+          "note": "Pacing metrics and planned rates are audit-only, not model inputs. Labels/features come from measured counters. Nonzero discard is a retained source limitation, not network packet loss."
+        },
+        "trial": {
+          "run": "20261120-195745-583234-alternate-continuous-bursty-8191985bps",
+          "route": "alternate",
+          "requested_bps": 8191985,
+          "sender": {
+            "start": 0,
+            "packets": 51137,
+            "lost_packets": 0,
+            "lost_percent": 0,
+            "jitter_ms": 0,
+            "end": 60.001720873,
+            "seconds": 60.001720873,
+            "bytes": 61364400,
+            "bits_per_second": 8181685.339310085,
+            "sender": true
+          },
+          "receiver": {
+            "start": 0,
+            "packets": 51137,
+            "lost_packets": 0,
+            "lost_percent": 0.0,
+            "jitter_ms": 0.3033781892795325,
+            "end": 60.008305856,
+            "seconds": 60.008305856,
+            "bytes": 61364400,
+            "bits_per_second": 8180787.525947382,
+            "sender": false
+          },
+          "queue_drop_deltas": {
+            "h1-eth0": 0,
+            "s1-eth4": 0,
+            "s3-eth2": 0,
+            "s4-eth1": 0
+          },
+          "udp_error_deltas": {
+            "h1": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            },
+            "h2": {
+              "UdpInErrors": 0,
+              "UdpRcvbufErrors": 0,
+              "UdpSndbufErrors": 0
+            }
+          },
+          "screen_failures": [],
+          "max_resource_gap_s": 1.0,
+          "traffic_engine": "continuous-udp-v1",
+          "scenario": "bursty",
+          "pacer": {
+            "discarded_budget_bits": 542297.5264408067,
+            "planned_bits": 491519112.47323257,
+            "skipped_ticks": 237,
+            "max_pacer_gap_s": 0.03862990099878516,
+            "send_errors": {}
+          },
+          "mixed_schedule_note": "Whole-run average is not a congestion label; inspect per-window data.",
+          "sender_based_missing_datagrams": 0.0,
+          "accounting_note": "Queue counters include RTT probes and control packets; keep sequence loss separately."
+        },
+        "collector": {
+          "qdiscs": {
+            "s1-eth3": {
+              "samples": 262,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.21935286748339422,
+                "median": 0.2500929920061026,
+                "p95": 0.2657521200017072,
+                "max": 0.2935325379949063
+              },
+              "query_duration_s": {
+                "min": 0.005515933007700369,
+                "median": 0.02043984699412249,
+                "p95": 0.04300814200541936,
+                "max": 0.08437735099869315
+              },
+              "invalid_intervals": 0,
+              "interval_count": 261,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s2-eth2": {
+              "samples": 262,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.21935286748339422,
+                "median": 0.2500929920061026,
+                "p95": 0.2657521200017072,
+                "max": 0.2935325379949063
+              },
+              "query_duration_s": {
+                "min": 0.005515933007700369,
+                "median": 0.02043984699412249,
+                "p95": 0.04300814200541936,
+                "max": 0.08437735099869315
+              },
+              "invalid_intervals": 0,
+              "interval_count": 261,
+              "max_queue_packets": 0,
+              "max_backlog_bytes": 0,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s1-eth4": {
+              "samples": 262,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.21935286748339422,
+                "median": 0.2500929920061026,
+                "p95": 0.2657521200017072,
+                "max": 0.2935325379949063
+              },
+              "query_duration_s": {
+                "min": 0.005515933007700369,
+                "median": 0.02043984699412249,
+                "p95": 0.04300814200541936,
+                "max": 0.08437735099869315
+              },
+              "invalid_intervals": 0,
+              "interval_count": 261,
+              "max_queue_packets": 28,
+              "max_backlog_bytes": 34776,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 4899357.878393647,
+                "p95": 14542843.29709668,
+                "max": 15289127.135186475
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            },
+            "s3-eth2": {
+              "samples": 262,
+              "failed_queries": 0,
+              "actual_interval_s": {
+                "min": 0.21935286748339422,
+                "median": 0.2500929920061026,
+                "p95": 0.2657521200017072,
+                "max": 0.2935325379949063
+              },
+              "query_duration_s": {
+                "min": 0.005515933007700369,
+                "median": 0.02043984699412249,
+                "p95": 0.04300814200541936,
+                "max": 0.08437735099869315
+              },
+              "invalid_intervals": 0,
+              "interval_count": 261,
+              "max_queue_packets": 13,
+              "max_backlog_bytes": 16146,
+              "sampled_drop_delta": 0,
+              "departure_bps": {
+                "min": 0.0,
+                "median": 5013226.783898368,
+                "p95": 14538348.193731368,
+                "max": 15289127.135186475
+              },
+              "rate_note": "Counter-derived departures; utilization uses configured class rate, not calibrated payload service."
+            }
+          },
+          "process_overhead": {
+            "route": "alternate",
+            "schema_version": 6,
+            "coverage": "all",
+            "backend": "one-tc-json-dump-per-cycle",
+            "tc_processes_per_sample": 1,
+            "interval_s": 0.25,
+            "samples": 262,
+            "elapsed_s": 65.50040022200847,
+            "queried_qdiscs": [
+              "s1-eth3",
+              "s2-eth2",
+              "s1-eth4",
+              "s3-eth2"
+            ],
+            "cpu_seconds": {
+              "self_s": 1.1023669999999999,
+              "children_s": 4.138977
+            },
+            "cpu_percent_one_core": {
+              "self_s": 1.6829927699122653,
+              "children_s": 6.319010244168375
+            },
+            "stopped_by_signal": true
+          }
+        },
+        "rtt": {
+          "idle": {
+            "replies": 10,
+            "milliseconds": {
+              "min": 10.1,
+              "median": 11.2,
+              "p95": 14.3,
+              "max": 14.3
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "loaded": {
+            "replies": 315,
+            "milliseconds": {
+              "min": 8.88,
+              "median": 11.3,
+              "p95": 16.7,
+              "max": 69.2
+            },
+            "loss_percent": 0.0,
+            "censored_below_1ms": 0
+          },
+          "traffic_only": {
+            "replies": 298,
+            "milliseconds": {
+              "min": 8.88,
+              "median": 11.3,
+              "p95": 16.3,
+              "max": 38.3
+            },
+            "loss_percent": null,
+            "censored_below_1ms": 0
+          }
+        },
+        "route_counter_deltas": {
+          "s1-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s1-eth4": {
+            "tx_bytes": 63544004,
+            "tx_packets": 51462,
+            "rx_bytes": 31850,
+            "rx_packets": 325
+          },
+          "s2-eth2": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s3-eth2": {
+            "tx_bytes": 63544004,
+            "tx_packets": 51462,
+            "rx_bytes": 31850,
+            "rx_packets": 325
+          },
+          "s4-eth3": {
+            "tx_bytes": 0,
+            "tx_packets": 0,
+            "rx_bytes": 0,
+            "rx_packets": 0
+          },
+          "s4-eth4": {
+            "tx_bytes": 31850,
+            "tx_packets": 325,
+            "rx_bytes": 63544004,
+            "rx_packets": 51462
+          }
+        },
+        "profile": {
+          "id": "dual-forward-cburst16k-source250-v1",
+          "forward_links": [
+            [
+              "h1",
+              "h1-eth0",
+              100
+            ],
+            [
+              "s1",
+              "s1-eth3",
+              100
+            ],
+            [
+              "s2",
+              "s2-eth2",
+              10
+            ],
+            [
+              "s1",
+              "s1-eth4",
+              20
+            ],
+            [
+              "s3",
+              "s3-eth2",
+              20
+            ],
+            [
+              "s4",
+              "s4-eth1",
+              100
+            ]
+          ],
+          "cburst_bytes": 16384,
+          "burst_bytes": 15360,
+          "source_queue_packets": 250,
+          "bottleneck_queue_packets": 50,
+          "delay_ms": 1
+        },
+        "restoration": {
+          "failures": []
+        },
+        "route_restoration": {
+          "verified": true,
+          "failures": []
+        },
+        "control_screen_failures": [],
+        "note": "Fixed manual path control, not reactive/ML QoS evidence; readback times include CLI overhead"
+      }
+    }
+  ],
+  "steady_alternate_calibration": [
+    {
+      "folder": "20261115-172226-437713-path-control-alternate-12000000bps",
+      "requested_bps": 12000000,
+      "sender_mbps": 11.996529211452907,
+      "receiver_mbps": 11.994289507271839,
+      "udp_loss_percent": 0.0
+    },
+    {
+      "folder": "20261115-174622-324468-path-control-alternate-12000000bps",
+      "requested_bps": 12000000,
+      "sender_mbps": 11.997080133102864,
+      "receiver_mbps": 11.995083470530092,
+      "udp_loss_percent": 0.0
+    },
+    {
+      "folder": "20261115-174650-556326-path-control-alternate-12000000bps",
+      "requested_bps": 12000000,
+      "sender_mbps": 11.9965325110687,
+      "receiver_mbps": 11.9965325110687,
+      "udp_loss_percent": 0.0
+    },
+    {
+      "folder": "20261115-174718-568518-path-control-alternate-16000000bps",
+      "requested_bps": 16000000,
+      "sender_mbps": 15.995909596717528,
+      "receiver_mbps": 15.993285224597535,
+      "udp_loss_percent": 0.0
+    },
+    {
+      "folder": "20261115-175651-482492-path-control-alternate-16000000bps",
+      "requested_bps": 16000000,
+      "sender_mbps": 15.995903242380876,
+      "receiver_mbps": 15.995903242380876,
+      "udp_loss_percent": 0.0
+    },
+    {
+      "folder": "20261115-175719-445352-path-control-alternate-16000000bps",
+      "requested_bps": 16000000,
+      "sender_mbps": 15.99592788475852,
+      "receiver_mbps": 15.99592788475852,
+      "udp_loss_percent": 0.0
+    }
+  ],
+  "definitions": {
+    "unmatched": "No unmatched observed event onset within the next two seconds; includes late episodes.",
+    "late": "Unmatched episode during an already-started sustained high-utilization event.",
+    "other_unmatched": "Unmatched and not late; no claim that all such opportunities are fully independent.",
+    "rate_denominator": "Duration-weighted rows with features and complete 3.75-second future support. This is discrete opportunity exposure, not continuous decision availability. Covered-source denominator is also reported unchanged.",
+    "margin_sensitivity": "0.5/1-second lead margins are descriptive offline timing sensitivities. They do not simulate admission, stale reads, route activation or prevented degradation."
+  },
+  "limitations": [
+    "Separate cohorts are not pooled. Adjacent rows are not independent repetitions.",
+    "Warnings use no-intervention prediction test only. Live rerouting traces are not relabeled.",
+    "Original future-support/cooldown matching retained; no model or trigger retuning."
+  ]
+}

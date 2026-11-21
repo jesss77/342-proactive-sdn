@@ -1,0 +1,13 @@
+Setting,Value
+Source / duration,"One h1-to-h2 UDP pair; 1,200-byte payload; 60 s"
+Profile,Primary bottleneck 10 Mbit/s; alternate links 20 Mbit/s
+Queues / delay,Source 250 packets; switch 50 packets; 1 ms/link
+Sampling / history,250 ms; at least 2 s contiguous history
+Event / forecast,Utilization >= 0.85 for 1 s; new onset within 2 s
+Label future support,3.75 s (horizon + confirmation + read guard)
+Reactive trigger,Observed high utilization sustained for 1 s
+Trend trigger,u >= 0.5; slope > 0; u + 2 slope >= 0.85
+Frozen tree,Depth 3; minimum leaf 25; 15 nodes; score >= 0.65
+Freshness checks,Live pre-action 0.5 s; actor entry 2 s
+Admission,Current demand + alternate load <= 12.72 Mbit/s
+Action limit,One successful switch; primary restored at cleanup
