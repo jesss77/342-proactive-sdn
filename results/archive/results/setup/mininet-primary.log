@@ -1,167 +1,0 @@
-Script started on 2026-10-31 15:39:39+02:00 [COMMAND="sudo mn --custom topology.py --topo diamond --link tc --arp --controller remote,ip=127.0.0.1,port=6653 --switch ovs,protocols=OpenFlow13 --wait" TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="52" LINES="24"]
-[sudo] password for jess: 
-*** Creating network
-*** Adding controller
-*** Adding hosts:
-h1 h2 h3 h4 
-*** Adding switches:
-s1 s2 s3 s4 
-*** Adding links:
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(h1, s1) (100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(h2, s4) (100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(h3, s1) (100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(h4, s4) (100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(s1, s2) (20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(s1, s3) (10.00Mbit 1ms delay) (10.00Mbit 1ms delay) (s2, s4) (20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(s3, s4) 
-*** Configuring hosts
-h1 h2 h3 h4 
-*** Starting controller
-c0 
-*** Starting 4 switches
-s1 s2 s3 s4 ...(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(10.00Mbit 1ms delay) (20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(100.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-(10.00Mbit 1ms delay) (20.00Mbit 1ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-
-*** Waiting for switches to connect
-s4 s1 s2 s3 
-*** Starting CLI:
-mininet> net
-h1 h1-eth0:s1-eth1
-h2 h2-eth0:s4-eth1
-h3 h3-eth0:s1-eth2
-h4 h4-eth0:s4-eth2
-s1 lo:  s1-eth1:h1-eth0 s1-eth2:h3-eth0 s1-eth3:s2-eth1 s1-eth4:s3-eth1
-s2 lo:  s2-eth1:s1-eth3 s2-eth2:s4-eth3
-s3 lo:  s3-eth1:s1-eth4 s3-eth2:s4-eth4
-s4 lo:  s4-eth1:h2-eth0 s4-eth2:h4-eth0 s4-eth3:s2-eth2 s4-eth4:s3-eth2
-c0
-mininet> pingall
-*** Ping: testing ping reachability
-h1 -> h2 h3 h4 
-h2 -> h1 h3 h4 
-h3 -> h1 h2 h4 
-h4 -> h1 h2 h3 
-*** Results: 0% dropped (12/12 received)
-mininet> sh tc -s class show dev s2-eth2 | tee /home/jess/cmps342/results/setup/bottleneck-class.txt
-class htb 5:1 root leaf 10: prio 0 rate 10Mbit ceil 10Mbit burst 15Kb cburst 1600b 
- Sent 3999 bytes 35 pkt (dropped 0, overlimits 0 requeues 0) 
- backlog 0b 0p requeues 0
- lended: 35 borrowed: 0 giants: 0
- tokens: 190662 ctokens: 18662
-
-mininet> sh tc -s qdisc show dev s2-eth2 | tee /home/jess/cmps342/results/setup/bottleneck-queue.txt
-qdisc htb 5: root refcnt 5 r2q 10 default 0x1 direct_packets_stat 0 direct_qlen 1000
- Sent 3999 bytes 35 pkt (dropped 0, overlimits 0 requeues 0) 
- backlog 0b 0p requeues 0
-qdisc netem 10: parent 5:1 limit 50 delay 1ms
- Sent 3999 bytes 35 pkt (dropped 0, overlimits 0 requeues 0) 
- backlog 0b 0p requeues 0
-mininet> sh ovs-ofctl -O OpenFlow13 dump-flows s1 | tee /home/jess/cmps342/results/setup/s1-primary-flows.txt
-OFPST_FLOW reply (OF1.3) (xid=0x2):
- cookie=0x0, duration=330.319s, table=0, n_packets=6, n_bytes=588, priority=100,dl_dst=00:00:00:00:00:01 actions=output:1
- cookie=0x0, duration=330.319s, table=0, n_packets=6, n_bytes=588, priority=100,dl_dst=00:00:00:00:00:03 actions=output:2
- cookie=0x0, duration=330.319s, table=0, n_packets=4, n_bytes=392, priority=100,dl_dst=00:00:00:00:00:02 actions=output:3
- cookie=0x0, duration=330.319s, table=0, n_packets=4, n_bytes=392, priority=100,dl_dst=00:00:00:00:00:04 actions=output:3
-mininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> sh mkdir -p /home/jess/cmps342/results/P01-primary-3M
-mininet> sh date -Is > /home/jess/cmps342/results/P01-primary-3M/started-at.txt
-mininet> sh tc -s qdisc show dev s2-eth2 > /home/jess/cmps342/results/P01-primary-3M/queue-before.txt
-mininet> h3 ping -n -c 10 -i 0.1 10.0.0.4 | tee /home/jess/cmps342/results/P01-primary-3M/ping-idle.txt
-PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
-64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=14.3 ms
-64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=16.6 ms
-64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=18.7 ms
-64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=64.5 ms
-64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=69.9 ms
-64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=167 ms
-64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=50.4 ms
-64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=37.4 ms
-64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=27.3 ms
-64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=73.2 ms
-
---- 10.0.0.4 ping statistics ---
-10 packets transmitted, 10 received, 0% packet loss, time 982ms
-rtt min/avg/max/mdev = 14.268/53.911/166.932/43.253 ms, pipe 2
-mininet> S[K`[Kh2 iperf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.err &[K[A[K[A[Kmininet> h2 iperf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.err &[A[C[C[C[C[C[C[C[C[C2 iperf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/je[1P[A[C[C[C[C[C[C[C[C iperf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jes[C[1P[A[C[C[C[C[C[C[Ciperf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess[1P[A[C[C[C[C[C[C[C[Cperf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/[1P[A[C[C[C[C[C[C[C[Cerf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/c[1P[A[C[C[C[C[C[C[C[Crf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cm[1P[A[C[C[C[C[C[C[C[Cf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmp[1P[A[C[C[C[C[C[C[C[C3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps[1P[A[C[C[C[C[C[C[C[C -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps3[1P[A[C[C[C[C[C[C[C[C-s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps34[1P[A[C[C[C[C[C[C[C[Cs -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342[1P[A[C[C[C[C[C[C[C[C -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/[1P[A[C[C[C[C[C[C[C[C-1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/r[1P[A[C[C[C[C[C[C[C[C1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/re[1P[A[C[C[C[C[C[C[C[C -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/res[1P[A[C[C[C[C[C[C[C[C-p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/resu[1P[A[C[C[C[C[C[C[C[Cp 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/resul[1P[A[C[C[C[C[C[C[C[C 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/result[1P[A[C[C[C[C[C[C[C[C5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results[1P[A[C[C[C[C[C[C[C[C201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/[1P[A[C[C[C[C[C[C[C[C01 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P[1P[A[C[C[C[C[C[C[C[C1 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P0[1P[A[C[C[C[C[C[C[C[C -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01[1P[A[C[C[C[C[C[C[C[C-J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-[1P[A[C[C[C[C[C[C[C[CJ > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-p[1P[A[C[C[C[C[C[C[C[C > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-pr[1P[A[C[C[C[C[C[C[C[C> /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-pri[1P[A[C[C[C[C[C[C[C[C /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-prim[1P[A[C[C[C[C[C[C[C[C/home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-prima[1P[A[C[C[C[C[C[C[C[Chome/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primar[1P[A[C[C[C[C[C[C[C[Come/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary[1P[A[C[C[C[C[C[C[C[Cme/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-[1P[A[C[C[C[C[C[C[C[Ce/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3[1P[A[C[C[C[C[C[C[C[C/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M[1P[A[C[C[C[C[C[C[C[Cjess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/[1P[A[C[C[C[C[C[C[C[Cess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/s[1P[A[C[C[C[C[C[C[C[Css/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/se[1P[A[C[C[C[C[C[C[C[C[C/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/ser[1P[A[C[C[C[C[C[C[C[C/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/serv[1P[A[C[C[C[C[C[C[C[Ccmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/serve[1P[A[C[C[C[C[C[C[C[Cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server[1P[A[C[C[C[C[C[C[C[Cps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.[1P[A[C[C[C[C[C[C[C[Cs342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.e[1P[A[C[C[C[C[C[C[C[C342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.er[C[1P &[A[C[C[C[C[C42/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.err[1P &[A[C[C[C[C[C[C2/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.err [1P&[A[C[C[C[C[C[C[C/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.err &[K[A[C[C[C[C[C[C[C[Cresults/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.err & [K[A[C[C[C[C[C[C[C[C[C[1P
-[K[A[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[1P &[1P &[1P&[Kh2 iperf3 -s -1 -p 5201 -J > /home/jess/cmps342/results/P01-primary-3M/server.json 2> /home/jess/cmps342/results/P01-primary-3M/server.err &
-mininet> h3 ping -D -n -i 0.1 -w 22 10.0.0.4 > /home/jess/cmps342/results/P01-primary-3M/ping-loaded.txt &
-bash: hping: command not found
-mininet> h3 ping -D -n -i 0.1 -w 22 10.0.0.4 > /home/jess/cmps342/results/P01-primary-3M/ping-loaded.txt &
-mininet> h1 iperf3 -c 10.0.0.2 -p 5201 -u -b 3M -l 1200 -t 20 | tee /home/jess/cmps342/results/P01-primary-3M/client.txt
-Connecting to host 10.0.0.2, port 5201
-[  5] local 10.0.0.1 port 40789 connected to 10.0.0.2 port 5201
-[ ID] Interval           Transfer     Bitrate         Total Datagrams
-[  5]   0.00-1.00   sec   367 KBytes  3.00 Mbits/sec  313  
-[  5]   1.00-2.01   sec   355 KBytes  2.88 Mbits/sec  303  
-[  5]   2.01-5.88   sec   329 KBytes   697 Kbits/sec  281  
-[  5]   5.88-6.00   sec  1.12 MBytes  77.8 Mbits/sec  978  
-[  5]   6.00-10.25  sec   347 KBytes   669 Kbits/sec  296  
-[  5]  10.25-10.25  sec  44.5 KBytes   126 Mbits/sec  39  
-[  5]  10.25-16.49  sec  1.14 MBytes  1.54 Mbits/sec  998  
-[  5]  16.49-25.22  sec  2.24 MBytes  2.15 Mbits/sec  1954  
-[  5]  25.22-25.22  sec  1.17 KBytes  2.57 Mbits/sec  1  
-- - - - - - - - - - - - - - - - - - - - - - - - -
-[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
-[  5]   0.00-25.22  sec  5.91 MBytes  1.97 Mbits/sec  0.000 ms  0/5163 (0%)  sender
-[  5]   0.00-26.04  sec  1.41 MBytes   455 Kbits/sec  96.502 ms  3927/5160 (76%)  receiver
-
-iperf Done.
-mininet> [Kmininet> [Kmininet> [Kmininet> sh tc -s qdisc show dev s2-eth2 > /home/jess/cmps342/results/P01-primary-3M/queue-after.txt
-mininet> sh tail -n 3 /home/jess/cmps342/results/P01-primary-3M/ping-loaded.txt
---- 10.0.0.4 ping statistics ---
-92 packets transmitted, 91 received, 1.08696% packet loss, time 16775ms
-rtt min/avg/max/mdev = 10.923/62.382/3023.024/314.857 ms, pipe 2
-mininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> [Kmininet> sh uptime'[K
- 16:01:00 up 29 min,  1 user,  load average: 0.03, 0.27, 0.25
-mininet> sh free -h
-               total        used        free      shared  buff/cache   available
-Mem:           5.8Gi       1.4Gi       3.4Gi        36Mi       1.3Gi       4.4Gi
-Swap:          4.0Gi          0B       4.0Gi
-mininet> sh vmstat 1 5
-procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
- r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
- 4  1      0 3527064  43884 1319700    0    0   661    38  614    1  1  2 98  0  0  0
- 3  0      0 3525272  43884 1319744    0    0     0     0 2804 3523  4  6 89  0  0  0
- 0  0      0 3525272  43884 1319744    0    0     0     0  263  227  0  1 99  0  0  0
- 2  0      0 3525272  43884 1319744    0    0     0     0 2039 2193  3  5 92  0  0  0
- 0  0      0 3525272  43884 1319744    0    0     0     0 1494 1426  1  3 96  0  0  0
-mininet> sh diff -u /home/jess/cmps342/results/P01-primary-3M/queue-before.txt /home/jess/cmps342/results/P01-primary-3M/queue-after.txt
---- /home/jess/cmps342/results/P01-primary-3M/queue-before.txt	2026-10-31 15:54:30.101220966 +0200
-+++ /home/jess/cmps342/results/P01-primary-3M/queue-after.txt	2026-10-31 15:56:50.859540684 +0200
-@@ -1,6 +1,6 @@
- qdisc htb 5: root refcnt 5 r2q 10 default 0x1 direct_packets_stat 0 direct_qlen 1000
-- Sent 4176 bytes 37 pkt (dropped 0, overlimits 0 requeues 0) 
-+ Sent 1548466 bytes 1391 pkt (dropped 202, overlimits 699 requeues 0) 
-  backlog 0b 0p requeues 0
- qdisc netem 10: parent 5:1 limit 50 delay 1ms
-- Sent 4176 bytes 37 pkt (dropped 0, overlimits 0 requeues 0) 
-+ Sent 1548466 bytes 1391 pkt (dropped 202, overlimits 0 requeues 0) 
-  backlog 0b 0p requeues 0
-mininet> S[Kexit
-*** Stopping 1 controllers
-c0 
-*** Stopping 8 links
-........
-*** Stopping 4 switches
-s1 s2 s3 s4 
-*** Stopping 4 hosts
-h1 h2 h3 h4 
-*** Done
-completed in 1440.138 seconds
-
-Script done on 2026-10-31 16:03:47+02:00 [COMMAND_EXIT_CODE="0"]

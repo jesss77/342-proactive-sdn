@@ -1,4 +1,4 @@
-.venv/
+.venv*/
 __pycache__/
 *.py[cod]
 .env
@@ -8,11 +8,11 @@ __pycache__/
 *.vmdk
 .DS_Store
 Thumbs.db
-results/runs/
-
 scratch/
-*.log
-
-.venv-analysis/
-.venv-training/
+results/runs/
+results/derived/
 results/environment/
+experiment/results/runs/
+experiment/results/derived/
+experiment/results/environment/
+*.log

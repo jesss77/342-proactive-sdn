@@ -1,7 +1,0 @@
-scenario,seed,policy,status,folder,trial,sender_mbps,receiver_mbps,udp_loss_percent,source_discard_percent,traffic_reply_rtt_median_ms,traffic_reply_rtt_p95_ms
-ramp,41,fixed_alternate,accepted,20261120-173253-865453-schedule-path-control-alternate-ramp-seed41,20261120-173259-346146-alternate-continuous-ramp-8246914bps,8.246507754525004,8.246146409991427,0.0,0.0,9.52,13.0
-bursty,41,fixed_alternate,accepted,20261120-195251-741981-schedule-path-control-alternate-bursty-seed41,20261120-195257-182790-alternate-continuous-bursty-7358693bps,7.326304135920908,7.324518769744652,0.0,0.43584413868879945,11.9,20.0
-ramp,42,fixed_alternate,accepted,20261120-195403-460968-schedule-path-control-alternate-ramp-seed42,20261120-195410-119182-alternate-continuous-ramp-8158933bps,8.157653754853458,8.155388018035806,0.0,0.009615918061308279,11.1,18.3
-bursty,42,fixed_alternate,accepted,20261120-195515-673787-schedule-path-control-alternate-bursty-seed42,20261120-195521-726598-alternate-continuous-bursty-7069358bps,7.0230400508480955,7.021512518258134,0.0,0.6375873215322452,11.3,19.9
-ramp,43,fixed_alternate,accepted,20261120-195627-441460-schedule-path-control-alternate-ramp-seed43,20261120-195633-992821-alternate-continuous-ramp-8585326bps,8.582638727703877,8.58057670393723,0.0,0.027794467500968423,11.1,18.8
-bursty,43,fixed_alternate,accepted,20261120-195739-272843-schedule-path-control-alternate-bursty-seed43,20261120-195745-583234-alternate-continuous-bursty-8191985bps,8.181685339310086,8.180787525947382,0.0,0.11033091342309491,11.3,16.3

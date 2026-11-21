@@ -1,4 +1,0 @@
-#kernel
-UdpInErrors                     0                  0.0
-UdpRcvbufErrors                 0                  0.0
-UdpSndbufErrors                 0                  0.0

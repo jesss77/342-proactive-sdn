@@ -1,2 +1,0 @@
-reason,observed_s,decision_s,decision_age_s,program_start_s,readback_finished_s,program_start_measurement_age_s,readback_finish_measurement_age_s,full_decision_to_readback_s,program_and_readback_s,first_install_command_age_s,meaning
-observed_utilization_sustained,46.55728988900955,46.56478325799981,0.007493368990253657,48.0842725399998,48.93507072501234,1.5269826509902487,2.377780836002785,2.370287467012531,0.8507981850125361,1.527051561002736,First install command start and flow readback are not first selected UDP packet activation times
