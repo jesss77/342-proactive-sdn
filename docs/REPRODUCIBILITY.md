@@ -69,7 +69,7 @@ SHA-256: `e8f2e4e4294d35918c8b0d2e37fa79e92366732a19b0a12daad6f7c2a521b8e3`
 
 Earlier failed/superseded diagnostics and historical source snapshots remain in the checkpoint and original `results/archive`. Versions, engines and profiles must not be pooled as matched data. Queue root drops, sender pacing shortfall and UDP sequence loss have distinct meanings. The paper's claims remain bounded by [the reported limitations](../results/matched-v1/PROPOSAL_ALIGNMENT.md).
 
-Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/followup-seed51-publication-manifest.json`. The earlier recreation and recovery manifests remain historical snapshots. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
+Run `python3 tools/verify_bundle.py` to check the current publication file hashes against `evidence/followup-closure-publication-manifest.json`. The earlier recreation and recovery manifests remain historical snapshots. The former `evidence/publication-manifest.json` records the November 16 snapshot; it is retained as history, not the checksum list for changed documentation/tools. Previous results and frozen source pins are preserved. The submitted PR4 is recorded separately; it is not needed to run this pipeline and is not uploaded by this update.
 
 ## November-20 failed recovery audit
 
@@ -98,4 +98,8 @@ not an extra matched policy block or proof of a root-cause fix.
 
 The [activation audit](../results/activation-pilot-v1/RESULTS.md) reproduces all three off/on/off reviews and decoded packet identities from the exact November 21 checkpoint, retaining the earlier cancelled state and all previous results. Run `python3 tools/audit_activation_pilot.py --extract scratch/activation-checkpoint --output scratch/activation-audit` in fresh directories; this starts no traffic or fitting.
 
-The separate [bursty follow-up](../BURSTY_FOLLOWUP.md) adds four files while retaining all 81 installed files unchanged. Its package is `evidence/packages/cmps342-bursty-followup-v1.zip`. Installation/acquisition remain guest actions; acquire only the first four-policy block, then export it for independent review. The original reservation, original benchmark and both failed supplemental batches remain identifiable.
+The separate [bursty follow-up](../BURSTY_FOLLOWUP.md) adds four files while retaining all 81 installed files unchanged. Its package is `evidence/packages/cmps342-bursty-followup-v1.zip`. The package records the prospective acquisition protocol. The actual follow-up is now closed after seven attempts: six individually valid and one collector-quality failure, with only seed51 forming a complete extra block. Nine cells were unattempted. Do not resume or reset the archived failed batch. The original reservation, original benchmark and all stopped batches remain identifiable.
+
+## Final follow-up closure
+
+The [closure record](../results/bursty-followup-v1/CLOSED.md) preserves all seven attempts, the exact shared polling miss, two passing readiness checks and the incomplete-block decision. The [post-PR4 attrition table](../results/bursty-followup-v1/POST_PR4_ATTRITION.md) separates calibration, diagnostic, timing and efficacy phases. Reproduce the final read-only review with `python3 tools/audit_closed_bursty_followup.py --extract scratch/closed-followup --output scratch/closed-followup-audit` in fresh directories. It generates no traffic or fitting, changes no raw files, and issues no resumption receipt.

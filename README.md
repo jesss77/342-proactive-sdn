@@ -4,6 +4,14 @@ CMPS342 research project — Youssef Shawwa and Jessy Karamaoun. Updated Novembe
 
 We test whether a lightweight learned congestion warning adds value when routing, observations and admission constraints are shared. **The registered experiment is complete: 36 matched trials, four policies, three traffic scenarios and three seeds. Earlier triggering helped against fixed/reactive routing; an added benefit from the learned tree over the simple trend rule was not established.**
 
+**Latest status: live acquisition is closed.** The independently verified
+[activation pilot](results/activation-pilot-v1/RESULTS.md) and six fixed-alternate
+controls strengthen the evidence. The [bounded bursty follow-up](results/bursty-followup-v1/CLOSED.md)
+stopped on collector quality after seven attempts: six individually valid,
+one failed and nine unattempted. Only seed51 is a complete additional matched
+block. Earlier failures and partial outcomes remain separate; no retries or
+quality waivers follow. See the [post-PR4 attrition table](results/bursty-followup-v1/POST_PR4_ATTRITION.md).
+
 ## Obtained results
 
 Each entry is a whole-run mean over three matched seeds. These are descriptive results from one VM, one selected host pair and at most one successful alternate-path switch per trial.
