@@ -1,5 +1,12 @@
 # Proactive Congestion Management in SDN Using a Decision Tree — Version 2 (`v2-busy-alternate`)
 
+> **Reproduction repair:** This branch fixes cross-platform frozen-file bytes
+> and the smoke-test indentation defect. Run `python check_reproduction.py`
+> first. See [REPRODUCTION_REPAIR.md](REPRODUCTION_REPAIR.md) for changes, fresh
+> acquisition state, and the distinction between reported summaries and missing
+> original raw logs. The historical experiment narrative below is retained; its
+> claim of 86 equally clean trials is qualified by the recorded quality exceptions.
+
 **Course:** CMPS342 Research Project — American University of Beirut (AUB)  
 **Authors:** Youssef Shawwa & Jessy Karamaoun  
 **Branch Role:** Clean modular **Version 2** extension (`86` completed matched & control trials under live alternate-path background traffic).  

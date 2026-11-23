@@ -56,9 +56,9 @@ def run(net, clock=time.monotonic, sleep=time.sleep):
     for rel in ['network/routing_action.py', 'control/routing_policy.py',
             'control/run_routing_smoke.py', 'network/topology.py',
             'network/diamond_controller.py']:
-    name = Path(rel).name
-    shutil.copy2(BASE / rel, folder / name)
-    meta['source_sha256'][name] = hashlib.sha256((BASE / rel).read_bytes()).hexdigest()
+        name = Path(rel).name
+        shutil.copy2(BASE / rel, folder / name)
+        meta['source_sha256'][name] = hashlib.sha256((BASE / rel).read_bytes()).hexdigest()
 
     save();actor=None
     def execute(node,args): return net[node].pexec(args)
@@ -122,9 +122,9 @@ def run(net, clock=time.monotonic, sleep=time.sleep):
         meta['rule_packet_proof']=wait_for_packet_counts(actor,clock=clock,sleep=sleep)
         save()
         probe('alternate_unselected', 'h3', 'h4', 'alternate')
-	actor.close(); meta['restoration'] = dict(verified=True, failures=[])
-	probe('restored_selected', 'h1', 'h2', 'primary')
-	probe('restored_unselected', 'h3', 'h4', 'alternate')
+        actor.close(); meta['restoration'] = dict(verified=True, failures=[])
+        probe('restored_selected', 'h1', 'h2', 'primary')
+        probe('restored_unselected', 'h3', 'h4', 'alternate')
         meta['outcome']='completed'
     except BaseException as error:
         meta['outcome']='failed';meta['error']=str(error)
