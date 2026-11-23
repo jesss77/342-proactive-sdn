@@ -1,0 +1,9 @@
+block,position,policy,scenario,seed,bg_bps,requested_bps,duration,error,at
+1,3,ml,ramp,41,4000000,11500000,60,RuntimeError('Traffic recorder failed; inspect trial'),2026-11-21T13:38:26.627837
+5,0,reactive,bursty,41,14000000,11500000,60,"RuntimeError(""Quality screen failed: ['achieved_sender_rate', 'source_pacing_budget_discarded', 'collector_quality'] (failed_q=0, max_invalid=1)"")",2026-11-21T14:00:30.153121
+5,0,reactive,bursty,41,14000000,11500000,60,"RuntimeError(""Quality screen failed: ['achieved_sender_rate', 'source_pacing_budget_discarded'] (failed_q=0, max_invalid=0)"")",2026-11-21T14:10:38.639722
+5,0,reactive,bursty,41,14000000,11500000,60,"RuntimeError(""Quality screen failed: ['achieved_sender_rate', 'source_pacing_budget_discarded'] (failed_q=0, max_invalid=0)"")",2026-11-21T14:15:07.176568
+8,0,fixed,ramp,42,14000000,11500000,60,"RuntimeError(""Quality screen failed: ['udp_error'] (failed_q=0, max_invalid=0)"")",2026-11-21T14:33:48.964833
+8,1,reactive,ramp,42,14000000,11500000,60,"RuntimeError(""Quality screen failed: ['udp_error'] (failed_q=0, max_invalid=0)"")",2026-11-21T14:37:42.522807
+14,0,early_warning,ramp,43,14000000,11500000,60,"RuntimeError(""Quality screen failed: ['achieved_sender_rate', 'source_pacing_budget_discarded'] (failed_q=0, max_invalid=0)"")",2026-11-21T21:20:54.617108
+14,0,early_warning,ramp,43,14000000,11500000,60,"RuntimeError(""Quality screen failed: ['achieved_sender_rate', 'source_pacing_budget_discarded'] (failed_q=0, max_invalid=0)"")",2026-11-21T21:23:10.365071

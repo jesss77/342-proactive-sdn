@@ -1,0 +1,9 @@
+Control,Runs,"Goodput
+Mbit/s","Loss
+%"
+"Primary, 3 Mbit/s",3,2.9990-2.9995,0
+"Primary, ramp",3,7.510,9.741
+"Primary, bursty",3,6.121,18.682
+"Alternate, 12 Mbit/s",3,11.994-11.997,0
+"Alternate, 16 Mbit/s",3,15.993-15.996,0
+"Alternate, variable",6,All sent datagrams delivered,0

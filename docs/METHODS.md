@@ -1,5 +1,10 @@
 # Methods and interpretation
 
+This page describes the frozen **V1** cohort. The final paper also includes a
+separate **V2** busy-alternate extension using two vCPUs and reported per-trial
+summaries. Its unchanged physical topology, changed forwarding/runtime/quality
+settings and missing raw-log limitations are mapped in [PAPER_ASSETS.md](PAPER_ASSETS.md).
+
 - Four-switch diamond; h1/h2 selected IPv4 pair, including RTT probes. h3/h4 idle.
 - Primary bottleneck 10 Mbit/s; both alternate links 20 Mbit/s. Access 100 Mbit/s.
 - Calibrated profile: source queue 250 packets; switch queue 50; burst 15,360 B,

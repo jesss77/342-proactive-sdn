@@ -1,0 +1,19 @@
+{
+  "original_commit": "512cafc5f48748b741bb2961fa9a644b8333d4a5",
+  "repaired_commit": "2a8904141b18cfb471e2b70aa15084bc9945596e",
+  "checkout_mode": "Git archive with core.autocrlf=false, representing stored blob bytes",
+  "original_model_preflight": "failed with frozen model byte mismatch",
+  "repaired_offline_checks": {
+    "python_sources_parsed": 22,
+    "frozen_model_preflight": "passed",
+    "model_sha256": "63b8b320ca7c6ca7c7e49d9bca6fb8408e491ea5bec168dd206dd9beeadaf595",
+    "feature_sha256": "2654567afd5e77285fdbf8ca0077e733389c07b4b63d7003ed6afff66649c291",
+    "threshold": 0.65,
+    "nodes": 15,
+    "live_Mininet_test_performed": false,
+    "original_raw_trials_available": false
+  },
+  "model_parameters_and_feature_logic_unchanged": true,
+  "original_summary_bytes_unchanged": true,
+  "live_network_trials_rerun": false
+}

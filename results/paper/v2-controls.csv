@@ -1,0 +1,15 @@
+control,policy,scenario,seed,background_bps,foreground_goodput_mbps,foreground_loss_percent,background_loss_percent,screen_failures,folder
+steady,fixed,steady,41,4000000,3.0,0.0,0.0,[],20261121-214804-399570-policy-fixed-steady-seed41
+steady,reactive,steady,41,4000000,3.0,0.0,0.0,[],20261121-214914-392400-policy-reactive-steady-seed41
+steady,ml,steady,41,4000000,3.0,0.0,0.0,[],20261121-215024-986462-policy-ml-steady-seed41
+steady,early_warning,steady,41,4000000,3.0,0.0,0.0,[],20261121-215135-608672-policy-early_warning-steady-seed41
+steady,reactive,steady,42,4000000,3.0,0.0,0.0,[],20261121-215245-674863-policy-reactive-steady-seed42
+steady,early_warning,steady,42,4000000,3.0,0.0,0.0,[],20261121-215356-148658-policy-early_warning-steady-seed42
+steady,fixed,steady,42,4000000,3.0,0.0,0.0,[],20261121-215506-253988-policy-fixed-steady-seed42
+steady,ml,steady,42,4000000,3.0,0.0,0.0,[],20261121-215615-963308-policy-ml-steady-seed42
+steady,early_warning,steady,43,4000000,3.0,0.0,0.0,[],20261121-215726-002026-policy-early_warning-steady-seed43
+steady,ml,steady,43,4000000,3.0,0.0,0.0,[],20261121-215836-044552-policy-ml-steady-seed43
+steady,reactive,steady,43,4000000,3.0,0.0,0.0,[],20261121-215946-017553-policy-reactive-steady-seed43
+steady,fixed,steady,43,4000000,3.0,0.0,0.0,[],20261121-220056-142477-policy-fixed-steady-seed43
+fixed_alternate,fixed_alternate,ramp,41,14000000,6.972,14.264,10.354,[],20261121-205413-754704-fixed-alternate-ramp-bg14m-seed41
+fixed_alternate,fixed_alternate,bursty,41,14000000,5.795,17.952,10.22,[],20261121-205519-734074-fixed-alternate-bursty-bg14m-seed41

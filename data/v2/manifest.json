@@ -1,0 +1,25 @@
+{
+  "format": "versioned-v2-summary-inputs-v1",
+  "repository": "jesss77/342-proactive-sdn",
+  "commit": "512cafc5f48748b741bb2961fa9a644b8333d4a5",
+  "evidence_level": "reported trial summaries; original per-trial logs are not in this checkout",
+  "raw_v2_logs_available": false,
+  "files": {
+    "v2-batch.json": {
+      "original_path": "results/v2-batch.json",
+      "sha256": "2dddd62484a7da80937320eb6693616f7c6c8d134a518f3ecb8799711bb4ca78"
+    },
+    "v2-steady-control.json": {
+      "original_path": "results/v2-steady-control.json",
+      "sha256": "4daf171e6e322a8388794803e53259a83bdfc2b1377ab5c1033ea0ee0dff5886"
+    },
+    "fixed_alternate_control.json": {
+      "original_path": "results/v2-report/fixed_alternate_control.json",
+      "sha256": "b9741e2ad455ef33b01595476c220afa59302a5fa0f0bfceba9af788d4ee1191"
+    },
+    "v2_timing.csv": {
+      "original_path": "results/v2-report/v2_timing.csv",
+      "sha256": "592e04d5461ff700df057be3b18e029cd346758e52248f96c1f954044374efd1"
+    }
+  }
+}

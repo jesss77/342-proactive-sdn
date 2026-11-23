@@ -20,12 +20,14 @@ needed by the frozen inspectors, and reproduces:
 - All four component diagnostic cases and all three capture off/on/off steps.
 - All seven attempted extra bursty trials, including the quality failure.
 - Consolidated exclusions, warning denominators/rates and paper evidence tables.
+- All six final-paper tables and exact figure coordinates, including the
+  separately labeled V2 summary-based results.
 
 Stage logs identify any failed check. Reproduction stops on a mismatch. It starts
 no traffic and changes no source, model, raw record or acceptance threshold.
 
 Use `python reproduce.py --verify` for a quick repository checksum check.
-The four extraction/integrity guard tests run with
+The extraction, source-integrity and paper-provenance guard tests run with
 `python -m unittest discover -s tests -v`. Allow about 500 MB for reconstructed
 raw inputs and derived output; only the compact package is stored in Git.
 
@@ -45,10 +47,17 @@ python3.12 -m venv .venv-analysis
 ```
 
 Windows uses `Scripts/python.exe` instead of `bin/python`. This regenerates the
-five paper figures and representative four-policy time traces in PNG/SVG/PDF
+five V1 evidence figures, representative four-policy time traces, and the four
+figures used in the combined final paper, in PNG/SVG/PDF
 where supported. The saved publication figures are PDFs; alternative exports are
 generated on demand. Metadata and font differences can change image hashes;
 the underlying numerical comparisons must still match.
+
+The final manuscript's canonical assets are under `results/paper/`; the new
+rebuild places them under `scratch/with-figures/paper/`. Its `table-data.json`
+supplies every displayed table cell; `plot-data/` stores full-precision plotted
+values. [Asset-by-asset source mapping](PAPER_ASSETS.md) explains configuration
+values, V1 raw-backed measurements and V2 reported summaries separately.
 
 ## Optional training replay
 

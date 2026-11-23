@@ -7,8 +7,9 @@ Decision Tree. The observation, admission and rerouting mechanism are shared.
 The original benchmark contains 36 matched trials: four policies, three traffic
 scenarios and three seeds.
 
-**Result: no consistent added networking benefit from ML over the simple trend
-rule was established.** Earlier rerouting helped relative to fixed routing.
+**V1 result: no consistent added networking benefit from ML over the simple
+trend rule was established with an idle alternate.** Earlier rerouting helped
+relative to fixed routing.
 
 | Policy | Ramp goodput (Mbit/s) | Ramp loss (%) | Bursty goodput (Mbit/s) | Bursty loss (%) |
 | --- | ---: | ---: | ---: | ---: |
@@ -23,6 +24,29 @@ and 0.811 for bursts, but advance warnings reached only 2/3 and 9/25 scorable
 events. The stronger alternate path handled all six fixed-alternate variable
 controls without loss. The extra bursty cohort stopped on quality failure;
 only seed 51 is a complete extra block and is reported separately.
+
+**The separate V2 extension reports a conditional ML advantage:** for bursty
+traffic with 4 Mbit/s alternate background, its three-run mean goodput/loss/probe
+p95 RTT were 7.485 Mbit/s / 0.587% / 26.1 ms for ML, versus 6.781 Mbit/s / 9.564%
+/ 42.4 ms for trend. V2 uses a changed platform and quality policy. Its raw trial
+logs were not published; its means and pairs can be reproduced from the pinned
+per-trial summaries. [Versioned V2 source](https://github.com/jesss77/342-proactive-sdn/tree/512cafc5f48748b741bb2961fa9a644b8333d4a5).
+[Repaired reproduction checkout](https://github.com/jesss77/342-proactive-sdn/tree/2a8904141b18cfb471e2b70aa15084bc9945596e)
+fixes model/feature line-ending fingerprints and smoke-test indentation; it does
+not alter the reported measurements or claim new live trials.
+
+## Audit the final paper
+
+[Every paper figure and table](docs/PAPER_ASSETS.md) now has a published generator,
+exact input mapping and generated numerical data. Start with
+[`results/paper/`](results/paper/) for the four figures, six tables, full-precision
+plot coordinates and per-cell source ledger. All figures use plotting code;
+the topology is a configuration schematic. No image-generation model is used.
+
+```bash
+python -m pip install -r requirements-analysis.txt
+python reproduce.py --output scratch/paper-audit --figures
+```
 
 ## Reproduce the saved results
 
@@ -50,6 +74,7 @@ never overwritten. [Details](docs/REPRODUCIBILITY.md).
 | --- | --- |
 | [`experiment/`](experiment/) | Frozen source, model, acquisition protocols and their pinned tests/docs. Original file bytes preserved. |
 | [`data/`](data/) | One compact raw-input package and its checksum/inventory. No VM checkpoints, installers or source-backup chains. |
+| [`data/v2/`](data/v2/) | Four immutable V2 summary inputs and their original commit/path/checksum mapping. V2 raw logs are unavailable. |
 | [`analysis/`](analysis/) | Calculations, independent inspections and plotting used by the single rebuild command. |
 | [`results/`](results/) | Main results, prediction evaluation, per-run tables, figures and follow-up limitations. [Start here](results/README.md). |
 | [`docs/`](docs/) | Reproduction and live-lab instructions. |

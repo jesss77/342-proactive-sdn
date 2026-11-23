@@ -1,0 +1,4 @@
+Split,Runs,All rows,Eligible,Positive,Short history,Event active,Short future
+Train,10,2390,995,352,75,1213,107
+Validation,6,1434,599,207,46,719,70
+Test,6,1434,642,206,45,670,77

@@ -1,0 +1,130 @@
+{
+  "figures": {
+    "01-topology": [
+      "Shared physical topology. Foreground starts on the 10 Mbit/s primary branch. V2 adds h3-to-h4 background on alternate; V1 leaves that pair idle.",
+      false
+    ],
+    "02-paired-differences": [
+      "Individual ML-minus-trend bursty loss differences. V1 uses an idle alternate; V2 uses 4 Mbit/s background on a changed platform. Each point is one matched seed pair; cohorts are not pooled. Negative differences favor ML. Vertical scales differ.",
+      true
+    ],
+    "03-aligned-captured-trace": [
+      "V1 frozen-ML ramp: measured source, utilization and sampled queue occupancy. Orange dashed marks the decision; purple dotted marks first alternate UDP egress. These markers nearly coincide at this scale. Occupancy is not queueing delay.",
+      false
+    ],
+    "04-forwarding-timing": [
+      "V1 capture pilot: distinct timestamps relative to the decision. First alternate UDP is an outgoing software observation; final flow readback is a later CLI verification.",
+      false
+    ]
+  },
+  "algorithm": [
+    "Read all four branch qdiscs; wait for valid, contiguous causal history.",
+    "Evaluate the chosen trigger; suppress action on missing or stale observations.",
+    "Estimate foreground demand and alternate load; check link state, headroom and action limits.",
+    "If admitted, install the same selected-pair overlays and verify readback and packet counters.",
+    "After success, stop triggering; continue monitoring. Restore routing and shaping at cleanup."
+  ],
+  "tables": {
+    "parameters": {
+      "caption": "Common trigger and action settings; V2 adds measured alternate-path background load.",
+      "heads": [
+        "Setting",
+        "Value"
+      ],
+      "widths": [
+        0.31,
+        0.69
+      ],
+      "note": "",
+      "wide": false
+    },
+    "dataset": {
+      "caption": "Whole-run partitions and mutually exclusive row exclusions. Invalid-sample exclusions are zero in all accepted partitions.",
+      "heads": [
+        "Split",
+        "Runs",
+        "All rows",
+        "Eligible",
+        "Positive",
+        "Short history",
+        "Event active",
+        "Short future"
+      ],
+      "widths": null,
+      "note": "",
+      "wide": true
+    },
+    "network": {
+      "caption": "V1: means of three run outcomes per policy/scenario. RTT is mean within-run traffic-window probe p95.",
+      "heads": [
+        "Policy",
+        "Ramp goodput\nMbit/s",
+        "Ramp loss\n%",
+        "Ramp RTT p95\nms",
+        "Burst goodput\nMbit/s",
+        "Burst loss\n%",
+        "Burst RTT p95\nms"
+      ],
+      "widths": null,
+      "note": "All twelve steady trials had zero UDP sequence loss. Individual paired differences, rather than pooled polling samples, show variation.",
+      "wide": true
+    },
+    "prediction": {
+      "caption": "Held-out row-level prediction scores on fixed-primary traces.",
+      "heads": [
+        "Method / scenario",
+        "Rows",
+        "Precision",
+        "Recall",
+        "F1"
+      ],
+      "widths": [
+        0.36,
+        0.12,
+        0.18,
+        0.17,
+        0.17
+      ],
+      "note": "",
+      "wide": false
+    },
+    "validation": {
+      "caption": "V1 measurement and path validation. Rates are received UDP payload; overload rows show means.",
+      "heads": [
+        "Control",
+        "Runs",
+        "Goodput\nMbit/s",
+        "Loss\n%"
+      ],
+      "widths": [
+        0.33,
+        0.1,
+        0.4,
+        0.17
+      ],
+      "note": "",
+      "wide": false
+    },
+    "v2loss": {
+      "caption": "V2 exploratory summaries: mean foreground UDP loss (%) over three seeds per cell.",
+      "heads": [
+        "Scenario",
+        "BG\nMbit/s",
+        "Fixed",
+        "Reactive",
+        "Trend",
+        "ML"
+      ],
+      "widths": [
+        0.18,
+        0.12,
+        0.175,
+        0.175,
+        0.175,
+        0.175
+      ],
+      "note": "Includes V2\u2019s three quality-tolerance exceptions, all at 14 Mbit/s background. At that load no intervention policy switched. Raw trial logs were unavailable for independent verification.",
+      "wide": true
+    }
+  }
+}

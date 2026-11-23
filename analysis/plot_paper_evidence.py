@@ -18,7 +18,9 @@ def run(repo,analysis,out):
     files=[]
     def save(fig,name):
         for suffix in ['pdf','svg','png']:
-            path=out/(name+'.'+suffix);fig.savefig(path,bbox_inches='tight',pad_inches=.035);files.append(path)
+            path=out/(name+'.'+suffix)
+            kwargs=dict(metadata={'CreationDate':None,'ModDate':None}) if suffix=='pdf' else {}
+            fig.savefig(path,bbox_inches='tight',pad_inches=.035,**kwargs);files.append(path)
         plt.close(fig)
     # The original four-host diamond, including the two idle hosts.
     fig,ax=plt.subplots(figsize=(3.45,2.05));ax.set_xlim(-.6,5.6);ax.set_ylim(-1.55,2.0);ax.axis('off')
@@ -58,7 +60,7 @@ def run(repo,analysis,out):
     src=lines(trial/'sender-samples.jsonl');t=[];rate=[]
     for a,b in zip(src,src[1:]):
         dt=(b['monotonic_ns']-a['monotonic_ns'])/1e9
-        t.append((a['monotonic_ns']+b['monotonic_ns'])/2e9-start);rate.append(8*1200*(b['sent_packets']-a['sent_packets'])/dt/1e6)
+        t.append((a['monotonic_ns']+b['monotonic_ns'])/2e9-start);rate.append(8*sender['payload_bytes']*(b['sent_packets']-a['sent_packets'])/dt/1e6)
     raw=lines(policy/'samples.jsonl');qt=[];primary=[];alternate=[];qp=[];qa=[]
     for a,b in zip(raw,raw[1:]):
         pairs={}
@@ -73,7 +75,8 @@ def run(repo,analysis,out):
     fig,axes=plt.subplots(3,1,figsize=(3.45,3.2),sharex=True,layout='constrained')
     axes[0].plot(t,rate,color='#333333',lw=.8,label='Measured sender payload');axes[0].set_ylabel('Mbit/s');axes[0].legend(loc='upper right')
     axes[1].plot(qt,primary,color='#0072B2',lw=.9,label='Primary');axes[1].plot(qt,alternate,color='#009E73',lw=.9,label='Alternate')
-    axes[1].axhline(.85,ls=':',color='#777777',lw=.7);axes[1].set_ylabel('Utilization');axes[1].legend(loc='upper right')
+    threshold=read(repo/'dataset_protocol.json')['label_config']['utilization_threshold']
+    axes[1].axhline(threshold,ls=':',color='#777777',lw=.7);axes[1].set_ylabel('Utilization');axes[1].legend(loc='upper right')
     axes[2].plot(qt,qp,color='#0072B2',lw=.8);axes[2].plot(qt,qa,color='#009E73',lw=.8);axes[2].set_ylabel('Queued packets');axes[2].set_xlabel('Seconds from native source start')
     for ax in axes:
         ax.axvline(action['decision_at']-start,color='#D55E00',ls='--',lw=.8)

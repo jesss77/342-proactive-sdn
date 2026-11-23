@@ -1,0 +1,22 @@
+{
+  "original_matched_trials": 36,
+  "development_runs": 16,
+  "heldout_runs": 6,
+  "primary_and_alternate_calibration_reproduced": true,
+  "supplemental_controls_and_failed_outcomes_reproduced": true,
+  "component_diagnostics_reproduced": 4,
+  "activation_steps_reproduced": 3,
+  "followup_attempts_reproduced": 7,
+  "heldout_predictions_exact": true,
+  "matched_report_exact": true,
+  "consolidated_evidence_exact": true,
+  "raw_quality_rules_changed": false,
+  "traffic_started": false,
+  "model_refitted": false,
+  "source_checkpoint_comparisons": "Historical receipts retained; obsolete full-backup comparisons are not rerun.",
+  "figures_regenerated": true,
+  "final_paper_tables_exact": true,
+  "final_paper_plot_values_exact": true,
+  "v2_summary_arithmetic_reproduced": true,
+  "v2_raw_logs_available": false
+}

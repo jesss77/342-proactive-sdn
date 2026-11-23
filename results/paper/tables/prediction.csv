@@ -1,0 +1,5 @@
+Method / scenario,Rows,Precision,Recall,F1
+ML / ramp,289,0.957,0.957,0.957
+ML / bursty,353,0.825,0.798,0.811
+trend / ramp,289,0.792,0.826,0.809
+trend / bursty,353,0.000,0.000,0.000

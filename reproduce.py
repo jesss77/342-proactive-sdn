@@ -72,6 +72,16 @@ def run(output,lab,pub,figures=False,refit=False):
     if figures:
         logged('paper-figures',script('plot_paper_evidence.py',['--repo',lab,'--analysis',output/'tables','--output',output/'figures']))
         logged('time-traces',script('build_time_traces.py',['--repo',lab,'--report',output/'matched/matched-report.json','--output',output/'time-traces','--plots']))
+    paper_args=['--repo',ROOT,'--lab',lab,'--evidence',output/'tables/paper-evidence.json','--output',output/'paper']
+    if figures:paper_args+=['--figures','--v1-figures',output/'figures']
+    logged('final-paper-assets',script('build_paper_assets.py',paper_args))
+    from importlib.util import spec_from_file_location,module_from_spec
+    spec=spec_from_file_location('paper_assets',analysis/'build_paper_assets.py');paper=module_from_spec(spec);spec.loader.exec_module(paper)
+    paper.compare_tables(read(output/'paper/table-data.json'),read(ROOT/'results/paper/table-data.json'))
+    import csv
+    for name in ['paired-differences.csv','captured-source.csv','captured-queues.csv','forwarding-timing.csv','topology.csv']:
+        with (output/'paper/plot-data'/name).open(newline='') as a,(ROOT/'results/paper/plot-data'/name).open(newline='') as b:
+            assert list(csv.DictReader(a))==list(csv.DictReader(b)),'Paper plot values differ: '+name
     if refit:
         logged('training-replay',[lab/'train_tree.py','--dataset',output/'development','--repo',lab,'--output',output/'training'])
         assert read(output/'training/model.json')==read(lab/'selected_tree.json')
@@ -80,7 +90,8 @@ def run(output,lab,pub,figures=False,refit=False):
        component_diagnostics_reproduced=4,activation_steps_reproduced=3,followup_attempts_reproduced=7,
        heldout_predictions_exact=True,matched_report_exact=True,consolidated_evidence_exact=True,
        raw_quality_rules_changed=False,traffic_started=False,model_refitted=refit,
-       source_checkpoint_comparisons='Historical receipts retained; obsolete full-backup comparisons are not rerun.',figures_regenerated=figures)
+       source_checkpoint_comparisons='Historical receipts retained; obsolete full-backup comparisons are not rerun.',figures_regenerated=figures,
+       final_paper_tables_exact=True,final_paper_plot_values_exact=True,v2_summary_arithmetic_reproduced=True,v2_raw_logs_available=False)
     (output/'reproduction.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2))
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--figures',action='store_true');p.add_argument('--refit',action='store_true');p.add_argument('--verify',action='store_true',help='Verify repository bytes without rebuilding')

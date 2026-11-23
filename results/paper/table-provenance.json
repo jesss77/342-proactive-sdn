@@ -1,0 +1,1291 @@
+{
+  "parameters": {
+    "evidence_level": "configuration",
+    "source": [
+      "experiment/dataset_protocol.json",
+      "experiment/operating_bounds.json",
+      "experiment/selected_tree.json",
+      "experiment/routing_policy.py",
+      "experiment/routing_action.py"
+    ],
+    "calculation": "Format configuration values and source-code defaults. These are settings, not empirical measurements.",
+    "rows": [
+      {
+        "row": 0,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Foreground",
+            "exact": "Foreground"
+          },
+          {
+            "column": 1,
+            "display": "1,200-byte UDP payload; 60 s; primary initially",
+            "exact": {
+              "payload_bytes": 1200,
+              "duration_s": 60
+            }
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Queues / delay",
+            "exact": "Queues / delay"
+          },
+          {
+            "column": 1,
+            "display": "Source 250 packets; switch 50 packets; 1 ms/link",
+            "exact": {
+              "id": "dual-forward-cburst16k-source250-v1",
+              "forward_links": [
+                [
+                  "h1",
+                  "h1-eth0",
+                  100
+                ],
+                [
+                  "s1",
+                  "s1-eth3",
+                  100
+                ],
+                [
+                  "s2",
+                  "s2-eth2",
+                  10
+                ],
+                [
+                  "s1",
+                  "s1-eth4",
+                  20
+                ],
+                [
+                  "s3",
+                  "s3-eth2",
+                  20
+                ],
+                [
+                  "s4",
+                  "s4-eth1",
+                  100
+                ]
+              ],
+              "cburst_bytes": 16384,
+              "burst_bytes": 15360,
+              "source_queue_packets": 250,
+              "bottleneck_queue_packets": 50,
+              "delay_ms": 1
+            }
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Sampling / history",
+            "exact": "Sampling / history"
+          },
+          {
+            "column": 1,
+            "display": "250 ms; at least 2 s contiguous history",
+            "exact": {
+              "interval_s": 0.25,
+              "history_s": 2.0
+            }
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Event / forecast",
+            "exact": "Event / forecast"
+          },
+          {
+            "column": 1,
+            "display": "Utilization >= 0.85 for 1 s; new onset within 2 s",
+            "exact": {
+              "version": "highutil85-duration1-horizon2-v1",
+              "utilization_threshold": 0.85,
+              "confirmation_s": 1.0,
+              "horizon_s": 2.0,
+              "history_s": 2.0,
+              "ewma_tau_s": 1.0,
+              "future_guard_s": 0.75,
+              "route": "primary",
+              "scope": "Frozen operational target for dual-fixed development; not packet-loss ground truth"
+            }
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Label future support",
+            "exact": "Label future support"
+          },
+          {
+            "column": 1,
+            "display": "3.75 s (horizon + confirmation + read guard)",
+            "exact": 3.75
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Reactive trigger",
+            "exact": "Reactive trigger"
+          },
+          {
+            "column": 1,
+            "display": "Observed high utilization sustained for 1 s",
+            "exact": {
+              "threshold": 0.85,
+              "confirmation_s": 1.0,
+              "horizon_s": 2.0
+            }
+          }
+        ]
+      },
+      {
+        "row": 6,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Trend trigger",
+            "exact": "Trend trigger"
+          },
+          {
+            "column": 1,
+            "display": "u >= 0.5; slope > 0; u + 2 slope >= 0.85",
+            "exact": {
+              "floor": 0.5,
+              "threshold": 0.85,
+              "confirmation_s": 1.0,
+              "horizon_s": 2.0
+            }
+          }
+        ]
+      },
+      {
+        "row": 7,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Frozen tree",
+            "exact": "Frozen tree"
+          },
+          {
+            "column": 1,
+            "display": "Depth 3; minimum leaf 25; 15 nodes; score >= 0.65",
+            "exact": {
+              "parameters": {
+                "max_depth": 3,
+                "min_samples_leaf": 25,
+                "class_weight": null
+              },
+              "nodes": 15,
+              "threshold": 0.65
+            }
+          }
+        ]
+      },
+      {
+        "row": 8,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Freshness checks",
+            "exact": "Freshness checks"
+          },
+          {
+            "column": 1,
+            "display": "Live pre-action 0.5 s; actor entry 2 s",
+            "exact": {
+              "live_s": 0.5,
+              "actor_s": 2
+            }
+          }
+        ]
+      },
+      {
+        "row": 9,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Admission",
+            "exact": "Admission"
+          },
+          {
+            "column": 1,
+            "display": "Current demand + alternate load <= 12.72 Mbit/s",
+            "exact": 12720000
+          }
+        ]
+      },
+      {
+        "row": 10,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Action limit",
+            "exact": "Action limit"
+          },
+          {
+            "column": 1,
+            "display": "One successful switch; primary restored at cleanup",
+            "exact": {
+              "max_actions": 1,
+              "cleanup": "experiment/routing_action.py::close"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "dataset": {
+    "evidence_level": "raw-backed V1 replay",
+    "source": "results/tables/paper-evidence.json#/exclusion_by_split",
+    "calculation": "Sum complete raw-backed runs within each whole-run partition.",
+    "rows": [
+      {
+        "row": 0,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Train",
+            "exact": "Train"
+          },
+          {
+            "column": 1,
+            "display": "10",
+            "exact": 10
+          },
+          {
+            "column": 2,
+            "display": "2390",
+            "exact": 2390
+          },
+          {
+            "column": 3,
+            "display": "995",
+            "exact": 995
+          },
+          {
+            "column": 4,
+            "display": "352",
+            "exact": 352
+          },
+          {
+            "column": 5,
+            "display": "75",
+            "exact": 75
+          },
+          {
+            "column": 6,
+            "display": "1213",
+            "exact": 1213
+          },
+          {
+            "column": 7,
+            "display": "107",
+            "exact": 107
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Validation",
+            "exact": "Validation"
+          },
+          {
+            "column": 1,
+            "display": "6",
+            "exact": 6
+          },
+          {
+            "column": 2,
+            "display": "1434",
+            "exact": 1434
+          },
+          {
+            "column": 3,
+            "display": "599",
+            "exact": 599
+          },
+          {
+            "column": 4,
+            "display": "207",
+            "exact": 207
+          },
+          {
+            "column": 5,
+            "display": "46",
+            "exact": 46
+          },
+          {
+            "column": 6,
+            "display": "719",
+            "exact": 719
+          },
+          {
+            "column": 7,
+            "display": "70",
+            "exact": 70
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Test",
+            "exact": "Test"
+          },
+          {
+            "column": 1,
+            "display": "6",
+            "exact": 6
+          },
+          {
+            "column": 2,
+            "display": "1434",
+            "exact": 1434
+          },
+          {
+            "column": 3,
+            "display": "642",
+            "exact": 642
+          },
+          {
+            "column": 4,
+            "display": "206",
+            "exact": 206
+          },
+          {
+            "column": 5,
+            "display": "45",
+            "exact": 45
+          },
+          {
+            "column": 6,
+            "display": "670",
+            "exact": 670
+          },
+          {
+            "column": 7,
+            "display": "77",
+            "exact": 77
+          }
+        ]
+      }
+    ],
+    "source_runs_by_row": [
+      [
+        "20261115-194521-205072-policy-fixed-ramp-seed11",
+        "20261115-194630-052595-policy-fixed-bursty-seed11",
+        "20261115-201812-415577-policy-fixed-bursty-seed12",
+        "20261115-201921-136071-policy-fixed-ramp-seed12",
+        "20261115-202030-010606-policy-fixed-ramp-seed13",
+        "20261115-202138-547099-policy-fixed-bursty-seed13",
+        "20261115-202247-279573-policy-fixed-bursty-seed14",
+        "20261115-202355-749293-policy-fixed-ramp-seed14",
+        "20261115-202504-552114-policy-fixed-ramp-seed15",
+        "20261115-202613-481035-policy-fixed-bursty-seed15"
+      ],
+      [
+        "20261115-202722-320511-policy-fixed-ramp-seed21",
+        "20261115-202831-295691-policy-fixed-bursty-seed21",
+        "20261115-202940-023843-policy-fixed-bursty-seed22",
+        "20261115-203048-927739-policy-fixed-ramp-seed22",
+        "20261115-203157-350275-policy-fixed-ramp-seed23",
+        "20261115-203305-814592-policy-fixed-bursty-seed23"
+      ],
+      [
+        "20261115-220149-140313-policy-fixed-ramp-seed31",
+        "20261115-220257-992148-policy-fixed-bursty-seed31",
+        "20261115-220406-813728-policy-fixed-bursty-seed32",
+        "20261115-220516-053845-policy-fixed-ramp-seed32",
+        "20261115-220624-888992-policy-fixed-ramp-seed33",
+        "20261115-220733-371316-policy-fixed-bursty-seed33"
+      ]
+    ]
+  },
+  "network": {
+    "evidence_level": "raw-backed V1 replay",
+    "source": "results/matched/matched-report.json#/rows",
+    "calculation": "Arithmetic mean of three distinct matched runs per policy/scenario. RTT is mean of within-run p95, not pooled probes.",
+    "rows": [
+      {
+        "row": 0,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Fixed primary",
+            "exact": "Fixed primary"
+          },
+          {
+            "column": 1,
+            "display": "7.510",
+            "exact": 7.510253532810412
+          },
+          {
+            "column": 2,
+            "display": "9.741",
+            "exact": 9.740576612739648
+          },
+          {
+            "column": 3,
+            "display": "60.0",
+            "exact": 60.0
+          },
+          {
+            "column": 4,
+            "display": "6.121",
+            "exact": 6.121006773039686
+          },
+          {
+            "column": 5,
+            "display": "18.682",
+            "exact": 18.68171851294276
+          },
+          {
+            "column": 6,
+            "display": "61.5",
+            "exact": 61.5
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Reactive",
+            "exact": "Reactive"
+          },
+          {
+            "column": 1,
+            "display": "8.319",
+            "exact": 8.319360597004964
+          },
+          {
+            "column": 2,
+            "display": "0.002",
+            "exact": 0.0019468130670093058
+          },
+          {
+            "column": 3,
+            "display": "19.3",
+            "exact": 19.333333333333332
+          },
+          {
+            "column": 4,
+            "display": "7.137",
+            "exact": 7.137489709257524
+          },
+          {
+            "column": 5,
+            "display": "5.591",
+            "exact": 5.591033527909637
+          },
+          {
+            "column": 6,
+            "display": "33.0",
+            "exact": 33.03333333333333
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Trend",
+            "exact": "Trend"
+          },
+          {
+            "column": 1,
+            "display": "8.329",
+            "exact": 8.328789790622139
+          },
+          {
+            "column": 2,
+            "display": "0.000",
+            "exact": 0.0
+          },
+          {
+            "column": 3,
+            "display": "18.1",
+            "exact": 18.1
+          },
+          {
+            "column": 4,
+            "display": "7.537",
+            "exact": 7.5370091704306175
+          },
+          {
+            "column": 5,
+            "display": "0.013",
+            "exact": 0.012665901438290444
+          },
+          {
+            "column": 6,
+            "display": "18.0",
+            "exact": 18.033333333333335
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "column": 0,
+            "display": "ML",
+            "exact": "ML"
+          },
+          {
+            "column": 1,
+            "display": "8.329",
+            "exact": 8.328941294452706
+          },
+          {
+            "column": 2,
+            "display": "0.000",
+            "exact": 0.0
+          },
+          {
+            "column": 3,
+            "display": "18.3",
+            "exact": 18.266666666666666
+          },
+          {
+            "column": 4,
+            "display": "7.521",
+            "exact": 7.521429730828415
+          },
+          {
+            "column": 5,
+            "display": "0.195",
+            "exact": 0.1946880758437026
+          },
+          {
+            "column": 6,
+            "display": "16.2",
+            "exact": 16.233333333333334
+          }
+        ]
+      }
+    ],
+    "source_runs_by_row": [
+      [
+        "20261116-205351-987193-policy-fixed-ramp-seed41",
+        "20261116-205935-647719-policy-fixed-bursty-seed41",
+        "20261116-210153-603234-policy-fixed-ramp-seed42",
+        "20261116-210520-715593-policy-fixed-bursty-seed42",
+        "20261116-211756-603716-policy-fixed-bursty-seed43",
+        "20261116-212341-042832-policy-fixed-ramp-seed43"
+      ],
+      [
+        "20261116-205133-095329-policy-reactive-ramp-seed41",
+        "20261116-205827-033193-policy-reactive-bursty-seed41",
+        "20261116-210411-492840-policy-reactive-ramp-seed42",
+        "20261116-210629-606277-policy-reactive-bursty-seed42",
+        "20261116-211648-048818-policy-reactive-bursty-seed43",
+        "20261116-212450-306463-policy-reactive-ramp-seed43"
+      ],
+      [
+        "20261116-205242-967862-policy-early_warning-ramp-seed41",
+        "20261116-205609-363137-policy-early_warning-bursty-seed41",
+        "20261116-210302-457878-policy-early_warning-ramp-seed42",
+        "20261116-210847-228543-policy-early_warning-bursty-seed42",
+        "20261116-211431-072962-policy-early_warning-bursty-seed43",
+        "20261116-212708-742211-policy-early_warning-ramp-seed43"
+      ],
+      [
+        "20261116-205500-673354-policy-ml-ramp-seed41",
+        "20261116-205718-124056-policy-ml-bursty-seed41",
+        "20261116-210044-631462-policy-ml-ramp-seed42",
+        "20261116-210738-411337-policy-ml-bursty-seed42",
+        "20261116-211539-567065-policy-ml-bursty-seed43",
+        "20261116-212559-960754-policy-ml-ramp-seed43"
+      ]
+    ]
+  },
+  "prediction": {
+    "evidence_level": "raw-backed V1 replay",
+    "source": "results/tables/paper-evidence.json#/prediction_rows",
+    "calculation": "Held-out fixed-primary model scoring; round only for display.",
+    "rows": [
+      {
+        "row": 0,
+        "cells": [
+          {
+            "column": 0,
+            "display": "ML / ramp",
+            "exact": "ML / ramp"
+          },
+          {
+            "column": 1,
+            "display": "289",
+            "exact": 289
+          },
+          {
+            "column": 2,
+            "display": "0.957",
+            "exact": 0.9565217391304348
+          },
+          {
+            "column": 3,
+            "display": "0.957",
+            "exact": 0.9565217391304348
+          },
+          {
+            "column": 4,
+            "display": "0.957",
+            "exact": 0.9565217391304348
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "cells": [
+          {
+            "column": 0,
+            "display": "ML / bursty",
+            "exact": "ML / bursty"
+          },
+          {
+            "column": 1,
+            "display": "353",
+            "exact": 353
+          },
+          {
+            "column": 2,
+            "display": "0.825",
+            "exact": 0.8248587570621468
+          },
+          {
+            "column": 3,
+            "display": "0.798",
+            "exact": 0.7978142076502732
+          },
+          {
+            "column": 4,
+            "display": "0.811",
+            "exact": 0.8111111111111111
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "column": 0,
+            "display": "trend / ramp",
+            "exact": "trend / ramp"
+          },
+          {
+            "column": 1,
+            "display": "289",
+            "exact": 289
+          },
+          {
+            "column": 2,
+            "display": "0.792",
+            "exact": 0.7916666666666666
+          },
+          {
+            "column": 3,
+            "display": "0.826",
+            "exact": 0.8260869565217391
+          },
+          {
+            "column": 4,
+            "display": "0.809",
+            "exact": 0.8085106382978723
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "column": 0,
+            "display": "trend / bursty",
+            "exact": "trend / bursty"
+          },
+          {
+            "column": 1,
+            "display": "353",
+            "exact": 353
+          },
+          {
+            "column": 2,
+            "display": "0.000",
+            "exact": 0.0
+          },
+          {
+            "column": 3,
+            "display": "0.000",
+            "exact": 0.0
+          },
+          {
+            "column": 4,
+            "display": "0.000",
+            "exact": 0.0
+          }
+        ]
+      }
+    ],
+    "source_runs_by_row": [
+      [
+        "20261115-220149-140313-policy-fixed-ramp-seed31",
+        "20261115-220516-053845-policy-fixed-ramp-seed32",
+        "20261115-220624-888992-policy-fixed-ramp-seed33"
+      ],
+      [
+        "20261115-220257-992148-policy-fixed-bursty-seed31",
+        "20261115-220406-813728-policy-fixed-bursty-seed32",
+        "20261115-220733-371316-policy-fixed-bursty-seed33"
+      ],
+      [
+        "20261115-220149-140313-policy-fixed-ramp-seed31",
+        "20261115-220516-053845-policy-fixed-ramp-seed32",
+        "20261115-220624-888992-policy-fixed-ramp-seed33"
+      ],
+      [
+        "20261115-220257-992148-policy-fixed-bursty-seed31",
+        "20261115-220406-813728-policy-fixed-bursty-seed32",
+        "20261115-220733-371316-policy-fixed-bursty-seed33"
+      ]
+    ]
+  },
+  "validation": {
+    "evidence_level": "raw-backed V1 replay",
+    "source": [
+      "results/matched/matched-report.json#/rows",
+      "results/tables/paper-evidence.json#/steady_alternate_calibration",
+      "results/tables/paper-evidence.json#/alternate_controls"
+    ],
+    "calculation": "Low-load/control goodput ranges; overloaded fixed-primary means; loss maximum for zero-loss controls. Exact packet counts verify the variable-control statement.",
+    "rows": [
+      {
+        "row": 0,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Primary, 3 Mbit/s",
+            "exact": "Primary, 3 Mbit/s"
+          },
+          {
+            "column": 1,
+            "display": "3",
+            "exact": 3
+          },
+          {
+            "column": 2,
+            "display": "2.9990-2.9995",
+            "exact": {
+              "min": 2.9990354450028995,
+              "max": 2.9995135826371406
+            }
+          },
+          {
+            "column": 3,
+            "display": "0",
+            "exact": 0.0
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Primary, ramp",
+            "exact": "Primary, ramp"
+          },
+          {
+            "column": 1,
+            "display": "3",
+            "exact": 3
+          },
+          {
+            "column": 2,
+            "display": "7.510",
+            "exact": 7.510253532810412
+          },
+          {
+            "column": 3,
+            "display": "9.741",
+            "exact": 9.740576612739648
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Primary, bursty",
+            "exact": "Primary, bursty"
+          },
+          {
+            "column": 1,
+            "display": "3",
+            "exact": 3
+          },
+          {
+            "column": 2,
+            "display": "6.121",
+            "exact": 6.121006773039686
+          },
+          {
+            "column": 3,
+            "display": "18.682",
+            "exact": 18.68171851294276
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Alternate, 12 Mbit/s",
+            "exact": "Alternate, 12 Mbit/s"
+          },
+          {
+            "column": 1,
+            "display": "3",
+            "exact": 3
+          },
+          {
+            "column": 2,
+            "display": "11.994-11.997",
+            "exact": {
+              "min": 11.994289507271839,
+              "max": 11.9965325110687
+            }
+          },
+          {
+            "column": 3,
+            "display": "0",
+            "exact": 0.0
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Alternate, 16 Mbit/s",
+            "exact": "Alternate, 16 Mbit/s"
+          },
+          {
+            "column": 1,
+            "display": "3",
+            "exact": 3
+          },
+          {
+            "column": 2,
+            "display": "15.993-15.996",
+            "exact": {
+              "min": 15.993285224597535,
+              "max": 15.99592788475852
+            }
+          },
+          {
+            "column": 3,
+            "display": "0",
+            "exact": 0.0
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Alternate, variable",
+            "exact": "Alternate, variable"
+          },
+          {
+            "column": 1,
+            "display": "6",
+            "exact": 6
+          },
+          {
+            "column": 2,
+            "display": "All sent datagrams delivered",
+            "exact": {
+              "sent": 296991,
+              "lost": 0
+            }
+          },
+          {
+            "column": 3,
+            "display": "0",
+            "exact": 0
+          }
+        ]
+      }
+    ],
+    "source_runs_by_row": [
+      [
+        "20261116-191234-584250-policy-fixed-steady-seed41",
+        "20261116-211213-093723-policy-fixed-steady-seed42",
+        "20261116-212014-337751-policy-fixed-steady-seed43"
+      ],
+      [
+        "20261116-205351-987193-policy-fixed-ramp-seed41",
+        "20261116-210153-603234-policy-fixed-ramp-seed42",
+        "20261116-212341-042832-policy-fixed-ramp-seed43"
+      ],
+      [
+        "20261116-205935-647719-policy-fixed-bursty-seed41",
+        "20261116-210520-715593-policy-fixed-bursty-seed42",
+        "20261116-211756-603716-policy-fixed-bursty-seed43"
+      ],
+      [
+        "20261115-172226-437713-path-control-alternate-12000000bps",
+        "20261115-174622-324468-path-control-alternate-12000000bps",
+        "20261115-174650-556326-path-control-alternate-12000000bps"
+      ],
+      [
+        "20261115-174718-568518-path-control-alternate-16000000bps",
+        "20261115-175651-482492-path-control-alternate-16000000bps",
+        "20261115-175719-445352-path-control-alternate-16000000bps"
+      ],
+      [
+        "20261120-173253-865453-schedule-path-control-alternate-ramp-seed41",
+        "20261120-195251-741981-schedule-path-control-alternate-bursty-seed41",
+        "20261120-195403-460968-schedule-path-control-alternate-ramp-seed42",
+        "20261120-195515-673787-schedule-path-control-alternate-bursty-seed42",
+        "20261120-195627-441460-schedule-path-control-alternate-ramp-seed43",
+        "20261120-195739-272843-schedule-path-control-alternate-bursty-seed43"
+      ]
+    ]
+  },
+  "v2loss": {
+    "evidence_level": "reported V2 summary",
+    "source": "data/v2/v2-batch.json#/completed",
+    "calculation": "Arithmetic mean of three reported runs per cell; V2 raw measurements unavailable. No quality exceptions are silently filtered.",
+    "rows": [
+      {
+        "row": 0,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Ramp",
+            "exact": "Ramp"
+          },
+          {
+            "column": 1,
+            "display": "0",
+            "exact": 0.0
+          },
+          {
+            "column": 2,
+            "display": "9.642",
+            "exact": 9.642206760960526
+          },
+          {
+            "column": 3,
+            "display": "0.000",
+            "exact": 0.0
+          },
+          {
+            "column": 4,
+            "display": "0.000",
+            "exact": 0.0
+          },
+          {
+            "column": 5,
+            "display": "0.000",
+            "exact": 0.0
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Ramp",
+            "exact": "Ramp"
+          },
+          {
+            "column": 1,
+            "display": "4",
+            "exact": 4.0
+          },
+          {
+            "column": 2,
+            "display": "9.573",
+            "exact": 9.573293950990307
+          },
+          {
+            "column": 3,
+            "display": "8.893",
+            "exact": 8.89306335427419
+          },
+          {
+            "column": 4,
+            "display": "0.000",
+            "exact": 0.0
+          },
+          {
+            "column": 5,
+            "display": "0.000",
+            "exact": 0.0
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Ramp",
+            "exact": "Ramp"
+          },
+          {
+            "column": 1,
+            "display": "14",
+            "exact": 14.0
+          },
+          {
+            "column": 2,
+            "display": "8.516",
+            "exact": 8.515533936463289
+          },
+          {
+            "column": 3,
+            "display": "7.995",
+            "exact": 7.995485311865411
+          },
+          {
+            "column": 4,
+            "display": "8.669",
+            "exact": 8.66926166768377
+          },
+          {
+            "column": 5,
+            "display": "9.108",
+            "exact": 9.108420004824001
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Bursty",
+            "exact": "Bursty"
+          },
+          {
+            "column": 1,
+            "display": "0",
+            "exact": 0.0
+          },
+          {
+            "column": 2,
+            "display": "18.568",
+            "exact": 18.567921696695954
+          },
+          {
+            "column": 3,
+            "display": "5.404",
+            "exact": 5.403696364585059
+          },
+          {
+            "column": 4,
+            "display": "0.093",
+            "exact": 0.09268347611633854
+          },
+          {
+            "column": 5,
+            "display": "0.000",
+            "exact": 0.0
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Bursty",
+            "exact": "Bursty"
+          },
+          {
+            "column": 1,
+            "display": "4",
+            "exact": 4.0
+          },
+          {
+            "column": 2,
+            "display": "18.327",
+            "exact": 18.327184483598643
+          },
+          {
+            "column": 3,
+            "display": "18.246",
+            "exact": 18.24649558807814
+          },
+          {
+            "column": 4,
+            "display": "9.564",
+            "exact": 9.563906513798944
+          },
+          {
+            "column": 5,
+            "display": "0.587",
+            "exact": 0.5873084085374588
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "cells": [
+          {
+            "column": 0,
+            "display": "Bursty",
+            "exact": "Bursty"
+          },
+          {
+            "column": 1,
+            "display": "14",
+            "exact": 14.0
+          },
+          {
+            "column": 2,
+            "display": "17.530",
+            "exact": 17.53002848398873
+          },
+          {
+            "column": 3,
+            "display": "15.719",
+            "exact": 15.719034339215796
+          },
+          {
+            "column": 4,
+            "display": "16.327",
+            "exact": 16.326611257038458
+          },
+          {
+            "column": 5,
+            "display": "17.219",
+            "exact": 17.218869502749858
+          }
+        ]
+      }
+    ],
+    "source_runs_by_row": [
+      [
+        "20261121-133005-210867-policy-fixed-ramp-seed41",
+        "20261121-133115-129598-policy-reactive-ramp-seed41",
+        "20261121-133225-039691-policy-ml-ramp-seed41",
+        "20261121-133334-934981-policy-early_warning-ramp-seed41",
+        "20261121-142312-877498-policy-early_warning-ramp-seed42",
+        "20261121-142422-844299-policy-ml-ramp-seed42",
+        "20261121-142532-803539-policy-reactive-ramp-seed42",
+        "20261121-142642-716642-policy-fixed-ramp-seed42",
+        "20261121-211014-732241-policy-fixed-ramp-seed43",
+        "20261121-211125-089551-policy-reactive-ramp-seed43",
+        "20261121-211235-638097-policy-ml-ramp-seed43",
+        "20261121-211346-135358-policy-early_warning-ramp-seed43"
+      ],
+      [
+        "20261121-133444-796986-policy-reactive-ramp-seed41",
+        "20261121-133555-949685-policy-early_warning-ramp-seed41",
+        "20261121-133707-117755-policy-fixed-ramp-seed41",
+        "20261121-134141-998112-policy-ml-ramp-seed41",
+        "20261121-142752-586460-policy-ml-ramp-seed42",
+        "20261121-142904-095096-policy-fixed-ramp-seed42",
+        "20261121-143015-143700-policy-early_warning-ramp-seed42",
+        "20261121-143126-416778-policy-reactive-ramp-seed42",
+        "20261121-211456-249815-policy-reactive-ramp-seed43",
+        "20261121-211608-011867-policy-early_warning-ramp-seed43",
+        "20261121-211719-894335-policy-fixed-ramp-seed43",
+        "20261121-211831-725497-policy-ml-ramp-seed43"
+      ],
+      [
+        "20261121-134253-192054-policy-early_warning-ramp-seed41",
+        "20261121-134404-726196-policy-ml-ramp-seed41",
+        "20261121-134516-057119-policy-reactive-ramp-seed41",
+        "20261121-134627-371842-policy-fixed-ramp-seed41",
+        "20261121-143520-055438-policy-fixed-ramp-seed42",
+        "20261121-143747-859501-policy-reactive-ramp-seed42",
+        "20261121-143858-872753-policy-ml-ramp-seed42",
+        "20261121-144010-099349-policy-early_warning-ramp-seed42",
+        "20261121-212457-280945-policy-early_warning-ramp-seed43",
+        "20261121-212608-090278-policy-ml-ramp-seed43",
+        "20261121-212718-636367-policy-reactive-ramp-seed43",
+        "20261121-212829-203859-policy-fixed-ramp-seed43"
+      ],
+      [
+        "20261121-134954-784889-policy-ml-bursty-seed41",
+        "20261121-135104-750390-policy-fixed-bursty-seed41",
+        "20261121-135214-635787-policy-early_warning-bursty-seed41",
+        "20261121-135324-579903-policy-reactive-bursty-seed41",
+        "20261121-144121-338978-policy-reactive-bursty-seed42",
+        "20261121-144231-237283-policy-early_warning-bursty-seed42",
+        "20261121-144341-109234-policy-fixed-bursty-seed42",
+        "20261121-144451-007304-policy-ml-bursty-seed42",
+        "20261121-212939-715960-policy-ml-bursty-seed43",
+        "20261121-213048-451173-policy-fixed-bursty-seed43",
+        "20261121-213157-384568-policy-early_warning-bursty-seed43",
+        "20261121-213306-098249-policy-reactive-bursty-seed43"
+      ],
+      [
+        "20261121-135434-426101-policy-fixed-bursty-seed41",
+        "20261121-135545-583259-policy-reactive-bursty-seed41",
+        "20261121-135656-776430-policy-ml-bursty-seed41",
+        "20261121-135807-968966-policy-early_warning-bursty-seed41",
+        "20261121-144600-970755-policy-early_warning-bursty-seed42",
+        "20261121-144712-163175-policy-ml-bursty-seed42",
+        "20261121-144823-343240-policy-reactive-bursty-seed42",
+        "20261121-144934-634738-policy-fixed-bursty-seed42",
+        "20261121-213415-057962-policy-fixed-bursty-seed43",
+        "20261121-213525-054904-policy-reactive-bursty-seed43",
+        "20261121-213635-074669-policy-ml-bursty-seed43",
+        "20261121-213745-050975-policy-early_warning-bursty-seed43"
+      ],
+      [
+        "20261121-141710-087512-policy-reactive-bursty-seed41",
+        "20261121-141821-085657-policy-early_warning-bursty-seed41",
+        "20261121-141932-307532-policy-fixed-bursty-seed41",
+        "20261121-142043-478625-policy-ml-bursty-seed41",
+        "20261121-145045-606235-policy-ml-bursty-seed42",
+        "20261121-145156-859422-policy-fixed-bursty-seed42",
+        "20261121-145308-066487-policy-early_warning-bursty-seed42",
+        "20261121-145419-333631-policy-reactive-bursty-seed42",
+        "20261121-213855-063076-policy-reactive-bursty-seed43",
+        "20261121-214005-520021-policy-early_warning-bursty-seed43",
+        "20261121-214116-211574-policy-fixed-bursty-seed43",
+        "20261121-214226-727844-policy-ml-bursty-seed43"
+      ]
+    ]
+  }
+}

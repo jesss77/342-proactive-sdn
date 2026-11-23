@@ -1,0 +1,11 @@
+Policy,"Ramp goodput
+Mbit/s","Ramp loss
+%","Ramp RTT p95
+ms","Burst goodput
+Mbit/s","Burst loss
+%","Burst RTT p95
+ms"
+Fixed primary,7.510,9.741,60.0,6.121,18.682,61.5
+Reactive,8.319,0.002,19.3,7.137,5.591,33.0
+Trend,8.329,0.000,18.1,7.537,0.013,18.0
+ML,8.329,0.000,18.3,7.521,0.195,16.2
