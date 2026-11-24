@@ -82,6 +82,9 @@ def run(output,lab,pub,figures=False,refit=False):
     for name in ['paired-differences.csv','captured-source.csv','captured-queues.csv','forwarding-timing.csv','topology.csv']:
         with (output/'paper/plot-data'/name).open(newline='') as a,(ROOT/'results/paper/plot-data'/name).open(newline='') as b:
             assert list(csv.DictReader(a))==list(csv.DictReader(b)),'Paper plot values differ: '+name
+    logged('review-supplement',script('build_review_supplement.py',['--replay',output,'--output',output/'paper-review']))
+    assert read(output/'paper-review/tables.json')==read(ROOT/'results/paper-review/tables.json'),'Revision table values differ'
+    assert read(output/'paper-review/review-evidence.json')==read(ROOT/'results/paper-review/review-evidence.json'),'Revision evidence differs'
     if refit:
         logged('training-replay',[lab/'train_tree.py','--dataset',output/'development','--repo',lab,'--output',output/'training'])
         assert read(output/'training/model.json')==read(lab/'selected_tree.json')
@@ -91,7 +94,7 @@ def run(output,lab,pub,figures=False,refit=False):
        heldout_predictions_exact=True,matched_report_exact=True,consolidated_evidence_exact=True,
        raw_quality_rules_changed=False,traffic_started=False,model_refitted=refit,
        source_checkpoint_comparisons='Historical receipts retained; obsolete full-backup comparisons are not rerun.',figures_regenerated=figures,
-       final_paper_tables_exact=True,final_paper_plot_values_exact=True,v2_summary_arithmetic_reproduced=True,v2_raw_logs_available=False)
+       final_paper_tables_exact=True,final_paper_plot_values_exact=True,review_supplement_exact=True,v2_summary_arithmetic_reproduced=True,v2_raw_logs_available=False)
     (output/'reproduction.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2))
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--figures',action='store_true');p.add_argument('--refit',action='store_true');p.add_argument('--verify',action='store_true',help='Verify repository bytes without rebuilding')

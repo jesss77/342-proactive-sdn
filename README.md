@@ -2,6 +2,10 @@
 
 CMPS 342 · Youssef Shawwa and Jessy Karamaoun · American University of Beirut
 
+The [manuscript revision supplement](results/paper-review/README.md) adds exact
+confusion counts, per-event warning diagnostics, comparable action timings and
+the complete frozen tree. It is regenerated and checked by the offline rebuild.
+
 We compare fixed routing, reactive rerouting, trend early warning and a frozen
 Decision Tree. The observation, admission and rerouting mechanism are shared.
 The original benchmark contains 36 matched trials: four policies, three traffic

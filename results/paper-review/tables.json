@@ -1,0 +1,234 @@
+{
+  "confusion": {
+    "caption": "Held-out ML confusion counts; pooled metrics sum these counts.",
+    "heads": [
+      "Scenario",
+      "TP",
+      "FP",
+      "FN",
+      "TN"
+    ],
+    "rows": [
+      [
+        "Ramp",
+        22,
+        1,
+        1,
+        265
+      ],
+      [
+        "Bursty",
+        146,
+        31,
+        37,
+        139
+      ],
+      [
+        "Pooled",
+        168,
+        32,
+        38,
+        404
+      ]
+    ],
+    "widths": [
+      0.32,
+      0.17,
+      0.17,
+      0.17,
+      0.17
+    ],
+    "wide": false,
+    "note": ""
+  },
+  "admission_timing": {
+    "caption": "V2 bursty traffic with 4 Mbit/s background: reported successful programming starts and admission estimates.",
+    "heads": [
+      "Seed",
+      "Policy",
+      "Start s",
+      "Demand Mbit/s",
+      "Alt. load Mbit/s"
+    ],
+    "rows": [
+      [
+        "41",
+        "ML",
+        "2.529",
+        "3.04",
+        "4.15"
+      ],
+      [
+        "41",
+        "Trend",
+        "No move",
+        "\u2014",
+        "\u2014"
+      ],
+      [
+        "42",
+        "ML",
+        "2.506",
+        "3.02",
+        "4.06"
+      ],
+      [
+        "42",
+        "Trend",
+        "4.236",
+        "7.17",
+        "4.12"
+      ],
+      [
+        "43",
+        "ML",
+        "8.245",
+        "3.02",
+        "4.11"
+      ],
+      [
+        "43",
+        "Trend",
+        "37.598",
+        "7.64",
+        "4.11"
+      ]
+    ],
+    "widths": [
+      0.1,
+      0.14,
+      0.2,
+      0.28,
+      0.28
+    ],
+    "wide": false,
+    "note": "Start is relative to foreground source start, not the decision or first forwarded packet. No move means no successful action, not no trigger request. CSV values retain their published precision."
+  },
+  "tree_splits": {
+    "caption": "Frozen tree split nodes. Follow left when the feature is at most the threshold; otherwise follow right. Node 0 is the root.",
+    "heads": [
+      "Node",
+      "Feature",
+      "Threshold",
+      "Left",
+      "Right"
+    ],
+    "rows": [
+      [
+        "0",
+        "R1",
+        "3024308",
+        "1",
+        "8"
+      ],
+      [
+        "1",
+        "E",
+        "0.348294169",
+        "2",
+        "5"
+      ],
+      [
+        "2",
+        "E",
+        "0.305200517",
+        "3",
+        "4"
+      ],
+      [
+        "5",
+        "E",
+        "0.421378583",
+        "6",
+        "7"
+      ],
+      [
+        "8",
+        "U2",
+        "0.727203816",
+        "9",
+        "12"
+      ],
+      [
+        "9",
+        "R",
+        "3384554",
+        "10",
+        "11"
+      ],
+      [
+        "12",
+        "S",
+        "0.0235257559",
+        "13",
+        "14"
+      ]
+    ],
+    "widths": [
+      0.12,
+      0.15,
+      0.45,
+      0.14,
+      0.14
+    ],
+    "wide": false,
+    "note": "R1: one-second upstream mean (bit/s); E: utilization EWMA; U2: two-second utilization mean; R: current upstream rate (bit/s); S: two-second utilization slope (per second). Thresholds shown to nine significant digits; exact binary values are in selected_tree.json."
+  },
+  "tree_leaves": {
+    "caption": "Frozen tree leaf scores and whether they request admission at the unchanged 0.65 threshold.",
+    "heads": [
+      "Node",
+      "Positive-class score",
+      "Requests admission"
+    ],
+    "rows": [
+      [
+        "3",
+        "0.890384875",
+        "Yes"
+      ],
+      [
+        "4",
+        "0.991753345",
+        "Yes"
+      ],
+      [
+        "6",
+        "0.709472764",
+        "Yes"
+      ],
+      [
+        "7",
+        "0.533952347",
+        "No"
+      ],
+      [
+        "10",
+        "0.327031083",
+        "No"
+      ],
+      [
+        "11",
+        "0.000000000",
+        "No"
+      ],
+      [
+        "13",
+        "0.142275569",
+        "No"
+      ],
+      [
+        "14",
+        "0.794931440",
+        "Yes"
+      ]
+    ],
+    "widths": [
+      0.15,
+      0.45,
+      0.4
+    ],
+    "wide": false,
+    "note": "Scores are weighted training class fractions, not calibrated probabilities. Float32 input comparison matches the exported CART implementation."
+  }
+}

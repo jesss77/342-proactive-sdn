@@ -1,0 +1,4 @@
+Scenario,TP,FP,FN,TN
+Ramp,22,1,1,265
+Bursty,146,31,37,139
+Pooled,168,32,38,404
