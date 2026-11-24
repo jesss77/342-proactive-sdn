@@ -1,16 +1,16 @@
 {
   "as_of": "2026-11-24",
-  "scope": "Compact V1 raw evidence, pinned V2 reported summaries, code-generated paper figures/tables and audit lineage. Private manuscript excluded.",
   "files_sha256": {
     ".gitattributes": "c521760ea9af063bca27b494a30dfc4630a8cc4c2ac323526c3bda4933e23b04",
     ".gitignore": "2e50d2b42fc0f6ecbb6f35dab3c162e64ea9dbc5088cdb4d39ade9dcf9a98c4c",
-    "README.md": "9102e0766b2e5e60ac80265455d2e66260e7f468c624b140205e8566e80ba031",
+    "README.md": "026bdcc5861a4413ac82bc5ce6be6a0d246635d46d4e6003fd6d8e064fcaba56",
     "analysis/analyze_matched.py": "b2f8d75ae28cdcc0fc566eb9e17db309adc253412ac7a8ff7846444a8f34284b",
     "analysis/audit_activation_pilot.py": "e366161887c34b63e9ab02988ab73689a4799e576f7ab64fbcaede0bf524cce0",
     "analysis/audit_closed_bursty_followup.py": "5060abcdb4f59b7868841b43b012084dbe7cd1599a2db28849b0f80bc91dcc9b",
     "analysis/audit_component_ladder.py": "34f0873df05adb70933ba5177109b3943f66b8dfb0b0ba7db1075e6d7efc7847",
     "analysis/audit_loaded_recovery.py": "ec31c49e36a0ee946be1c0521f8fc538c1738e00c94982a1c688ccde4b00f1bc",
     "analysis/audit_stopped_supplement.py": "158c6bd2e31b103269d51060909077159beec01a86315a480bd75810e71a6210",
+    "analysis/build_final_review_assets.py": "705da5050d3c69b5f21fec980562feb89b30e25f113b92fe1b27862f53c6e70f",
     "analysis/build_paper_assets.py": "7281e5b16911970fb5d3d6df303b0d96766bded7c9ef23cc0228c4928669055d",
     "analysis/build_review_supplement.py": "9ccd5543399b047c41df38f0bd61712a8c326fb39b07752f87b1a8a035966ff7",
     "analysis/build_time_traces.py": "44f49d79eeaf142b9e2219bdfe5941340701bc6c8e7e74639fef05c4fb82c213",
@@ -136,6 +136,14 @@
     "results/matched/trials.csv": "e6dcf8b7673e565cd838ae442b4c61c9f79c4ae7b05c3a18fa3d916b2192bad1",
     "results/model/training_report.json": "964ec9cb813505c069f710e3183687eb6de9befecc49c4f6c922e828e35c297d",
     "results/model/tree.txt": "3033fda92a393b9cc12b942e25a7531f3da0281641a670fe4e4e530af33dd4af",
+    "results/paper-final-review/02-paired-differences.pdf": "c4d0b3e68cdfef6a8707f9c371c586c83bdd2453e02ccfe9148edb7f6accd631",
+    "results/paper-final-review/03-aligned-captured-trace.pdf": "6b4684a52d150c0e86f11d0ea695c5dd91c4de499c515d45e77afdd9990a0fbe",
+    "results/paper-final-review/05-delayed-reactive-trace.pdf": "b4ae8f89154e3af938c907c3e6bfbef1c53b68edf560f861afebc9a6bb17ecc0",
+    "results/paper-final-review/README.md": "34ac8be0d1b1ff386e35120e084fb94f3ca53d0fac892621f01a8b27347dbb60",
+    "results/paper-final-review/review-tables.json": "7202dbae067c454ecefd66bf6ec5f38432ca9c645e6924ebde920f64ad7abdd0",
+    "results/paper-final-review/v1-adverse-pair.csv": "c4f2e95d4709d0e4268cddb9c5a2ffe3649e7eee590a76becbad525b276d0121",
+    "results/paper-final-review/v2-all-conditions.csv": "d6ba970b7eb8f68afa628a167a316aa62e1c66760c55c53f2775df4914f350af",
+    "results/paper-final-review/warning-leads.csv": "9ccafb2c6658ced023ef06fe0d6143596ebdf46161e1244a5fe03a8d2d3237cb",
     "results/paper-review/README.md": "c27e4187358eb4550af754992db15524ee1cf2d3e2183061f2ef3bd6a9c0d9c6",
     "results/paper-review/admission_timing.csv": "9130daca6d65f6a06e584fce9719a647fb89288896b455e42aee86df984ccd1b",
     "results/paper-review/confusion.csv": "bee3016bae544c8454b5a026b1595482c7ce25ae4833856836c11a7a111f808a",
@@ -189,5 +197,6 @@
     "results/verification.json": "3b99600ce9c3edf3e0abf9b6ff80d332fc6eefcbffe066ea46e2347aa049f989",
     "tests/test_paper_assets.py": "91a90aa179a1458e2341e3d51fd117f24569140cd69cd258d444914a1bf81ef8",
     "tests/test_reproduction.py": "b87367338be2a8ecba280b3f6525ff1615c6f80defaba2a1f123f169de5e8d31"
-  }
+  },
+  "scope": "Compact V1 raw evidence, pinned V2 reported summaries, code-generated paper figures/tables and audit lineage. Private manuscript excluded."
 }

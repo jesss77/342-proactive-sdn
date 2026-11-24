@@ -1,0 +1,3 @@
+policy,run,loss_percent,denials,program_start_s
+reactive,20261116-210629-606277-policy-reactive-bursty-seed42,15.030368960203065,40,47.610658737998165
+early_warning,20261116-210847-228543-policy-early_warning-bursty-seed42,0.015845708076783774,0,4.1436688030007645

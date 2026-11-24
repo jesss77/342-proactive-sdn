@@ -1,0 +1,475 @@
+{
+  "groups": [
+    {
+      "scenario": "ramp",
+      "bg": 0,
+      "policy": "Fixed",
+      "n": 3,
+      "loss": 9.642206760960526,
+      "loss_min": 7.750387323253123,
+      "loss_max": 12.037522468544038,
+      "goodput": 7.5116969033719085,
+      "rtt": 58.06666666666667,
+      "moves": 0,
+      "denials": 0,
+      "drops": 15135
+    },
+    {
+      "scenario": "ramp",
+      "bg": 0,
+      "policy": "Reactive",
+      "n": 3,
+      "loss": 0.0,
+      "loss_min": 0.0,
+      "loss_max": 0.0,
+      "goodput": 8.323855410443741,
+      "rtt": 11.666666666666666,
+      "moves": 3,
+      "denials": 0,
+      "drops": 0
+    },
+    {
+      "scenario": "ramp",
+      "bg": 0,
+      "policy": "Trend",
+      "n": 3,
+      "loss": 0.0,
+      "loss_min": 0.0,
+      "loss_max": 0.0,
+      "goodput": 8.326875983654231,
+      "rtt": 11.533333333333333,
+      "moves": 3,
+      "denials": 0,
+      "drops": 0
+    },
+    {
+      "scenario": "ramp",
+      "bg": 0,
+      "policy": "ML",
+      "n": 3,
+      "loss": 0.0,
+      "loss_min": 0.0,
+      "loss_max": 0.0,
+      "goodput": 8.329057851286034,
+      "rtt": 11.7,
+      "moves": 3,
+      "denials": 0,
+      "drops": 0
+    },
+    {
+      "scenario": "ramp",
+      "bg": 4,
+      "policy": "Fixed",
+      "n": 3,
+      "loss": 9.573293950990307,
+      "loss_min": 7.5859087961962395,
+      "loss_max": 12.039358000673426,
+      "goodput": 7.513783565187734,
+      "rtt": 58.1,
+      "moves": 0,
+      "denials": 0,
+      "drops": 15016
+    },
+    {
+      "scenario": "ramp",
+      "bg": 4,
+      "policy": "Reactive",
+      "n": 3,
+      "loss": 8.89306335427419,
+      "loss_min": 7.747680599415491,
+      "loss_max": 10.051876950171328,
+      "goodput": 7.511039733525696,
+      "rtt": 58.03333333333333,
+      "moves": 0,
+      "denials": 334,
+      "drops": 13804
+    },
+    {
+      "scenario": "ramp",
+      "bg": 4,
+      "policy": "Trend",
+      "n": 3,
+      "loss": 0.0,
+      "loss_min": 0.0,
+      "loss_max": 0.0,
+      "goodput": 8.292124462330834,
+      "rtt": 12.4,
+      "moves": 3,
+      "denials": 0,
+      "drops": 0
+    },
+    {
+      "scenario": "ramp",
+      "bg": 4,
+      "policy": "ML",
+      "n": 3,
+      "loss": 0.0,
+      "loss_min": 0.0,
+      "loss_max": 0.0,
+      "goodput": 8.31748227474686,
+      "rtt": 11.8,
+      "moves": 3,
+      "denials": 0,
+      "drops": 0
+    },
+    {
+      "scenario": "ramp",
+      "bg": 14,
+      "policy": "Fixed",
+      "n": 3,
+      "loss": 8.515533936463289,
+      "loss_min": 5.962265660951162,
+      "loss_max": 12.375361103345448,
+      "goodput": 7.510127793148376,
+      "rtt": 57.8,
+      "moves": 0,
+      "denials": 0,
+      "drops": 13295
+    },
+    {
+      "scenario": "ramp",
+      "bg": 14,
+      "policy": "Reactive",
+      "n": 3,
+      "loss": 7.995485311865411,
+      "loss_min": 5.226784483806899,
+      "loss_max": 12.302668408285127,
+      "goodput": 7.508340437462959,
+      "rtt": 57.46666666666667,
+      "moves": 0,
+      "denials": 298,
+      "drops": 12461
+    },
+    {
+      "scenario": "ramp",
+      "bg": 14,
+      "policy": "Trend",
+      "n": 3,
+      "loss": 8.66926166768377,
+      "loss_min": 6.7936344358786345,
+      "loss_max": 12.363717688279255,
+      "goodput": 7.512210106684782,
+      "rtt": 57.766666666666666,
+      "moves": 0,
+      "denials": 213,
+      "drops": 13538
+    },
+    {
+      "scenario": "ramp",
+      "bg": 14,
+      "policy": "ML",
+      "n": 3,
+      "loss": 9.108420004824001,
+      "loss_min": 7.309278147132514,
+      "loss_max": 12.356953815186193,
+      "goodput": 7.506207876096202,
+      "rtt": 58.0,
+      "moves": 0,
+      "denials": 96,
+      "drops": 14265
+    },
+    {
+      "scenario": "bursty",
+      "bg": 0,
+      "policy": "Fixed",
+      "n": 3,
+      "loss": 18.567921696695954,
+      "loss_min": 17.554070886649303,
+      "loss_max": 20.366065673041238,
+      "goodput": 6.127496703653961,
+      "rtt": 57.96666666666667,
+      "moves": 0,
+      "denials": 0,
+      "drops": 26418
+    },
+    {
+      "scenario": "bursty",
+      "bg": 0,
+      "policy": "Reactive",
+      "n": 3,
+      "loss": 5.403696364585059,
+      "loss_min": 0.6680470367621205,
+      "loss_max": 14.862385321100918,
+      "goodput": 7.151983347300193,
+      "rtt": 27.166666666666664,
+      "moves": 3,
+      "denials": 39,
+      "drops": 7233
+    },
+    {
+      "scenario": "bursty",
+      "bg": 0,
+      "policy": "Trend",
+      "n": 3,
+      "loss": 0.09268347611633854,
+      "loss_min": 0.013673744457250015,
+      "loss_max": 0.1969707260748489,
+      "goodput": 7.531607908132825,
+      "rtt": 11.266666666666666,
+      "moves": 3,
+      "denials": 0,
+      "drops": 126
+    },
+    {
+      "scenario": "bursty",
+      "bg": 0,
+      "policy": "ML",
+      "n": 3,
+      "loss": 0.0,
+      "loss_min": 0.0,
+      "loss_max": 0.0,
+      "goodput": 7.539007971714551,
+      "rtt": 11.333333333333334,
+      "moves": 3,
+      "denials": 0,
+      "drops": 0
+    },
+    {
+      "scenario": "bursty",
+      "bg": 4,
+      "policy": "Fixed",
+      "n": 3,
+      "loss": 18.327184483598643,
+      "loss_min": 17.15775406927071,
+      "loss_max": 20.36020549684527,
+      "goodput": 6.1283674589020976,
+      "rtt": 57.766666666666666,
+      "moves": 0,
+      "denials": 0,
+      "drops": 26009
+    },
+    {
+      "scenario": "bursty",
+      "bg": 4,
+      "policy": "Reactive",
+      "n": 3,
+      "loss": 18.24649558807814,
+      "loss_min": 17.039817375653012,
+      "loss_max": 20.362158888910592,
+      "goodput": 6.12859430375656,
+      "rtt": 57.9,
+      "moves": 0,
+      "denials": 207,
+      "drops": 25882
+    },
+    {
+      "scenario": "bursty",
+      "bg": 4,
+      "policy": "Trend",
+      "n": 3,
+      "loss": 9.563906513798944,
+      "loss_min": 0.013612232859930124,
+      "loss_max": 17.162576687116566,
+      "goodput": 6.780820088578954,
+      "rtt": 42.4,
+      "moves": 2,
+      "denials": 143,
+      "drops": 13765
+    },
+    {
+      "scenario": "bursty",
+      "bg": 4,
+      "policy": "ML",
+      "n": 3,
+      "loss": 0.5873084085374588,
+      "loss_min": 0.0,
+      "loss_max": 1.7619252256123765,
+      "goodput": 7.484697920624532,
+      "rtt": 26.099999999999998,
+      "moves": 3,
+      "denials": 3,
+      "drops": 903
+    },
+    {
+      "scenario": "bursty",
+      "bg": 14,
+      "policy": "Fixed",
+      "n": 3,
+      "loss": 17.53002848398873,
+      "loss_min": 16.02965330492298,
+      "loss_max": 20.362989880045326,
+      "goodput": 6.130897729882892,
+      "rtt": 57.766666666666666,
+      "moves": 0,
+      "denials": 0,
+      "drops": 24746
+    },
+    {
+      "scenario": "bursty",
+      "bg": 14,
+      "policy": "Reactive",
+      "n": 3,
+      "loss": 15.719034339215796,
+      "loss_min": 13.68585495171369,
+      "loss_max": 19.712958223412215,
+      "goodput": 6.13419431520349,
+      "rtt": 57.93333333333333,
+      "moves": 0,
+      "denials": 206,
+      "drops": 21889
+    },
+    {
+      "scenario": "bursty",
+      "bg": 14,
+      "policy": "Trend",
+      "n": 3,
+      "loss": 16.326611257038458,
+      "loss_min": 13.77092594344084,
+      "loss_max": 20.26477374946224,
+      "goodput": 6.129480387226727,
+      "rtt": 58.3,
+      "moves": 0,
+      "denials": 260,
+      "drops": 22880
+    },
+    {
+      "scenario": "bursty",
+      "bg": 14,
+      "policy": "ML",
+      "n": 3,
+      "loss": 17.218869502749858,
+      "loss_min": 15.381515314347125,
+      "loss_max": 20.316591752980262,
+      "goodput": 6.13046233326527,
+      "rtt": 58.06666666666667,
+      "moves": 0,
+      "denials": 262,
+      "drops": 24251
+    }
+  ],
+  "accuracy": [
+    [
+      "ML / ramp",
+      "289",
+      "0.957",
+      "0.957",
+      "0.957",
+      "99.31"
+    ],
+    [
+      "ML / bursty",
+      "353",
+      "0.825",
+      "0.798",
+      "0.811",
+      "80.74"
+    ],
+    [
+      "ML / pooled",
+      "642",
+      "0.840",
+      "0.816",
+      "0.828",
+      "89.10"
+    ],
+    [
+      "Trend / ramp",
+      "289",
+      "0.792",
+      "0.826",
+      "0.809",
+      "96.89"
+    ],
+    [
+      "Trend / bursty",
+      "353",
+      "0.000",
+      "0.000",
+      "0.000",
+      "45.89"
+    ],
+    [
+      "Trend / pooled",
+      "642",
+      "0.594",
+      "0.092",
+      "0.160",
+      "68.85"
+    ]
+  ],
+  "v1_p95_range": [
+    19.073,
+    258.432
+  ],
+  "warning_leads": [
+    [
+      "ML",
+      "ramp",
+      "20261115-220149-140313-policy-fixed-ramp-seed31",
+      1.9985508155004936
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220406-813728-policy-fixed-bursty-seed32",
+      0.2464621809995151
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220406-813728-policy-fixed-bursty-seed32",
+      1.2403491570003098
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220406-813728-policy-fixed-bursty-seed32",
+      0.7489504055047291
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220406-813728-policy-fixed-bursty-seed32",
+      1.9766335579988663
+    ],
+    [
+      "ML",
+      "ramp",
+      "20261115-220516-053845-policy-fixed-ramp-seed32",
+      1.7556038680049824
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220733-371316-policy-fixed-bursty-seed33",
+      1.4892874459983432
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220733-371316-policy-fixed-bursty-seed33",
+      1.0081146385055035
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220733-371316-policy-fixed-bursty-seed33",
+      1.9971717385051306
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220733-371316-policy-fixed-bursty-seed33",
+      1.748171300496324
+    ],
+    [
+      "ML",
+      "bursty",
+      "20261115-220733-371316-policy-fixed-bursty-seed33",
+      1.7506482855023933
+    ],
+    [
+      "Trend",
+      "ramp",
+      "20261115-220516-053845-policy-fixed-ramp-seed32",
+      1.7556038680049824
+    ],
+    [
+      "Trend",
+      "ramp",
+      "20261115-220624-888992-policy-fixed-ramp-seed33",
+      1.9908946819996345
+    ]
+  ],
+  "moderate_loss_difference": -8.976598105261486
+}

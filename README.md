@@ -41,6 +41,10 @@ not alter the reported measurements or claim new live trials.
 
 ## Audit the final paper
 
+The [final-review supplement](results/paper-final-review/) reproduces the revised
+paired-loss and capture plots, the new delayed-switch trace, held-out accuracy
+and warning leads, and V2 delivery and admission metrics for all conditions.
+
 [Every paper figure and table](docs/PAPER_ASSETS.md) now has a published generator,
 exact input mapping and generated numerical data. Start with
 [`results/paper/`](results/paper/) for the four figures, six tables, full-precision
